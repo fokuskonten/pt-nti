@@ -9,6 +9,9 @@ Thumbs.db
 .idea/
 scratch/
 
+# Media & audio editing assets (kept locally in D:/Soundtrack/ and assets/audio/)
+assets/audio/
+
 # Dependency and build output
 node_modules/
 dist/

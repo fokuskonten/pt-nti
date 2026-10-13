@@ -407,10 +407,8 @@ a { color: inherit; text-decoration: none; }
 .topic-chip:hover {
   border-color: var(--blue-primary);
   color: var(--blue-primary);
-  background-color: var(--white);
+  background-color: var(--blue-light);
 }
-
-.topic-chip:hover { background-color: var(--blue-light); border-color: var(--blue-primary); }
 .ai-chat-footer { padding: 10px 12px; background-color: var(--white); border-top: 1px solid var(--border-card); display: flex; gap: 8px; }
 .ai-chat-input { flex: 1; padding: 10px 14px; border-radius: var(--radius-full); border: 1px solid var(--border-card); font-size: 0.875rem; font-family: inherit; outline: none; background-color: var(--bg-page); }
 .ai-chat-input:focus { border-color: var(--blue-primary); background-color: var(--white); }
@@ -664,4 +662,114 @@ a { color: inherit; text-decoration: none; }
   text-transform: uppercase;
   letter-spacing: 0.06em;
   margin-bottom: 0.75rem;
+}
+
+/* ==========================================================================
+   FAQ ACCORDION COMPONENT (ENTERPRISE B2B TOUCH READY)
+   ========================================================================== */
+.faq-category {
+  margin-bottom: 2.25rem;
+}
+.faq-category-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--blue-deep);
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--blue-light);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.faq-item {
+  background-color: var(--white);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-md);
+  margin-bottom: 0.75rem;
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+  transition: var(--transition);
+}
+.faq-item:hover {
+  border-color: var(--blue-border);
+}
+.faq-header {
+  padding: 1.1rem 1.25rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  font-weight: 600;
+  color: var(--blue-deep);
+  font-size: 0.975rem;
+  user-select: none;
+}
+.faq-header svg {
+  flex-shrink: 0;
+  color: var(--blue-primary);
+  transition: transform 0.25s ease;
+}
+.faq-item.active .faq-header svg {
+  transform: rotate(180deg);
+}
+.faq-content {
+  display: none;
+  padding: 0 1.25rem 1.25rem;
+  font-size: 0.925rem;
+  color: var(--text-body);
+  line-height: 1.7;
+  border-top: 1px solid var(--blue-light);
+  padding-top: 1rem;
+}
+.faq-item.active .faq-content {
+  display: block;
+}
+
+/* ==========================================================================
+   POLICY & ENTERPRISE DOCUMENT COMPONENT
+   ========================================================================== */
+.policy-card {
+  background-color: var(--white);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-lg);
+  padding: 2.25rem;
+  box-shadow: var(--shadow-card);
+  margin-bottom: 2rem;
+}
+.policy-section-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--blue-deep);
+  margin-top: 1.75rem;
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.policy-text {
+  font-size: 0.95rem;
+  color: var(--text-body);
+  line-height: 1.75;
+  margin-bottom: 1rem;
+}
+.policy-list {
+  padding-left: 1.5rem;
+  margin-bottom: 1.25rem;
+  font-size: 0.95rem;
+  color: var(--text-body);
+  line-height: 1.75;
+}
+.policy-list li {
+  margin-bottom: 0.5rem;
+}
+.policy-highlight-box {
+  background-color: var(--blue-light);
+  border-left: 4px solid var(--blue-primary);
+  padding: 1.25rem 1.5rem;
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  margin: 1.5rem 0;
+  font-size: 0.925rem;
+  color: var(--blue-deep);
+  line-height: 1.6;
 }

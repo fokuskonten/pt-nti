@@ -1,9 +1,20 @@
-const CACHE_NAME = 'pt-nti-pwa-v4.0.0';
+const CACHE_NAME = 'pt-nti-pwa-v4.1.0';
 
 const PRECACHE_ASSETS = [
   './',
-  './style.css?v=4.0.0',
-  './app.js?v=4.0.0',
+  './index.html',
+  './layanan.html',
+  './fasilitas.html',
+  './produk.html',
+  './pelanggan.html',
+  './kontak.html',
+  './rfq.html',
+  './faq.html',
+  './kebijakan-mutu.html',
+  './kebijakan-privasi.html',
+  './ketentuan-layanan.html',
+  './style.css?v=4.1.0',
+  './app.js?v=4.1.0',
   './manifest.json',
   './assets/docs/CP_PT_NTI.pdf',
   './assets/images/logo_pti.png',

@@ -110,6 +110,26 @@ const aiKnowledge = [
   {
     keywords: ['klien', 'mitra', 'customer', 'gaya motor'],
     answer: 'PT NTI dipercaya oleh mitra korporat terkemuka seperti PT Gaya Motor (perakitan otomotif), PT Rekaday Multi Adiprima, PT Hashimoto Engineering, PT Haneeda Ekajaya, dan rekanan tier-1 otomotif nasional.'
+  },
+  {
+    keywords: ['moq', 'minimal', 'jumlah', 'minimum order', 'biji', 'pcs'],
+    answer: 'Tidak ada batasan Minimum Order Quantity (MOQ) di PT NTI. Kami melayani pembuatan 1 unit prototipe/custom part darurat, hingga volume serial ratusan pcs per bulan.'
+  },
+  {
+    keywords: ['bayar', 'pembayaran', 'termin', 'top', 'tempo', 'dp', 'faktur', 'ppn'],
+    answer: 'Skema pembayaran pesanan baru adalah Down Payment (DP) 50% dan pelunasan 50% setelah lolos QC FAI. Untuk pelanggan korporat rekanan, tersedia fasilitas Term of Payment (TOP) 14 hingga 30 hari kalender kalender dengan faktur pajak PPN 11%.'
+  },
+  {
+    keywords: ['nda', 'rahasia', 'kerahasiaan', 'bocor', 'hak cipta', 'intelektual'],
+    answer: 'Kerahasiaan gambar teknik 2D/3D Anda dijamin mutlak. PT NTI siap menandatangani perjanjian kerahasiaan resmi (Non-Disclosure Agreement / NDA) sebelum penerimaan file drawing.'
+  },
+  {
+    keywords: ['garansi', 'rework', 'remake', 'rusak', 'salah', 'komplain', 'ng'],
+    answer: 'Kami memberikan jaminan 100% garansi rework atau remake gratis apabila dimensi part tidak sesuai drawing approved yang dilaporkan dalam 7 hari kerja penerimaan.'
+  },
+  {
+    keywords: ['waktu', 'lead time', 'berapa lama', 'hari', 'durasi', 'pengiriman'],
+    answer: 'Lead time pengerjaan part CNC machining standar berkisar 2–5 hari kerja. Untuk tooling dies dan jig inspeksi berkisar 1–3 minggu. Kami juga menyediakan jalur pengerjaan ekspres darurat untuk mengatasi line-stop pabrik pelanggan.'
   }
 ];
 
@@ -207,4 +227,14 @@ document.addEventListener('DOMContentLoaded', () => {
       if (e.key === 'Enter') sendAiMessage();
     });
   }
+
+  // 4. FAQ Accordion Handler
+  document.querySelectorAll('.faq-header').forEach(header => {
+    header.addEventListener('click', () => {
+      const item = header.closest('.faq-item');
+      if (item) {
+        item.classList.toggle('active');
+      }
+    });
+  });
 });
