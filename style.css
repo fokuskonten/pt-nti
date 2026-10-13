@@ -227,14 +227,14 @@ a { color: inherit; text-decoration: none; }
   border: 1px solid var(--blue-border);
 }
 
-/* Buttons - ZERO CAPSULE OUTLINE, MODERN ENTERPRISE SOLID 8PX EDGES */
+/* Buttons - ZERO CAPSULE OUTLINE, MODERN ENTERPRISE SOLID 6PX SHARP EDGES */
 .btn-pill, .btn-action, .btn-pill-primary, .btn-pill-secondary, .btn-pill-lg, .btn-primary, .btn-secondary, .btn-lg {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
   padding: 10px 22px;
-  border-radius: 8px !important;
+  border-radius: 6px !important;
   font-size: 0.9rem;
   font-weight: 600;
   cursor: pointer;
@@ -246,7 +246,7 @@ a { color: inherit; text-decoration: none; }
   background-color: var(--blue-primary);
   color: var(--white);
   box-shadow: var(--shadow-btn);
-  border-radius: 8px !important;
+  border-radius: 6px !important;
 }
 .btn-pill-primary:hover, .btn-primary:hover {
   background-color: var(--blue-hover);
@@ -259,7 +259,7 @@ a { color: inherit; text-decoration: none; }
   color: var(--blue-primary);
   border: 1px solid var(--blue-border);
   box-shadow: var(--shadow-card);
-  border-radius: 8px !important;
+  border-radius: 6px !important;
 }
 .btn-pill-secondary:hover, .btn-secondary:hover {
   background-color: var(--blue-light);
@@ -269,8 +269,24 @@ a { color: inherit; text-decoration: none; }
 .btn-pill-lg, .btn-lg {
   padding: 13px 28px;
   font-size: 1rem;
-  border-radius: 8px !important;
+  border-radius: 6px !important;
 }
+
+/* Responsive Form Rows */
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+@media (max-width: 768px) {
+  .form-row {
+    grid-template-columns: 1fr !important;
+    gap: 1.25rem !important;
+    margin-bottom: 1.25rem !important;
+  }
+}
+
 
 /* Hero */
 .hero-wrapper { padding: 4.5rem 0 3.5rem; background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%); border-bottom: 1px solid var(--border-card); }
@@ -422,26 +438,32 @@ a { color: inherit; text-decoration: none; }
   
   .brand-link {
     gap: 10px;
-    max-width: calc(100% - 130px);
+    max-width: calc(100% - 50px);
   }
   .brand-logo-img {
-    width: 38px;
-    height: 38px;
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
   }
   .brand-title {
-    font-size: 0.825rem;
+    font-size: 0.9rem;
+    font-weight: 800;
     letter-spacing: -0.01em;
   }
   .brand-subtitle {
-    font-size: 0.6rem;
+    font-size: 0.65rem;
+    color: var(--blue-primary);
+    font-weight: 600;
   }
 
   .nav-actions {
-    gap: 8px;
+    gap: 0;
   }
-  .btn-nav-cta {
-    padding: 7px 12px !important;
-    font-size: 0.775rem !important;
+  .nav-actions .btn-nav-cta {
+    display: none !important;
+  }
+  .nav-toggle {
+    display: flex !important;
   }
 
   .site-nav {

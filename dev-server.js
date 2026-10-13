@@ -64,23 +64,40 @@ const server = http.createServer((req, res) => {
 
   // Parse URL
   let parsedUrl = req.url.split('?')[0];
-  if (parsedUrl === '/') {
+  if (parsedUrl.startsWith('/pt-nti')) {
+    parsedUrl = parsedUrl.slice('/pt-nti'.length);
+  }
+  if (!parsedUrl || parsedUrl === '/') {
     parsedUrl = '/index.html';
   }
 
   let filePath = path.join(ROOT_DIR, parsedUrl);
 
-  // Check direct file or .html fallback (Clean URL support)
-  if (!fs.existsSync(filePath) || fs.statSync(filePath).isDirectory()) {
-    if (fs.existsSync(filePath + '.html')) {
-      filePath = filePath + '.html';
-    } else {
-      res.writeHead(404, { 'Content-Type': 'text/plain; charset=utf-8' });
-      res.end('404 Not Found - PT. Nurcahya Teknik Industry');
-      return;
+  // Check direct file or fallback
+  let fileToServe = null;
+  if (fs.existsSync(filePath)) {
+    const stat = fs.statSync(filePath);
+    if (stat.isFile()) {
+      fileToServe = filePath;
+    } else if (stat.isDirectory()) {
+      const indexInDir = path.join(filePath, 'index.html');
+      if (fs.existsSync(indexInDir)) {
+        fileToServe = indexInDir;
+      }
     }
   }
 
+  if (!fileToServe && fs.existsSync(filePath + '.html')) {
+    fileToServe = filePath + '.html';
+  }
+
+  if (!fileToServe) {
+    res.writeHead(404, { 'Content-Type': 'text/plain; charset=utf-8' });
+    res.end('404 Not Found - PT. Nurcahya Teknik Industry');
+    return;
+  }
+
+  filePath = fileToServe;
   const ext = path.extname(filePath).toLowerCase();
   const contentType = MIME_TYPES[ext] || 'application/octet-stream';
 
