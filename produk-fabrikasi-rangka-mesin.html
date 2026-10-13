@@ -5,16 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fabrikasi Rangka Dudukan Mesin & Rak Industri Heavy Duty | PT. Nurcahya Teknik Industry</title>
   <meta name="description" content="Fabrikasi struktur rangka baja kokoh untuk dudukan mesin pabrik, struktur konveyor, dan sistem rak penyimpanan beban tonase berat.">
-  <link rel="icon" type="image/png" href="assets/images/icon-192.png">
+  
   <link rel="manifest" href="manifest.json">
   <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/images/favicon-64.png">
+  <link rel="apple-touch-icon" href="assets/images/favicon-64.png">
 </head>
 <body>
   
-  <header class="site-nav">
+      <header class="site-nav">
     <div class="container nav-wrapper">
-      <a href="index.html" class="brand-link" aria-label="Beranda PT Nurcahya Teknik Industry">
-        <img src="assets/images/logo_pti.png" alt="Logo PT Nurcahya Teknik Industry" class="brand-logo-img">
+      <a href="./" class="brand-link" aria-label="PT. Nurcahya Teknik Industry">
+        <img src="assets/images/logo_pti.png" alt="Logo PT NTI" class="brand-logo-img">
         <div class="brand-text">
           <span class="brand-title">PT. NURCAHYA TEKNIK INDUSTRY</span>
           <span class="brand-subtitle">Precision Machining & Tooling</span>
@@ -22,26 +25,41 @@
       </a>
 
       <nav class="nav-links">
-        <a href="index.html" class="nav-item ">Beranda</a>
-        <a href="fasilitas.html" class="nav-item ">Fasilitas Mesin</a>
-        <a href="produk.html" class="nav-item active">Produk & Portofolio</a>
-        <a href="pelanggan.html" class="nav-item ">Mitra Pelanggan</a>
-        <a href="kontak.html" class="nav-item ">Kontak & Lokasi</a>
+        <a href="./" class="nav-item ">Beranda</a>
+        <a href="fasilitas" class="nav-item ">Fasilitas</a>
+        <a href="produk" class="nav-item active">Portofolio</a>
+        <a href="pelanggan" class="nav-item ">Klien</a>
+        <a href="kontak" class="nav-item ">Kontak</a>
       </nav>
 
-      <div>
-        <a href="rfq.html" class="btn-pill btn-pill-primary">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
-          <span>Minta Penawaran (RFQ)</span>
+      <div class="nav-actions">
+        <a href="rfq" class="btn-pill btn-pill-primary btn-nav-cta">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+          <span>Minta RFQ</span>
         </a>
+        <button type="button" class="nav-toggle" id="navToggle" aria-label="Buka Menu Navigasi">
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+        </button>
+      </div>
+    </div>
+    <div class="mobile-nav-drawer" id="mobileNavDrawer">
+      <div class="container mobile-nav-inner">
+        <a href="./" class="mobile-nav-item ">Beranda</a>
+        <a href="fasilitas" class="mobile-nav-item ">Fasilitas Mesin</a>
+        <a href="produk" class="mobile-nav-item active">Portofolio Produk</a>
+        <a href="pelanggan" class="mobile-nav-item ">Klien & Mitra</a>
+        <a href="kontak" class="mobile-nav-item ">Kontak & E-Card (.vcf)</a>
+        <a href="rfq" class="mobile-nav-item mobile-nav-highlight">Minta Penawaran (RFQ) &rarr;</a>
       </div>
     </div>
   </header>
 
   <main class="container section-py">
     <div class="breadcrumb-nav">
-      <a href="index.html">Beranda</a> <span>/</span>
-      <a href="produk.html">Produk & Portofolio</a> <span>/</span>
+      <a href="./">Beranda</a> <span>/</span>
+      <a href="produk">Produk & Portofolio</a> <span>/</span>
       <span style="color:var(--blue-deep); font-weight:600;">Fabrikasi Rangka Dudukan Mesin & Rak Industri Heavy Duty</span>
     </div>
 
@@ -51,7 +69,7 @@
       </div>
 
       <div class="detail-info">
-        <span class="detail-badge">Fabrikasi & Material Handling</span>
+        <div class="detail-kicker">Fabrikasi & Material Handling</div>
         <h1 class="detail-title">Fabrikasi Rangka Dudukan Mesin & Rak Industri Heavy Duty</h1>
         <p class="detail-desc">Fabrikasi struktur rangka baja kokoh untuk dudukan mesin pabrik, struktur konveyor, dan sistem rak penyimpanan beban tonase berat.</p>
         <p style="font-size:0.95rem; color:var(--text-muted); line-height:1.7; margin-bottom:2rem;">Struktur rangka mesin industri memerlukan pengelasan yang kokoh dan bebas tegangan puntir agar landasan mesin tetap rata saat dibebani mesin bergetar. Kami menggunakan baja profil tebal (hollow, UNP, siku SS400) yang dipotong bersudut presisi, dilas dengan teknik MIG/MAG penetrasi penuh, dan diratakan bidang dudukannya melalui proses permesinan (machining milling) sebelum dilapisi cat epoxy powder coating anti-karat.</p>
@@ -113,7 +131,7 @@
       <h2 class="promo-title">Struktur Dudukan Mesin Kokoh, Tahan Getaran, dan Berumur Panjang</h2>
       <p class="promo-text">Hindari rangka mesin yang melengkung atau retak lasan akibat beban getaran dinamis. Percayakan fabrikasi mekanikal workshop Anda kepada PT NTI. Dapatkan struktur yang kokoh, rapi, dan bergaransi kekuatan beban.</p>
       <div style="display:flex; flex-wrap:wrap; gap:1rem;">
-        <a href="rfq.html" class="btn-pill btn-pill-primary">
+        <a href="rfq" class="btn-pill btn-pill-primary">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
           <span>Kirim Spesifikasi Drawing Sekarang</span>
         </a>
@@ -125,7 +143,7 @@
 
     <!-- ALUR PENGERJAAN -->
     <div style="background-color:var(--white); border:1px solid var(--border-card); border-radius:var(--radius-lg); padding:2.5rem; box-shadow:var(--shadow-card); margin-top:3rem; margin-bottom:3rem;">
-      <h3 style="font-size:1.4rem; font-weight:800; color:var(--blue-deep); margin-bottom:1.5rem;">Standar Tahapan Rekayasa Manufaktur PT NTI</h3>
+      <h3 style="font-size:1.4rem; font-weight:800; color:var(--blue-deep); margin-bottom:1.5rem;">Standar Tahapan Manufaktur Presisi PT NTI</h3>
       <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:1.5rem;">
         <div style="padding:1.25rem; border-left:3px solid var(--blue-primary); background:var(--bg-page); border-radius:0 var(--radius-md) var(--radius-md) 0;">
           <div style="font-size:0.75rem; font-weight:700; color:var(--blue-primary); margin-bottom:0.25rem;">01. REVIEW DRAWING CAD</div>
@@ -171,24 +189,24 @@
         <div>
           <div class="footer-col-title">Layanan & Fasilitas</div>
           <ul class="footer-links">
-            <li><a href="layanan-cnc-milling-3axis.html" class="footer-link">CNC Milling 3-Axis (1000x500 mm)</a></li>
-            <li><a href="layanan-cnc-bubut.html" class="footer-link">CNC Bubut Turning</a></li>
-            <li><a href="layanan-milling-manual.html" class="footer-link">Milling Manual Konvensional</a></li>
-            <li><a href="produk.html" class="footer-link">Stamping Dies & Mold</a></li>
-            <li><a href="produk.html" class="footer-link">Jig & Checking Fixture</a></li>
-            <li><a href="produk.html" class="footer-link">Fabrikasi Rak & Trolley</a></li>
+            <li><a href="layanan-cnc-milling-3axis" class="footer-link">CNC Milling 3-Axis (1000x500 mm)</a></li>
+            <li><a href="layanan-cnc-bubut" class="footer-link">CNC Bubut Turning</a></li>
+            <li><a href="layanan-milling-manual" class="footer-link">Milling Manual Konvensional</a></li>
+            <li><a href="produk" class="footer-link">Stamping Dies & Mold</a></li>
+            <li><a href="produk" class="footer-link">Jig & Checking Fixture</a></li>
+            <li><a href="produk" class="footer-link">Fabrikasi Rak & Trolley</a></li>
           </ul>
         </div>
 
         <div>
           <div class="footer-col-title">Navigasi Resmi</div>
           <ul class="footer-links">
-            <li><a href="index.html" class="footer-link">Beranda Utama</a></li>
-            <li><a href="fasilitas.html" class="footer-link">Daftar Fasilitas Mesin</a></li>
-            <li><a href="produk.html" class="footer-link">Katalog Portofolio Part</a></li>
-            <li><a href="pelanggan.html" class="footer-link">Kemitraan & Rekam Jejak</a></li>
-            <li><a href="rfq.html" class="footer-link">Pengajuan Penawaran (RFQ)</a></li>
-            <li><a href="kontak.html" class="footer-link">Kontak & Workshop Fisik</a></li>
+            <li><a href="./" class="footer-link">Beranda Utama</a></li>
+            <li><a href="fasilitas" class="footer-link">Daftar Fasilitas Mesin</a></li>
+            <li><a href="produk" class="footer-link">Katalog Portofolio Part</a></li>
+            <li><a href="pelanggan" class="footer-link">Kemitraan & Rekam Jejak</a></li>
+            <li><a href="rfq" class="footer-link">Pengajuan Penawaran (RFQ)</a></li>
+            <li><a href="kontak" class="footer-link">Kontak & Workshop Fisik</a></li>
           </ul>
         </div>
 

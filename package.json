@@ -1,0 +1,17 @@
+{
+  "name": "pt-nurcahya-teknik-industry",
+  "version": "1.0.0",
+  "description": "Ekosistem Web PWA PT. Nurcahya Teknik Industry",
+  "scripts": {
+    "dev": "node dev-server.js",
+    "start": "node dev-server.js"
+  },
+  "keywords": [
+    "machining",
+    "dies",
+    "jig",
+    "pwa"
+  ],
+  "author": "PT. Nurcahya Teknik Industry",
+  "license": "ISC"
+}

@@ -159,6 +159,31 @@ function sendAiMessage() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+  // Mobile Nav Toggle Handler
+  const navToggle = document.getElementById('navToggle');
+  const mobileNavDrawer = document.getElementById('mobileNavDrawer');
+  if (navToggle && mobileNavDrawer) {
+    navToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      navToggle.classList.toggle('active');
+      mobileNavDrawer.classList.toggle('active');
+    });
+
+    mobileNavDrawer.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navToggle.classList.remove('active');
+        mobileNavDrawer.classList.remove('active');
+      });
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!navToggle.contains(e.target) && !mobileNavDrawer.contains(e.target)) {
+        navToggle.classList.remove('active');
+        mobileNavDrawer.classList.remove('active');
+      }
+    });
+  }
+
   const fab = document.getElementById('aiChatFabBtn');
   const win = document.getElementById('aiChatWindow');
   const close = document.getElementById('aiChatCloseBtn');

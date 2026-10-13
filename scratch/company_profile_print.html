@@ -1,0 +1,1711 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Company Profile PT. Nurcahya Teknik Industry 2026</title>
+  <style>
+    /* ==========================================================================
+       PT. NURCAHYA TEKNIK INDUSTRY - EXECUTIVE COMPANY PROFILE 2026
+       Standard: A4 Landscape (297mm x 210mm) | Print Quality 300 DPI
+       Palette: Corporate Blue (#1d4ed8 / #0f2b48) & Pure White (#ffffff / #f8fafc)
+       Strict: Corporate Blue & Pure White palette, high DPI print, strict enterprise terms
+       ========================================================================== */
+
+    @page {
+      size: 297mm 210mm;
+      margin: 0;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      width: 297mm;
+      background-color: #f8fafc;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      color: #0f2b48;
+      line-height: 1.45;
+      -webkit-font-smoothing: antialiased;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .page {
+      width: 297mm;
+      height: 210mm;
+      max-height: 210mm;
+      padding: 9mm 12mm 8mm 12mm;
+      background: #ffffff;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      page-break-after: always;
+      break-after: page;
+    }
+
+    .page:last-child {
+      page-break-after: avoid;
+      break-after: avoid;
+    }
+
+    /* TYPOGRAPHY & COLORS */
+    .text-primary { color: #1d4ed8; }
+    .text-navy { color: #0f2b48; }
+    .text-muted { color: #64748b; }
+    .text-body { color: #334155; }
+
+    /* RUNNING HEADER */
+    .running-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 2.2mm;
+      border-bottom: 1.5px solid #1d4ed8;
+      margin-bottom: 3.5mm;
+    }
+
+    .running-header-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .running-header-logo {
+      height: 26px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    .running-header-title {
+      font-size: 11pt;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      color: #0f2b48;
+    }
+
+    .running-header-subtitle {
+      font-size: 8pt;
+      font-weight: 600;
+      color: #1d4ed8;
+      margin-left: 8px;
+      padding-left: 8px;
+      border-left: 1px solid #cbd5e1;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+    }
+
+    .running-header-right {
+      font-size: 7.5pt;
+      font-weight: 700;
+      color: #1d4ed8;
+      background-color: #eff6ff;
+      border: 1px solid #bfdbfe;
+      padding: 3px 8px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* RUNNING FOOTER */
+    .running-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 2mm;
+      border-top: 1px solid #e2e8f0;
+      font-size: 7.2pt;
+      color: #64748b;
+      margin-top: 2.5mm;
+    }
+
+    .running-footer-left {
+      font-weight: 600;
+      color: #0f2b48;
+    }
+
+    .running-footer-center {
+      color: #64748b;
+    }
+
+    .running-footer-right {
+      font-weight: 700;
+      color: #1d4ed8;
+      background-color: #eff6ff;
+      padding: 1px 7px;
+      border-radius: 4px;
+      border: 1px solid #dbeafe;
+    }
+
+    /* CARD COMPONENTS */
+    .corp-box {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      box-shadow: 0 1px 3px rgba(15, 43, 72, 0.04);
+      padding: 10px 12px;
+    }
+
+    .corp-box-blue {
+      background: #f8fafc;
+      border: 1px solid #bfdbfe;
+      border-left: 4px solid #1d4ed8;
+      border-radius: 8px;
+      padding: 10px 12px;
+    }
+
+    .badge-tag {
+      display: inline-block;
+      font-size: 6.8pt;
+      font-weight: 700;
+      color: #1d4ed8;
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+      padding: 2px 6px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+    }
+
+    /* ==========================================================================
+       PAGE 1: COVER EKSEKUTIF
+       ========================================================================== */
+    .cover-container {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background: #ffffff;
+      border: 1.5px solid #1d4ed8;
+      border-radius: 8px;
+      padding: 12mm 14mm 10mm 14mm;
+      position: relative;
+    }
+
+    .cover-top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1.5px solid #e2e8f0;
+      padding-bottom: 5mm;
+    }
+
+    .cover-logo-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .cover-logo-img {
+      height: 52px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    .cover-brand-title {
+      font-size: 17pt;
+      font-weight: 900;
+      color: #0f2b48;
+      letter-spacing: 0.8px;
+    }
+
+    .cover-brand-sub {
+      font-size: 8.5pt;
+      font-weight: 600;
+      color: #1d4ed8;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .cover-badge-top {
+      background: #0f2b48;
+      color: #ffffff;
+      font-size: 8.5pt;
+      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: 6px;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+    }
+
+    .cover-hero {
+      margin: 4mm 0 3mm 0;
+    }
+
+    .cover-kicker {
+      display: inline-block;
+      font-size: 9pt;
+      font-weight: 800;
+      color: #1d4ed8;
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+      padding: 3px 12px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom: 2.5mm;
+    }
+
+    .cover-main-title {
+      font-size: 31pt;
+      font-weight: 900;
+      color: #0f2b48;
+      line-height: 1.1;
+      letter-spacing: -0.5px;
+      margin-bottom: 2.5mm;
+    }
+
+    .cover-subtitle {
+      font-size: 13.5pt;
+      font-weight: 700;
+      color: #1d4ed8;
+      margin-bottom: 3.5mm;
+      line-height: 1.3;
+    }
+
+    .cover-desc {
+      font-size: 9pt;
+      color: #334155;
+      line-height: 1.55;
+      max-width: 95%;
+    }
+
+    .cover-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin-top: 3mm;
+    }
+
+    .cover-card {
+      background: #f8fafc;
+      border: 1px solid #cbd5e1;
+      border-top: 3px solid #1d4ed8;
+      border-radius: 6px;
+      padding: 9px 11px;
+    }
+
+    .cover-card-metric {
+      font-size: 13pt;
+      font-weight: 900;
+      color: #0f2b48;
+      margin-bottom: 2px;
+    }
+
+    .cover-card-title {
+      font-size: 8pt;
+      font-weight: 700;
+      color: #1d4ed8;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+      margin-bottom: 3px;
+    }
+
+    .cover-card-text {
+      font-size: 7.2pt;
+      color: #475569;
+      line-height: 1.35;
+    }
+
+    .cover-footer-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+      border-radius: 6px;
+      padding: 6px 14px;
+      font-size: 7.8pt;
+      margin-top: 3.5mm;
+    }
+
+    /* ==========================================================================
+       PAGE 2: PROFIL, VISI, MISI & KOMITMEN MUTU
+       ========================================================================== */
+    .p2-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      height: 100%;
+    }
+
+    .p2-section-title {
+      font-size: 10.5pt;
+      font-weight: 800;
+      color: #0f2b48;
+      border-bottom: 1.5px solid #1d4ed8;
+      padding-bottom: 4px;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .value-item {
+      display: flex;
+      gap: 8px;
+      align-items: flex-start;
+      margin-bottom: 6px;
+    }
+
+    .value-number {
+      background: #1d4ed8;
+      color: #ffffff;
+      font-size: 7.5pt;
+      font-weight: 800;
+      width: 17px;
+      height: 17px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 4px;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .value-content {
+      font-size: 7.6pt;
+      color: #334155;
+      line-height: 1.35;
+    }
+
+    .value-content strong {
+      color: #0f2b48;
+    }
+
+    .tolerance-badge-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 7px;
+      margin-top: 6px;
+    }
+
+    .tolerance-pill {
+      background: #ffffff;
+      border: 1px solid #bfdbfe;
+      border-radius: 6px;
+      padding: 6px 8px;
+      text-align: center;
+    }
+
+    .tolerance-val {
+      font-size: 11pt;
+      font-weight: 900;
+      color: #1d4ed8;
+    }
+
+    .tolerance-lbl {
+      font-size: 6.8pt;
+      font-weight: 700;
+      color: #475569;
+      text-transform: uppercase;
+    }
+
+    /* ==========================================================================
+       PAGE 3: FASILITAS WORKSHOP & SPESIFIKASI MESIN
+       ========================================================================== */
+    .p3-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 11px;
+      height: 100%;
+    }
+
+    .machine-card {
+      background: #ffffff;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      padding: 9px 11px;
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .machine-img {
+      width: 108px;
+      height: 94px;
+      object-fit: cover;
+      border-radius: 6px;
+      border: 1px solid #cbd5e1;
+      flex-shrink: 0;
+    }
+
+    .machine-img-placeholder {
+      width: 108px;
+      height: 94px;
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+      border-radius: 6px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #1d4ed8;
+      text-align: center;
+      padding: 6px;
+      flex-shrink: 0;
+    }
+
+    .machine-info {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .machine-title {
+      font-size: 8.8pt;
+      font-weight: 800;
+      color: #0f2b48;
+      line-height: 1.25;
+    }
+
+    .machine-spec-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 7.2pt;
+      border-bottom: 1px dashed #e2e8f0;
+      padding-bottom: 1.5px;
+    }
+
+    .machine-spec-label {
+      color: #64748b;
+      font-weight: 600;
+    }
+
+    .machine-spec-val {
+      color: #0f2b48;
+      font-weight: 700;
+      text-align: right;
+    }
+
+    /* ==========================================================================
+       PAGE 4: PORTOFOLIO PART PRESISI
+       ========================================================================== */
+    .p4-row-top {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-bottom: 9px;
+    }
+
+    .p4-row-bottom {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+
+    .part-card-compact {
+      background: #ffffff;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      padding: 8px 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .part-card-horizontal {
+      background: #ffffff;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      padding: 8px 11px;
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .part-img-thumb {
+      width: 100%;
+      height: 72px;
+      object-fit: cover;
+      border-radius: 5px;
+      border: 1px solid #e2e8f0;
+    }
+
+    .part-img-side {
+      width: 110px;
+      height: 82px;
+      object-fit: cover;
+      border-radius: 6px;
+      border: 1px solid #cbd5e1;
+      flex-shrink: 0;
+    }
+
+    .part-title {
+      font-size: 8.2pt;
+      font-weight: 800;
+      color: #0f2b48;
+      line-height: 1.25;
+    }
+
+    .part-meta {
+      font-size: 7pt;
+      color: #1d4ed8;
+      font-weight: 700;
+    }
+
+    .part-desc {
+      font-size: 6.9pt;
+      color: #475569;
+      line-height: 1.35;
+    }
+
+    /* ==========================================================================
+       PAGE 5: ALAT BANTU PRODUKSI & FABRIKASI
+       ========================================================================== */
+    .p5-row-top {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 11px;
+      margin-bottom: 9px;
+    }
+
+    .p5-row-bottom {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+
+    .fixture-card {
+      background: #ffffff;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      padding: 8px 11px;
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .fixture-img {
+      width: 110px;
+      height: 82px;
+      object-fit: cover;
+      border-radius: 6px;
+      border: 1px solid #cbd5e1;
+      flex-shrink: 0;
+    }
+
+    .fab-card {
+      background: #ffffff;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      padding: 7px 9px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .fab-img {
+      width: 100%;
+      height: 68px;
+      object-fit: cover;
+      border-radius: 5px;
+      border: 1px solid #e2e8f0;
+    }
+
+    /* ==========================================================================
+       PAGE 6: ALUR KERJA MANUFAKTUR & SISTEM MUTU
+       ========================================================================== */
+    .workflow-steps {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+
+    .step-box {
+      background: #f8fafc;
+      border: 1px solid #cbd5e1;
+      border-top: 3.5px solid #1d4ed8;
+      border-radius: 6px;
+      padding: 8px 8px;
+      position: relative;
+    }
+
+    .step-number {
+      font-size: 13pt;
+      font-weight: 900;
+      color: #1d4ed8;
+      line-height: 1;
+      margin-bottom: 3px;
+    }
+
+    .step-title {
+      font-size: 7.7pt;
+      font-weight: 800;
+      color: #0f2b48;
+      margin-bottom: 4px;
+      line-height: 1.2;
+    }
+
+    .step-text {
+      font-size: 6.8pt;
+      color: #475569;
+      line-height: 1.35;
+    }
+
+    .p6-bottom-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      flex: 1;
+    }
+
+    .qc-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 7.2pt;
+    }
+
+    .qc-table th {
+      background: #eff6ff;
+      color: #0f2b48;
+      font-weight: 700;
+      text-align: left;
+      padding: 4px 6px;
+      border-bottom: 1.5px solid #bfdbfe;
+    }
+
+    .qc-table td {
+      padding: 3.5px 6px;
+      border-bottom: 1px solid #e2e8f0;
+      color: #334155;
+    }
+
+    .qc-table tr:nth-child(even) td {
+      background: #f8fafc;
+    }
+
+    /* ==========================================================================
+       PAGE 7: REKAM JEJAK KEMITRAAN KLIEN
+       ========================================================================== */
+    .p7-client-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 9px;
+      margin-bottom: 11px;
+    }
+
+    .client-card {
+      background: #ffffff;
+      border: 1px solid #cbd5e1;
+      border-left: 3.5px solid #1d4ed8;
+      border-radius: 6px;
+      padding: 8px 10px;
+    }
+
+    .client-name {
+      font-size: 8.3pt;
+      font-weight: 800;
+      color: #0f2b48;
+      margin-bottom: 2px;
+      letter-spacing: 0.2px;
+    }
+
+    .client-sector {
+      font-size: 7pt;
+      font-weight: 700;
+      color: #1d4ed8;
+      margin-bottom: 3px;
+    }
+
+    .client-desc {
+      font-size: 6.7pt;
+      color: #475569;
+      line-height: 1.3;
+    }
+
+    .p7-pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 9px;
+    }
+
+    .pillar-card {
+      background: #f8fafc;
+      border: 1px solid #bfdbfe;
+      border-radius: 6px;
+      padding: 8px 9px;
+    }
+
+    .pillar-title {
+      font-size: 7.7pt;
+      font-weight: 800;
+      color: #0f2b48;
+      margin-bottom: 3px;
+    }
+
+    .pillar-text {
+      font-size: 6.8pt;
+      color: #475569;
+      line-height: 1.35;
+    }
+
+    /* ==========================================================================
+       PAGE 8: KONTAK EKSEKUTIF, AKSES WORKSHOP & RFQ
+       ========================================================================== */
+    .p8-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      height: 100%;
+    }
+
+    .contact-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 4px 0;
+      border-bottom: 1px dashed #e2e8f0;
+      font-size: 7.5pt;
+    }
+
+    .contact-label {
+      color: #64748b;
+      font-weight: 600;
+      width: 32%;
+    }
+
+    .contact-val {
+      color: #0f2b48;
+      font-weight: 700;
+      width: 68%;
+      text-align: right;
+    }
+
+    .rfq-step-row {
+      display: flex;
+      gap: 8px;
+      align-items: flex-start;
+      margin-bottom: 6px;
+    }
+
+    .rfq-step-num {
+      background: #1d4ed8;
+      color: #ffffff;
+      font-size: 7pt;
+      font-weight: 800;
+      width: 16px;
+      height: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 4px;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .rfq-step-text {
+      font-size: 7.3pt;
+      color: #334155;
+      line-height: 1.35;
+    }
+
+    .web-portal-card {
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+      border-radius: 6px;
+      padding: 9px 12px;
+      margin-top: 8px;
+      text-align: center;
+    }
+
+    .web-portal-url {
+      font-size: 9.5pt;
+      font-weight: 800;
+      color: #1d4ed8;
+      letter-spacing: 0.3px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==========================================================================
+       PAGE 1: COVER DEPAN EKSEKUTIF
+       ========================================================================== -->
+  <div class="page">
+    <div class="cover-container">
+      
+      <!-- Top Bar -->
+      <div class="cover-top-bar">
+        <div class="cover-logo-wrapper">
+          <img src="../assets/images/logo_pti.png" alt="Logo PT NTI" class="cover-logo-img">
+          <div>
+            <div class="cover-brand-title">PT. NURCAHYA TEKNIK INDUSTRY</div>
+            <div class="cover-brand-sub">Precision Machining • Tooling Dies • Checking Fixture • Industrial Fabrication</div>
+          </div>
+        </div>
+        <div class="cover-badge-top">EDISI EKSEKUTIF 2026</div>
+      </div>
+
+      <!-- Main Hero Content -->
+      <div class="cover-hero">
+        <span class="cover-kicker">WORKSHOP RESMI CIKARANG PUSAT • KABUPATEN BEKASI</span>
+        <h1 class="cover-main-title">COMPANY PROFILE 2026</h1>
+        <div class="cover-subtitle">Mitra Manufaktur Presisi CNC, Dies, Jig & Fabrikasi Industri</div>
+        <p class="cover-desc">
+          Solusi terintegrasi pembuatan komponen berakurasi tinggi (toleransi mikron), rancang bangun tooling stamping dies heavy duty, alat bantu checking fixture jig terkalibrasi, serta fabrikasi struktur material handling untuk rantai pasok industri perakitan otomotif tier-1 dan manufaktur nasional.
+        </p>
+      </div>
+
+      <!-- Highlights 4-Column Grid -->
+      <div class="cover-grid">
+        <div class="cover-card">
+          <div class="cover-card-metric">1.000 × 500</div>
+          <div class="cover-card-title">Kapasitas Meja Kerja (mm)</div>
+          <div class="cover-card-text">Dua unit CNC Milling 3-Axis (Hision & GUT) kapasitas beban s/d 600 kg untuk cetakan dan part besar.</div>
+        </div>
+
+        <div class="cover-card">
+          <div class="cover-card-metric">±0.005 mm</div>
+          <div class="cover-card-title">Toleransi Presisi Mikron</div>
+          <div class="cover-card-text">Optical linear scale feedback dan instrumen ukur Mitutoyo terkalibrasi untuk akurasi dimensi kritis.</div>
+        </div>
+
+        <div class="cover-card">
+          <div class="cover-card-metric">Zero Defect</div>
+          <div class="cover-card-title">Komitmen Mutu & Strict NDA</div>
+          <div class="cover-card-text">Inspeksi dimensi menyeluruh berdokumen QC Report serta jaminan kerahasiaan gambar kerja mitra.</div>
+        </div>
+
+        <div class="cover-card">
+          <div class="cover-card-metric">Cikarang Pusat</div>
+          <div class="cover-card-title">Lokasi Kluster Strategis</div>
+          <div class="cover-card-text">Akses cepat ke zona industri GIIC Deltamas, Jababeka, Delta Silicon, EJIP, dan MM2100 Bekasi.</div>
+        </div>
+      </div>
+
+      <!-- Footer Bar -->
+      <div class="cover-footer-bar">
+        <div><strong>Workshop:</strong> Bugel Salam Poncol RT 02/06, Desa Hegarmukti, Cikarang Pusat, Kab. Bekasi</div>
+        <div><strong>WhatsApp / RFQ:</strong> +62 813-8415-1264</div>
+        <div><strong>Portal Resmi:</strong> https://pt-nurcahya-teknik-industry.pages.dev/</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       PAGE 2: PROFIL PERUSAHAAN, VISI, MISI & KOMITMEN MUTU
+       ========================================================================== -->
+  <div class="page">
+    <div class="running-header">
+      <div class="running-header-left">
+        <img src="../assets/images/logo_pti.png" alt="Logo PT NTI" class="running-header-logo">
+        <span class="running-header-title">PT. NURCAHYA TEKNIK INDUSTRY</span>
+        <span class="running-header-subtitle">Profil Perusahaan & Komitmen Mutu</span>
+      </div>
+      <div class="running-header-right">EDISI EKSEKUTIF 2026</div>
+    </div>
+
+    <div class="p2-layout">
+      <!-- Kolom Kiri -->
+      <div style="display:flex; flex-direction:column; gap:9px;">
+        <div class="corp-box" style="flex:1;">
+          <div class="p2-section-title">
+            <span>Tentang Perusahaan</span>
+            <span class="badge-tag">Company Overview</span>
+          </div>
+          <p style="font-size:7.6pt; color:#334155; line-height:1.48; margin-bottom:7px;">
+            <strong>PT. Nurcahya Teknik Industry</strong> adalah entitas manufaktur presisi yang didirikan untuk menjawab kebutuhan komponen berkualitas tinggi di sektor industri perakitan otomotif dan manufaktur nasional. Beroperasi di sentra industri Cikarang Pusat, Kabupaten Bekasi, workshop kami mengintegrasikan fasilitas pemesinan CNC 3-Axis modern, CNC Bubut turning berkecepatan tinggi, lini milling konvensional, serta bengkel fabrikasi logam struktural.
+          </p>
+          <p style="font-size:7.6pt; color:#334155; line-height:1.48;">
+            Kami berkomitmen menjadi mitra andalan bagi industri otomotif tier-1 dan integrator sistem manufaktur dalam menghasilkan komponen presisi mikron yang andal, tepat jadwal, dan berdaya saing tinggi.
+          </p>
+        </div>
+
+        <div class="corp-box-blue" style="flex:1.2;">
+          <div class="p2-section-title">
+            <span>4 Nilai Inti Operasional (Core Values)</span>
+            <span class="badge-tag">Enterprise Standards</span>
+          </div>
+          
+          <div class="value-item">
+            <div class="value-number">1</div>
+            <div class="value-content">
+              <strong>Kepatuhan Toleransi Dimensi Mutlak:</strong> Mematuhi setiap spesifikasi dan batas toleransi pada gambar kerja (drawing) resmi tanpa kompromi.
+            </div>
+          </div>
+
+          <div class="value-item">
+            <div class="value-number">2</div>
+            <div class="value-content">
+              <strong>Ketepatan Waktu Pengiriman (On-Time Delivery):</strong> Pengendalian jadwal produksi yang ketat untuk memastikan tidak ada kendala hambatan jalur perakitan pada pabrik mitra.
+            </div>
+          </div>
+
+          <div class="value-item">
+            <div class="value-number">3</div>
+            <div class="value-content">
+              <strong>Kerahasiaan Desain Mitra (Strict NDA):</strong> Perlindungan mutlak atas kekayaan intelektual, gambar teknik 2D/3D, dan data prototipe milik seluruh pelanggan.
+            </div>
+          </div>
+
+          <div class="value-item">
+            <div class="value-number">4</div>
+            <div class="value-content">
+              <strong>Efisiensi Biaya Manufaktur:</strong> Memberikan penawaran harga kompetitif melalui optimasi lintasan pahat (toolpath) dan pemilihan material yang tepat guna.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Kolom Kanan -->
+      <div style="display:flex; flex-direction:column; gap:9px;">
+        <div class="corp-box" style="flex:1;">
+          <div class="p2-section-title">
+            <span>Visi & Misi Korporat</span>
+            <span class="badge-tag">Vision & Mission</span>
+          </div>
+          <div style="margin-bottom:7px;">
+            <div style="font-size:7.8pt; font-weight:800; color:#1d4ed8; margin-bottom:2px;">VISI PERUSAHAAN</div>
+            <p style="font-size:7.4pt; color:#334155; line-height:1.4;">
+              Menjadi mitra manufaktur presisi terdepan dan terpercaya di tingkat nasional yang menghasilkan komponen permesinan, tooling, dan peralatan bantu berkualitas kelas dunia dengan konsistensi toleransi tinggi.
+            </p>
+          </div>
+          <div>
+            <div style="font-size:7.8pt; font-weight:800; color:#1d4ed8; margin-bottom:2px;">MISI PERUSAHAAN</div>
+            <div class="value-item" style="margin-bottom:3px;">
+              <div class="value-number">A</div>
+              <div class="value-content">Menghadirkan layanan pemesinan presisi CNC, perakitan stamping dies, jig fixture, dan fabrikasi industri berstandar zero defect.</div>
+            </div>
+            <div class="value-item" style="margin-bottom:3px;">
+              <div class="value-number">B</div>
+              <div class="value-content">Mengimplementasikan teknologi permesinan mutakhir serta tenaga ahli berkualifikasi untuk memenuhi standar toleransi mikron industri otomotif.</div>
+            </div>
+            <div class="value-item">
+              <div class="value-number">C</div>
+              <div class="value-content">Membangun kemitraan strategis jangka panjang yang transparan, andal, dan mengedepankan ketepatan jadwal pengiriman.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="corp-box" style="flex:1;">
+          <div class="p2-section-title">
+            <span>Komitmen Mutu & Toleransi Presisi Mikron</span>
+            <span class="badge-tag">Quality Assurance</span>
+          </div>
+          <p style="font-size:7.3pt; color:#475569; line-height:1.4; margin-bottom:5px;">
+            Seluruh proses produksi kami melalui 3 tahapan inspeksi mutu terintegrasi: pemeriksaan bahan baku datang, validasi dimensi selama proses pemesinan, dan inspeksi akhir 100% menggunakan instrumen Mitutoyo terkalibrasi.
+          </p>
+
+          <div class="tolerance-badge-grid">
+            <div class="tolerance-pill">
+              <div class="tolerance-val">±0.005 mm</div>
+              <div class="tolerance-lbl">CNC Milling 3-Axis</div>
+            </div>
+            <div class="tolerance-pill">
+              <div class="tolerance-val">±0.010 mm</div>
+              <div class="tolerance-lbl">CNC Bubut Turning</div>
+            </div>
+            <div class="tolerance-pill">
+              <div class="tolerance-val">H7 Fit</div>
+              <div class="tolerance-lbl">Pin & Dowel Hole</div>
+            </div>
+            <div class="tolerance-pill">
+              <div class="tolerance-val">Ra &lt; 0.4 µm</div>
+              <div class="tolerance-lbl">Kehalusan Cavity Mold</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="running-footer">
+      <span class="running-footer-left">PT. Nurcahya Teknik Industry • Profil Perusahaan, Visi, Misi & Komitmen Mutu</span>
+      <span class="running-footer-center">Workshop: Hegarmukti, Cikarang Pusat, Kabupaten Bekasi</span>
+      <span class="running-footer-right">Halaman 2 dari 8</span>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       PAGE 3: FASILITAS WORKSHOP & SPESIFIKASI MESIN
+       ========================================================================== -->
+  <div class="page">
+    <div class="running-header">
+      <div class="running-header-left">
+        <img src="../assets/images/logo_pti.png" alt="Logo PT NTI" class="running-header-logo">
+        <span class="running-header-title">PT. NURCAHYA TEKNIK INDUSTRY</span>
+        <span class="running-header-subtitle">Fasilitas Workshop & Spesifikasi Mesin</span>
+      </div>
+      <div class="running-header-right">EDISI EKSEKUTIF 2026</div>
+    </div>
+
+    <div class="p3-grid">
+      <!-- Mesin 1: CNC Milling Hision -->
+      <div class="machine-card">
+        <div class="machine-img-placeholder">
+          <div style="font-size:16pt; font-weight:900; line-height:1;">1.000</div>
+          <div style="font-size:7pt; font-weight:700;">× 500 mm</div>
+          <div style="font-size:6.5pt; font-weight:800; margin-top:4px; text-transform:uppercase;">CNC Milling Hision</div>
+        </div>
+        <div class="machine-info">
+          <div class="badge-tag" style="align-self:flex-start;">Heavy Duty Machining Center</div>
+          <div class="machine-title">Mesin CNC Milling Hision 3-Axis</div>
+          <div class="machine-spec-row">
+            <span class="machine-spec-label">Dimensi Meja Kerja</span>
+            <span class="machine-spec-val">1.000 × 500 mm (Beban 600 kg)</span>
+          </div>
+          <div class="machine-spec-row">
+            <span class="machine-spec-label">Travel Sumbu (X, Y, Z)</span>
+            <span class="machine-spec-val">X: 1.000 mm | Y: 500 mm | Z: 500 mm</span>
+          </div>
+          <div class="machine-spec-row">
+            <span class="machine-spec-label">Spindle Taper & Speed</span>
+            <span class="machine-spec-val">BT40 • Hingga 10.000 RPM</span>
+          </div>
+          <div class="machine-spec-row">
+            <span class="machine-spec-label">Akurasi / Repeatability</span>
+            <span class="machine-spec-val">±0.005 mm (Optical Linear Scale)</span>
+          </div>
+          <div class="machine-spec-row">
+            <span class="machine-spec-label">Aplikasi Utama</span>
+            <span class="machine-spec-val">Pelat die base besar, cavity dies, balok berat</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mesin 2: CNC Milling GUT -->
+      <div class="machine-card">
+        <img src="../assets/images/cnc_milling_gut_3axis.jpg" alt="Mesin CNC Milling GUT 3-Axis" class="machine-img">
+        <div class="machine-info">
+          <div class="badge-tag" style="align-self:flex-start;">High Speed Machining Center</div>
+          <div class="machine-title">Mesin CNC Milling GUT 3-Axis</div>
+          <div class="machine-spec-row">
+            <span class="machine-spec-label">Dimensi Meja Kerja</span>
+            <span class="machine-spec-val">800 × 350 mm (Beban 400 kg)</span>
+          </div>
+          <div class="machine-spec-row">
+            <span class="machine-spec-label">Travel Sumbu (X, Y, Z)</span>
+            <span class="machine-spec-val">X: 750 mm | Y: 360 mm | Z: 450 mm</span>
+          </div>
+          <div class="machine-spec-row">
+            <span class="machine-spec-label">Spindle Speed</span>
+            <span class="machine-spec-val">8.000 RPM Berkecepatan Tinggi</span>
+          </div>
+          <div class="machine-spec-row">
+            <span class="machine-spec-label">Akurasi Penempatan</span>
+            <span class="machine-spec-val">±0.010 mm</span>
+          </div>
+          <div class="machine-spec-row">
+            <span class="machine-spec-label">Aplikasi Utama</span>
+            <span class="machine-spec-val">Stripper plate, pocket insert, part kontur 3D</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mesin 3: CNC Bubut Hision -->
+      <div class="machine-card">
+        <img src="../assets/images/cnc_bubut_hision.jpg" alt="Mesin CNC Bubut Hision Presisi" class="machine-img">
+        <div class="machine-info">
+          <div class="badge-tag" style="align-self:flex-start;">Precision Turning Center</div>
+          <div class="machine-title">Mesin CNC Bubut Hision Presisi</div>
+          <div class="machine-spec-row">
+            <span class="machine-spec-label">Kapasitas Maks. Benda</span>
+            <span class="machine-spec-val">Ø320 mm × Panjang 500 mm</span>
+          </div>
+          <div class="machine-spec-row">
+            <span class="machine-spec-label">Travel Sumbu (X, Z)</span>
+            <span class="machine-spec-val">X: 220 mm | Z: 520 mm</span>
+          </div>
+          <div class="machine-spec-row">
+            <span class="machine-spec-label">Kecepatan Spindle</span>
+            <span class="machine-spec-val">4.500 RPM Stepless Inverter</span>
+          </div>
+          <div class="machine-spec-row">
+            <span class="machine-spec-label">Akurasi Konsentrisitas</span>
+            <span class="machine-spec-val">±0.010 mm</span>
+          </div>
+          <div class="machine-spec-row">
+            <span class="machine-spec-label">Aplikasi Utama</span>
+            <span class="machine-spec-val">Shaft poros, guide pin dies, bushing H7</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mesin 4: Milling Manual Konvensional -->
+      <div class="machine-card">
+        <img src="../assets/images/milling_manual.jpg" alt="Mesin Milling Manual Konvensional" class="machine-img">
+        <div class="machine-info">
+          <div class="badge-tag" style="align-self:flex-start;">Conventional Roughing & Facing</div>
+          <div class="machine-title">Mesin Milling Manual Konvensional</div>
+          <div class="machine-spec-row">
+            <span class="machine-spec-label">Dimensi Meja Kerja</span>
+            <span class="machine-spec-val">1.200 × 300 mm</span>
+          </div>
+          <div class="machine-spec-row">
+            <span class="machine-spec-label">Travel Sumbu (X, Y, Z)</span>
+            <span class="machine-spec-val">X: 800 mm | Y: 300 mm | Z: 400 mm</span>
+          </div>
+          <div class="machine-spec-row">
+            <span class="machine-spec-label">Sistem Spindle</span>
+            <span class="machine-spec-val">16-Speed Stepped High-Torque</span>
+          </div>
+          <div class="machine-spec-row">
+            <span class="machine-spec-label">Akurasi Pengerjaan</span>
+            <span class="machine-spec-val">±0.030 mm</span>
+          </div>
+          <div class="machine-spec-row">
+            <span class="machine-spec-label">Aplikasi Utama</span>
+            <span class="machine-spec-val">Facing balok, alur pasak/keyway, squaring</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="running-footer">
+      <span class="running-footer-left">PT. Nurcahya Teknik Industry • Fasilitas Workshop & Spesifikasi Mesin</span>
+      <span class="running-footer-center">Workshop: Hegarmukti, Cikarang Pusat, Kabupaten Bekasi</span>
+      <span class="running-footer-right">Halaman 3 dari 8</span>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       PAGE 4: PORTOFOLIO PART PRESISI
+       ========================================================================== -->
+  <div class="page">
+    <div class="running-header">
+      <div class="running-header-left">
+        <img src="../assets/images/logo_pti.png" alt="Logo PT NTI" class="running-header-logo">
+        <span class="running-header-title">PT. NURCAHYA TEKNIK INDUSTRY</span>
+        <span class="running-header-subtitle">Portofolio Part Presisi (CNC Machining & Tooling Dies)</span>
+      </div>
+      <div class="running-header-right">EDISI EKSEKUTIF 2026</div>
+    </div>
+
+    <!-- Baris 1: 3 Komponen CNC Machining -->
+    <div class="p4-row-top">
+      <div class="part-card-compact">
+        <img src="../assets/images/machining_precision_1.jpg" alt="Pemesinan Komponen Spherical & Kontur" class="part-img-thumb">
+        <div class="badge-tag" style="align-self:flex-start;">CNC Turning & Milling</div>
+        <div class="part-title">Komponen Spherical & Kontur</div>
+        <div class="part-meta">Material: S45C, SCM440, SKD11 | Akurasi: ±0.01 mm</div>
+        <div class="part-desc">
+          Pengerjaan profil kontur bola 3D dan profil lengkung kompleks, dilanjutkan proses surface grinding untuk kebulatan mutlak pada komponen ball joint coupling dan hidrolik.
+        </div>
+      </div>
+
+      <div class="part-card-compact">
+        <img src="../assets/images/machining_precision_2.jpg" alt="Pelat Cetakan & Insert Dies" class="part-img-thumb">
+        <div class="badge-tag" style="align-self:flex-start;">Tooling Die Base</div>
+        <div class="part-title">Pelat Cetakan & Insert Dies</div>
+        <div class="part-meta">Material: SKD11 Hardened (HRC 58-62) | Pitch: ±0.01 mm</div>
+        <div class="part-desc">
+          Pemesinan pelat dasar dies, stripper plate, dan pocket insert tooling dengan lubang dowel pin presisi H7 untuk menjamin kelurusan proses stamping berkelanjutan.
+        </div>
+      </div>
+
+      <div class="part-card-compact">
+        <img src="../assets/images/machining_precision_3.jpg" alt="Billet & Blok Mesin Paduan" class="part-img-thumb">
+        <div class="badge-tag" style="align-self:flex-start;">Solid Billet Machining</div>
+        <div class="part-title">Billet & Blok Mesin Paduan</div>
+        <div class="part-meta">Material: Alumunium 6061-T6 / Dural 7075 | Akurasi: ±0.01 mm</div>
+        <div class="part-desc">
+          Pemesinan balok logam solid menjadi housing aktuator, manifold pneumatik, dan bracket robotika dengan dinding tipis tanpa tegangan sisa pada material.
+        </div>
+      </div>
+    </div>
+
+    <!-- Baris 2: 2 Tooling Dies & Mold -->
+    <div class="p4-row-bottom">
+      <div class="part-card-horizontal">
+        <img src="../assets/images/produk_dies_stamping_1.jpg" alt="Stamping Dies Heavy Duty Otomotif" class="part-img-side">
+        <div style="flex:1; display:flex; flex-direction:column; gap:3px;">
+          <div class="badge-tag" style="align-self:flex-start;">Automotive Sheet Metal Tooling</div>
+          <div class="part-title">Perkakas Stamping Dies Heavy Duty Otomotif</div>
+          <div class="part-meta">Dimensi s/d 950 × 500 mm | Kapasitas Press s/d 250 Ton | Akurasi: ±0.015 mm</div>
+          <div class="part-desc">
+            Rancang bangun unit stamping dies lengkap (Blanking, Piercing, Bending, Forming) untuk part bodi dan sasis lembaran logam otomotif. Dirancang dengan perhitungan springback akurat dan daya tahan produksi tinggi menggunakan material SKD11 dan DC53.
+          </div>
+        </div>
+      </div>
+
+      <div class="part-card-horizontal">
+        <img src="../assets/images/produk_dies_cavity_2.jpg" alt="Mold Dies Presisi Cavity & Core" class="part-img-side">
+        <div style="flex:1; display:flex; flex-direction:column; gap:3px;">
+          <div class="badge-tag" style="align-self:flex-start;">Injection & Die Casting Mold</div>
+          <div class="part-title">Komponen Mold Dies Presisi Cavity & Core</div>
+          <div class="part-meta">Dimensi s/d 500 × 400 × 300 mm | Toleransi: ±0.01 mm | Kontak &gt; 90%</div>
+          <div class="part-desc">
+            Pemesinan rongga cetakan (cavity) dan inti (core) untuk injeksi plastik dan die-casting berpresisi tinggi. Menghasilkan kontur tiga dimensi mulus dengan kehalusan permukaan Ra &lt; 0.4 µm serta kerapatan celah parting line yang presisi bebas flash.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="running-footer">
+      <span class="running-footer-left">PT. Nurcahya Teknik Industry • Portofolio Part Presisi (CNC Machining & Tooling Dies)</span>
+      <span class="running-footer-center">Workshop: Hegarmukti, Cikarang Pusat, Kabupaten Bekasi</span>
+      <span class="running-footer-right">Halaman 4 dari 8</span>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       PAGE 5: ALAT BANTU PRODUKSI & FABRIKASI
+       ========================================================================== -->
+  <div class="page">
+    <div class="running-header">
+      <div class="running-header-left">
+        <img src="../assets/images/logo_pti.png" alt="Logo PT NTI" class="running-header-logo">
+        <span class="running-header-title">PT. NURCAHYA TEKNIK INDUSTRY</span>
+        <span class="running-header-subtitle">Alat Bantu Produksi & Fabrikasi (Jig & Material Handling)</span>
+      </div>
+      <div class="running-header-right">EDISI EKSEKUTIF 2026</div>
+    </div>
+
+    <!-- Baris 1: 2 Checking Fixture & Welding Jig -->
+    <div class="p5-row-top">
+      <div class="fixture-card">
+        <img src="../assets/images/jig_inspection_fixture_1.jpg" alt="Jig Inspection Fixture Unit A" class="fixture-img">
+        <div style="flex:1; display:flex; flex-direction:column; gap:2.5px;">
+          <div class="badge-tag" style="align-self:flex-start;">Quality Inspection Tooling</div>
+          <div class="part-title">Jig Inspection Fixture Unit A (Checking Fixture)</div>
+          <div class="part-meta">Base Alumunium 6061-T6 (s/d 800 × 600 mm) | Datum: ±0.01 mm</div>
+          <div class="part-desc">
+            Alat bantu kendali mutu inspeksi dimensi part hasil stamping dan perakitan otomotif di lini massal. Dilengkapi pin locator hardened SKD11 (HRC 60-62), toggle clamp terukur, titik duduk dial indicator, serta pengujian Repeatability Gauge R&amp;R &lt; 10%.
+          </div>
+        </div>
+      </div>
+
+      <div class="fixture-card">
+        <img src="../assets/images/jig_inspection_fixture_2.jpg" alt="Jig Inspection Fixture Unit B" class="fixture-img">
+        <div style="flex:1; display:flex; flex-direction:column; gap:2.5px;">
+          <div class="badge-tag" style="align-self:flex-start;">Assembly & Welding Fixture</div>
+          <div class="part-title">Jig Inspection Fixture Unit B (Holding & Welding Jig)</div>
+          <div class="part-meta">Base Pelat SS400 Solid (s/d 1.000 × 500 mm) | Akurasi: ±0.02 mm</div>
+          <div class="part-desc">
+            Jig penahan posisi pengelasan dan pengecekan perakitan komponen pipa dan bracket otomotif. Menjamin posisi referensi sambungan tetap stabil dan bebas distorsi panas pengelasan menggunakan clamping arms S45C dan bushing hardened SKD11.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Baris 2: 3 Fabrikasi Heavy Duty & Material Handling -->
+    <div class="p5-row-bottom">
+      <div class="fab-card">
+        <img src="../assets/images/fabrikasi_rak_blue.jpg" alt="Fabrikasi Dudukan Mesin & Rak Heavy Duty" class="fab-img">
+        <div class="badge-tag" style="align-self:flex-start;">Heavy Duty Structure</div>
+        <div class="part-title">Rangka Dudukan Mesin & Rak Heavy Duty</div>
+        <div class="part-meta">Kapasitas s/d 2.000 kg | Hollow SS400 / UNP</div>
+        <div class="part-desc">
+          Konstruksi rangka mesin dan rak penyimpanan industri berbahan baja struktural kuat. Dilapisi cat proteksi industri anti-karat dengan pelat tapak berkekuatan tinggi untuk peredam getaran mesin.
+        </div>
+      </div>
+
+      <div class="fab-card">
+        <img src="../assets/images/fabrikasi_rak_meja_susun.jpg" alt="Fabrikasi Meja Assembly & Rak Susun" class="fab-img">
+        <div class="badge-tag" style="align-self:flex-start;">5S Modular Assembly</div>
+        <div class="part-title">Meja Perakitan & Rak Susun Bertingkat</div>
+        <div class="part-meta">Beban Statis 500 kg | SS400 &amp; SUS304</div>
+        <div class="part-desc">
+          Meja kerja modular lini perakitan manufaktur dengan rak susun komponen bertingkat, laci perkakas mekanik, dan dudukan instalasi kelistrikan/pneumatik sesuai standar ergonomi 5S pabrik Jepang.
+        </div>
+      </div>
+
+      <div class="fab-card">
+        <img src="../assets/images/fabrikasi_trolley_material.jpg" alt="Trolley Material Handling Custom" class="fab-img">
+        <div class="badge-tag" style="align-self:flex-start;">Plant Logistics Trolley</div>
+        <div class="part-title">Trolley Material Handling Custom</div>
+        <div class="part-meta">Kapasitas s/d 1.000 kg | Roda Heavy PU</div>
+        <div class="part-desc">
+          Trolley logistik internal pabrik untuk memindahkan komponen mentah atau part presisi antar-stasiun kerja tanpa menimbulkan goresan, dilengkapi partisi bantalan proteksi polyurethane anti-gores.
+        </div>
+      </div>
+    </div>
+
+    <div class="running-footer">
+      <span class="running-footer-left">PT. Nurcahya Teknik Industry • Alat Bantu Produksi & Fabrikasi (Jig & Material Handling)</span>
+      <span class="running-footer-center">Workshop: Hegarmukti, Cikarang Pusat, Kabupaten Bekasi</span>
+      <span class="running-footer-right">Halaman 5 dari 8</span>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       PAGE 6: ALUR KERJA MANUFAKTUR & SISTEM MUTU
+       ========================================================================== -->
+  <div class="page">
+    <div class="running-header">
+      <div class="running-header-left">
+        <img src="../assets/images/logo_pti.png" alt="Logo PT NTI" class="running-header-logo">
+        <span class="running-header-title">PT. NURCAHYA TEKNIK INDUSTRY</span>
+        <span class="running-header-subtitle">Alur Kerja Manufaktur Presisi & Sistem Pengujian Mutu</span>
+      </div>
+      <div class="running-header-right">EDISI EKSEKUTIF 2026</div>
+    </div>
+
+    <!-- 5 Tahap Alur Kerja -->
+    <div class="workflow-steps">
+      <div class="step-box">
+        <div class="step-number">01</div>
+        <div class="step-title">DFM Drawing Analysis</div>
+        <div class="step-text">Evaluasi gambar kerja 2D/3D (CAD: STEP, IGES, DXF). Kajian kelayakan manufaktur (DFM), verifikasi datum referensi, dan analisis toleransi kritis GD&amp;T.</div>
+      </div>
+
+      <div class="step-box">
+        <div class="step-number">02</div>
+        <div class="step-title">CAM Toolpath Simulation</div>
+        <div class="step-text">Penyusunan kode program NC via CAM. Optimasi lintasan pahat, parameter kecepatan potong (speed &amp; feed), serta simulasi anti-collision virtual.</div>
+      </div>
+
+      <div class="step-box">
+        <div class="step-number">03</div>
+        <div class="step-title">Precision CNC Machining</div>
+        <div class="step-text">Eksekusi pemesinan roughing, semi-finishing, dan finishing pada mesin CNC Hision/GUT. Proses vacuum hardening HRC dan perakitan manual fitting.</div>
+      </div>
+
+      <div class="step-box">
+        <div class="step-number">04</div>
+        <div class="step-title">QC Dimension Inspection</div>
+        <div class="step-text">Pengukuran menyeluruh 100% menggunakan instrumen Mitutoyo terkalibrasi, verifikasi toleransi mikron, dan penerbitan Lembar Laporan QC Dimensi.</div>
+      </div>
+
+      <div class="step-box">
+        <div class="step-number">05</div>
+        <div class="step-title">Packaging & Delivery</div>
+        <div class="step-text">Pembersihan debu gram logam, pelapisan oli pelindung anti-karat, proteksi kemasan bubble wrap / kayu industri, dan pengiriman tepat waktu ke pabrik mitra.</div>
+      </div>
+    </div>
+
+    <!-- Bagian Bawah: Standar Instrumen QC & Kebijakan Mutu -->
+    <div class="p6-bottom-grid">
+      <div class="corp-box">
+        <div class="p2-section-title">
+          <span>Instrumen Pengujian Mutu Terkalibrasi</span>
+          <span class="badge-tag">Mitutoyo Certified</span>
+        </div>
+        <table class="qc-table">
+          <thead>
+            <tr>
+              <th>Instrumen Pengukuran</th>
+              <th>Rentang Ukur</th>
+              <th>Resolusi / Akurasi</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Digital Vernier Caliper Mitutoyo</strong></td>
+              <td>0 - 300 mm</td>
+              <td>±0.01 mm</td>
+            </tr>
+            <tr>
+              <td><strong>Height Master &amp; Height Gauge</strong></td>
+              <td>0 - 600 mm</td>
+              <td>±0.001 mm</td>
+            </tr>
+            <tr>
+              <td><strong>Dial Indicator &amp; Lever Gauge</strong></td>
+              <td>0 - 10 mm</td>
+              <td>±0.001 mm / ±0.01 mm</td>
+            </tr>
+            <tr>
+              <td><strong>Outside &amp; Inside Micrometer Set</strong></td>
+              <td>0 - 150 mm</td>
+              <td>±0.001 mm</td>
+            </tr>
+            <tr>
+              <td><strong>Pin Gauge Set Presisi H7</strong></td>
+              <td>Ø1.0 - Ø20.0 mm</td>
+              <td>±0.002 mm</td>
+            </tr>
+            <tr>
+              <td><strong>Hardness Tester Portable</strong></td>
+              <td>Skala HRC / HB</td>
+              <td>±1.0 HRC</td>
+            </tr>
+            <tr>
+              <td><strong>Surface Roughness Tester</strong></td>
+              <td>Ra, Rz, Rq</td>
+              <td>Ra hingga 0.05 µm</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="corp-box-blue">
+        <div class="p2-section-title">
+          <span>Kebijakan Jaminan Mutu Industri</span>
+          <span class="badge-tag">Zero Defect Policy</span>
+        </div>
+
+        <div class="value-item" style="margin-bottom:6px;">
+          <div class="value-number">✓</div>
+          <div class="value-content">
+            <strong>100% Dimensional Inspection:</strong> Setiap komponen diperiksa secara individual terhadap drawing master sebelum dikemas dan dikirimkan.
+          </div>
+        </div>
+
+        <div class="value-item" style="margin-bottom:6px;">
+          <div class="value-number">✓</div>
+          <div class="value-content">
+            <strong>Certificate of Inspection (QC Report):</strong> Lembar laporan dimensi resmi disertakan di setiap surat jalan penyerahan barang kepada divisi QA/QC mitra.
+          </div>
+        </div>
+
+        <div class="value-item" style="margin-bottom:6px;">
+          <div class="value-number">✓</div>
+          <div class="value-content">
+            <strong>Jaminan Zero Cost Rework:</strong> Koreksi dan modifikasi cepat tanpa biaya tambahan jika terjadi ketidaksesuaian dimensi terhadap drawing yang telah disepakati.
+          </div>
+        </div>
+
+        <div class="value-item">
+          <div class="value-number">✓</div>
+          <div class="value-content">
+            <strong>Kepatuhan Standar K3 &amp; CSMS:</strong> Memenuhi standar keselamatan kerja manufaktur dan kesiapan audit kepatuhan vendor untuk rantai pasok otomotif tier-1.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="running-footer">
+      <span class="running-footer-left">PT. Nurcahya Teknik Industry • Alur Kerja Manufaktur & Sistem Mutu</span>
+      <span class="running-footer-center">Workshop: Hegarmukti, Cikarang Pusat, Kabupaten Bekasi</span>
+      <span class="running-footer-right">Halaman 6 dari 8</span>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       PAGE 7: REKAM JEJAK KEMITRAAN KLIEN
+       ========================================================================== -->
+  <div class="page">
+    <div class="running-header">
+      <div class="running-header-left">
+        <img src="../assets/images/logo_pti.png" alt="Logo PT NTI" class="running-header-logo">
+        <span class="running-header-title">PT. NURCAHYA TEKNIK INDUSTRY</span>
+        <span class="running-header-subtitle">Rekam Jejak Kemitraan Klien (Enterprise Credibility)</span>
+      </div>
+      <div class="running-header-right">EDISI EKSEKUTIF 2026</div>
+    </div>
+
+    <!-- 8 Mitra Korporat Resmi -->
+    <div class="p7-client-grid">
+      <div class="client-card">
+        <div class="client-name">PT. GAYA MOTOR</div>
+        <div class="client-sector">Perakitan Otomotif Nasional (Tier-1)</div>
+        <div class="client-desc">Mitra permesinan komponen sasis, bodi, dan bracket perakitan kendaraan roda empat.</div>
+      </div>
+
+      <div class="client-card">
+        <div class="client-name">PT. REKADAY MULTI ADIPRIMA</div>
+        <div class="client-sector">Komponen Otomotif &amp; Presisi</div>
+        <div class="client-desc">Mitra pengerjaan stamping dies, insert cetakan, dan komponen interior otomotif.</div>
+      </div>
+
+      <div class="client-card">
+        <div class="client-name">PT. HASHIMOTO ENGINEERING</div>
+        <div class="client-sector">Tooling &amp; Permesinan Presisi</div>
+        <div class="client-desc">Pemesinan insert dies presisi, guide plate, dan pelat cetakan akurasi mikron.</div>
+      </div>
+
+      <div class="client-card">
+        <div class="client-name">PT. HANEEDA EKAJAYA</div>
+        <div class="client-sector">Pabrikan Tooling &amp; Komponen</div>
+        <div class="client-desc">Pemesinan komponen tooling presisi, balok die set, dan part mekanikal cetakan.</div>
+      </div>
+
+      <div class="client-card">
+        <div class="client-name">PT. STEP INDONESIA</div>
+        <div class="client-sector">Engineering &amp; Otomasi Pabrik</div>
+        <div class="client-desc">Pemesinan part otomasi pabrik, bracket robotika, fixture penumpu, dan komponen jig.</div>
+      </div>
+
+      <div class="client-card">
+        <div class="client-name">PT. BERDUA SEJAHTERA TEKNIK</div>
+        <div class="client-sector">Fabrikasi Logam &amp; Permesinan</div>
+        <div class="client-desc">Sub-assembly permesinan presisi, jig pengelasan, dan fabrikasi pelat lembaran.</div>
+      </div>
+
+      <div class="client-card">
+        <div class="client-name">PT. NOERHAYAT BERKAH SEJAHTERA</div>
+        <div class="client-sector">Mitra Pengadaan &amp; Permesinan</div>
+        <div class="client-desc">Pengadaan part mekanikal toleransi ketat, bushing tahan aus, dan tooling industri.</div>
+      </div>
+
+      <div class="client-card">
+        <div class="client-name">PT. GEMA LESTARI SARANA TEKNIK</div>
+        <div class="client-sector">Solusi Teknis &amp; Fabrikasi</div>
+        <div class="client-desc">Fabrikasi trolley material handling custom, rak modular, dan permesinan part perbaikan.</div>
+      </div>
+    </div>
+
+    <!-- 4 Pilar Standar Kemitraan B2B -->
+    <div class="p7-pillars-grid">
+      <div class="pillar-card">
+        <div class="pillar-title">Perjanjian Kerahasiaan (NDA)</div>
+        <div class="pillar-text">Menjamin perlindungan mutlak atas hak kekayaan intelektual, gambar teknik CAD 2D/3D, dan data prototipe milik mitra dengan protokol kerahasiaan ketat.</div>
+      </div>
+
+      <div class="pillar-card">
+        <div class="pillar-title">Kualifikasi Vendor Terverifikasi</div>
+        <div class="pillar-text">Memenuhi persyaratan audit legalitas korporat, perpajakan, keselamatan kerja (K3), dan standar CSMS pabrik perakitan otomotif terkemuka.</div>
+      </div>
+
+      <div class="pillar-card">
+        <div class="pillar-title">Garansi Kesesuaian Gambar 100%</div>
+        <div class="pillar-text">Komitmen zero-defect dengan jaminan perbaikan cepat tanpa biaya jika ditemukan ketidaksesuaian dimensi terhadap drawing master yang disetujui.</div>
+      </div>
+
+      <div class="pillar-card">
+        <div class="pillar-title">Tata Kelola Keuangan B2B</div>
+        <div class="pillar-text">Penerbitan Faktur Pajak resmi, ketertiban administrasi perpajakan, serta dukungan Term of Payment (TOP) fleksibel sesuai Purchase Order resmi perusahaan.</div>
+      </div>
+    </div>
+
+    <div class="running-footer">
+      <span class="running-footer-left">PT. Nurcahya Teknik Industry • Rekam Jejak Kemitraan Klien (Enterprise Credibility)</span>
+      <span class="running-footer-center">Workshop: Hegarmukti, Cikarang Pusat, Kabupaten Bekasi</span>
+      <span class="running-footer-right">Halaman 7 dari 8</span>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       PAGE 8: KONTAK EKSEKUTIF, AKSES WORKSHOP & RFQ
+       ========================================================================== -->
+  <div class="page">
+    <div class="running-header">
+      <div class="running-header-left">
+        <img src="../assets/images/logo_pti.png" alt="Logo PT NTI" class="running-header-logo">
+        <span class="running-header-title">PT. NURCAHYA TEKNIK INDUSTRY</span>
+        <span class="running-header-subtitle">Kontak Eksekutif & Akses Workshop Fisik</span>
+      </div>
+      <div class="running-header-right">EDISI EKSEKUTIF 2026</div>
+    </div>
+
+    <div class="p8-layout">
+      <!-- Kolom Kiri: Profil Workshop & Saluran Kontak -->
+      <div style="display:flex; flex-direction:column; gap:9px;">
+        <div class="corp-box">
+          <div class="p2-section-title">
+            <span>Workshop Fisik & Administrasi</span>
+            <span class="badge-tag">Official Plant</span>
+          </div>
+          
+          <div class="contact-item">
+            <span class="contact-label">Badan Usaha</span>
+            <span class="contact-val">PT. NURCAHYA TEKNIK INDUSTRY</span>
+          </div>
+
+          <div class="contact-item">
+            <span class="contact-label">Bidang Manufaktur</span>
+            <span class="contact-val">Pemesinan CNC, Tooling Dies, Jig &amp; Fabrikasi</span>
+          </div>
+
+          <div class="contact-item">
+            <span class="contact-label">Alamat Workshop</span>
+            <span class="contact-val">Bugel Salam Poncol RT 02/06, Desa Hegarmukti, Kec. Cikarang Pusat, Kab. Bekasi 17530</span>
+          </div>
+
+          <div class="contact-item">
+            <span class="contact-label">Akses Kawasan</span>
+            <span class="contact-val">Dekat GIIC Deltamas, Jababeka, Delta Silicon &amp; EJIP</span>
+          </div>
+
+          <div class="contact-item">
+            <span class="contact-label">Jam Operasional</span>
+            <span class="contact-val">Senin - Jumat: 08:00 - 17:00 | Sabtu: 08:00 - 14:00 WIB</span>
+          </div>
+        </div>
+
+        <div class="corp-box-blue">
+          <div class="p2-section-title">
+            <span>Narahubung Eksekutif & RFQ</span>
+            <span class="badge-tag">Direct Contact</span>
+          </div>
+
+          <div class="contact-item">
+            <span class="contact-label">PIC Operasional &amp; RFQ</span>
+            <span class="contact-val" style="font-size:8.5pt; color:#1d4ed8;">Nur Cahyani</span>
+          </div>
+
+          <div class="contact-item">
+            <span class="contact-label">WhatsApp / Direct Call</span>
+            <span class="contact-val" style="font-size:8.5pt; color:#1d4ed8;">+62 813-8415-1264</span>
+          </div>
+
+          <div class="contact-item">
+            <span class="contact-label">Email Resmi 1</span>
+            <span class="contact-val">Nur.nurcahyani@outlook.co.id</span>
+          </div>
+
+          <div class="contact-item">
+            <span class="contact-label">Email Resmi 2</span>
+            <span class="contact-val">Nur.nurcahya92@outlook.com</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Kolom Kanan: Panduan RFQ & Portal Web Resmi -->
+      <div style="display:flex; flex-direction:column; gap:9px;">
+        <div class="corp-box">
+          <div class="p2-section-title">
+            <span>Alur Cepat Pengajuan Penawaran Harga (RFQ)</span>
+            <span class="badge-tag">1×24 Jam Respon</span>
+          </div>
+
+          <div class="rfq-step-row">
+            <div class="rfq-step-num">1</div>
+            <div class="rfq-step-text">
+              <strong>Kirimkan Drawing 2D:</strong> Format PDF, DWG, atau DXF yang mencantumkan batas toleransi kritis, spesifikasi material, dan perlakuan panas (hardening).
+            </div>
+          </div>
+
+          <div class="rfq-step-row">
+            <div class="rfq-step-num">2</div>
+            <div class="rfq-step-text">
+              <strong>Sertakan Model 3D (CAD):</strong> Format STEP (.stp) atau IGES (.igs) untuk mempermudah kalkulasi lintasan potong CAM dan estimasi cycle time akurat.
+            </div>
+          </div>
+
+          <div class="rfq-step-row">
+            <div class="rfq-step-num">3</div>
+            <div class="rfq-step-text">
+              <strong>Cantumkan Jumlah Kebutuhan:</strong> Estimasi kuantiti part (prototipe, trial run, atau batch produksi massal) serta jadwal target penyerahan barang.
+            </div>
+          </div>
+
+          <div class="rfq-step-row">
+            <div class="rfq-step-num">4</div>
+            <div class="rfq-step-text">
+              <strong>Penerbitan Penawaran Resmi:</strong> Tim engineering PT NTI menerbitkan Surat Penawaran Harga resmi (Quotation) lengkap dengan estimasi lead time dalam waktu 1×24 jam kerja.
+            </div>
+          </div>
+        </div>
+
+        <div class="corp-box" style="display:flex; flex-direction:column; justify-content:space-between;">
+          <div>
+            <div class="p2-section-title">
+              <span>Ekosistem Digital & Kemitraan Jangka Panjang</span>
+              <span class="badge-tag">Web Portal</span>
+            </div>
+            <p style="font-size:7.2pt; color:#475569; line-height:1.4; margin-bottom:6px;">
+              Kunjungi portal web resmi kami untuk melihat katalog lengkap spesifikasi fasilitas mesin, pembaruan portofolio part, atau mengunggah dokumen teknis secara langsung.
+            </p>
+          </div>
+
+          <div class="web-portal-card">
+            <div style="font-size:7pt; color:#64748b; font-weight:700; text-transform:uppercase; margin-bottom:2px;">Alamat Portal Web Resmi:</div>
+            <div class="web-portal-url">https://pt-nurcahya-teknik-industry.pages.dev/</div>
+          </div>
+
+          <div style="font-size:7pt; color:#334155; line-height:1.35; margin-top:6px; background:#f8fafc; padding:6px 9px; border-radius:5px; border:1px solid #e2e8f0;">
+            <strong>Komitmen Blanket Purchase Order:</strong> Kami siap melayani kontrak pasokan berkala jangka panjang dengan jaminan ketersediaan buffer stock part, stabilitas harga, dan prioritas jadwal produksi.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="running-footer">
+      <span class="running-footer-left">PT. Nurcahya Teknik Industry • Kontak Eksekutif & Akses Workshop Fisik</span>
+      <span class="running-footer-center">Workshop: Hegarmukti, Cikarang Pusat, Kabupaten Bekasi</span>
+      <span class="running-footer-right">Halaman 8 dari 8</span>
+    </div>
+  </div>
+
+</body>
+</html>
