@@ -14,7 +14,7 @@ function downloadVCard() {
     'EMAIL;TYPE=PREF,INTERNET:Nur.nurcahyani@outlook.co.id',
     'EMAIL;TYPE=WORK,INTERNET:Nur.nurcahya92@outlook.com',
     'ADR;TYPE=WORK:;;Bugel salam poncol RT 02 Rw 06 desa hegarmukti;Cikarang Pusat;Bekasi;Jawa Barat;Indonesia',
-    'URL:https://pt-nti.pages.dev/',
+    'URL:https://pt-nurcahya-teknik-industry.pages.dev/',
     'NOTE:Precision Machining CNC, Stamping Dies, Jig Inspection & Fabrikasi Industri Cikarang',
     'END:VCARD'
   ].join('\r\n');
