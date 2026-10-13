@@ -1,0 +1,80 @@
+[
+  {
+    "src": "extracted_img_1.jpg",
+    "dest": "cnc_bubut_hision.jpg",
+    "category": "facility",
+    "title": "Mesin CNC Bubut Hision"
+  },
+  {
+    "src": "extracted_img_2.jpg",
+    "dest": "milling_manual.jpg",
+    "category": "facility",
+    "title": "Mesin Milling Manual"
+  },
+  {
+    "src": "extracted_img_3.jpg",
+    "dest": "cnc_milling_gut_3axis.jpg",
+    "category": "facility",
+    "title": "Mesin CNC Milling GUT 3-Axis"
+  },
+  {
+    "src": "extracted_img_4.jpg",
+    "dest": "machining_precision_1.jpg",
+    "category": "machining",
+    "title": "Jasa Machining Presisi Komponen Spherical"
+  },
+  {
+    "src": "extracted_img_5.jpg",
+    "dest": "machining_precision_2.jpg",
+    "category": "machining",
+    "title": "Jasa Machining Presisi Pelat Cetakan"
+  },
+  {
+    "src": "extracted_img_6.jpg",
+    "dest": "machining_precision_3.jpg",
+    "category": "machining",
+    "title": "Pemesinan Presisi Billet dan Kontur"
+  },
+  {
+    "src": "extracted_img_7.jpg",
+    "dest": "produk_dies_stamping_1.jpg",
+    "category": "dies",
+    "title": "Produk Stamping Dies Heavy Duty"
+  },
+  {
+    "src": "extracted_img_8.jpg",
+    "dest": "fabrikasi_rak_blue.jpg",
+    "category": "fabrication",
+    "title": "Fabrikasi Rangka Dudukan Mesin & Rak"
+  },
+  {
+    "src": "extracted_img_9.jpg",
+    "dest": "fabrikasi_rak_meja_susun.jpg",
+    "category": "fabrication",
+    "title": "Fabrikasi Rak Kerja & Meja Assembly"
+  },
+  {
+    "src": "extracted_img_10.jpg",
+    "dest": "fabrikasi_trolley_material.jpg",
+    "category": "fabrication",
+    "title": "Fabrikasi Trolley Material Handling"
+  },
+  {
+    "src": "extracted_img_11.jpg",
+    "dest": "jig_inspection_fixture_1.jpg",
+    "category": "jig",
+    "title": "Jig Inspection Fixture Unit A"
+  },
+  {
+    "src": "extracted_img_12.jpg",
+    "dest": "produk_dies_cavity_2.jpg",
+    "category": "dies",
+    "title": "Produk Mold Dies Presisi Cavity"
+  },
+  {
+    "src": "extracted_img_13.jpg",
+    "dest": "jig_inspection_fixture_2.jpg",
+    "category": "jig",
+    "title": "Jig Inspection Fixture Unit B"
+  }
+]

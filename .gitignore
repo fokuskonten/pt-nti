@@ -1,0 +1,20 @@
+# Scratch & temporary files
+.DS_Store
+Thumbs.db
+*.tmp
+*.log
+*.bak
+*~
+.vscode/
+.idea/
+
+# Dependency and build output
+node_modules/
+dist/
+
+# Keep assets tracked
+!assets/
+!assets/images/
+!assets/images/*
+!assets/docs/
+!assets/docs/CP_PT_NTI.pdf
