@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Permintaan Penawaran Harga (RFQ) | PT. Nurcahya Teknik Industry</title>
+  <meta name="description" content="Formulir resmi permintaan penawaran harga pengerjaan CNC machining, dies, checking fixture jig, dan fabrikasi.">
+  <link rel="icon" type="image/png" href="assets/images/icon-192.png">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <header class="site-nav">
+    <div class="container nav-wrapper">
+      <a href="index.html" class="brand-link" aria-label="Beranda PT Nurcahya Teknik Industry">
+        <img src="assets/images/logo_pti.png" alt="Logo PT Nurcahya Teknik Industry" class="brand-logo-img">
+        <div class="brand-text">
+          <span class="brand-title">PT. NURCAHYA TEKNIK INDUSTRY</span>
+          <span class="brand-subtitle">Precision Machining & Tooling</span>
+        </div>
+      </a>
+
+      <nav class="nav-links">
+        <a href="index.html" class="nav-item ">Beranda</a>
+        <a href="fasilitas.html" class="nav-item ">Fasilitas Mesin</a>
+        <a href="produk.html" class="nav-item ">Produk & Portofolio</a>
+        <a href="pelanggan.html" class="nav-item ">Mitra Pelanggan</a>
+        <a href="kontak.html" class="nav-item ">Kontak & Lokasi</a>
+      </nav>
+
+      <div>
+        <a href="rfq.html" class="btn-pill btn-pill-primary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+          <span>Minta Penawaran (RFQ)</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container section-py">
+    <div class="section-head">
+      <span class="section-tag">Formulir Rekayasa</span>
+      <h1 class="section-title">Permintaan Penawaran Harga (RFQ)</h1>
+      <p class="section-intro">Kirimkan rincian kebutuhan part manufaktur Anda. Sistem akan memformat draf resmi untuk langsung dikirimkan ke tim engineering via WhatsApp.</p>
+    </div>
+
+    <div class="form-card">
+      <form id="rfqFormMain">
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:1.5rem;">
+          <div class="form-group">
+            <label class="form-label">Nama Lengkap PIC</label>
+            <input type="text" id="rfqName" class="form-control" placeholder="Contoh: Budi Santoso" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Perusahaan / Instansi</label>
+            <input type="text" id="rfqCompany" class="form-control" placeholder="Contoh: PT Manufaktur Otomotif" required>
+          </div>
+        </div>
+
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:1.5rem;">
+          <div class="form-group">
+            <label class="form-label">Nomor WhatsApp / Kontak</label>
+            <input type="text" id="rfqPhone" class="form-control" placeholder="Contoh: 08123456789" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Kategori Layanan</label>
+            <select id="rfqService" class="form-control">
+              <option value="Machining CNC Milling">CNC Milling 3-Axis (Table 1000x500 mm)</option>
+              <option value="Machining CNC Bubut">CNC Bubut Turning Hision</option>
+              <option value="Stamping & Mold Dies">Rancang Bangun Stamping Dies / Mold</option>
+              <option value="Jig & Checking Fixture">Jig & Checking Fixture Inspeksi</option>
+              <option value="Fabrikasi Rak & Trolley">Fabrikasi Rak & Trolley Material</option>
+              <option value="Lainnya">Kebutuhan Rekayasa Lainnya</option>
+            </select>
+          </div>
+        </div>
+
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:1.5rem;">
+          <div class="form-group">
+            <label class="form-label">Jenis Material</label>
+            <input type="text" id="rfqMaterial" class="form-control" placeholder="Contoh: SKD11 / S45C / SUS304 / Alumunium">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Estimasi Kuantitas (Volume)</label>
+            <input type="text" id="rfqQty" class="form-control" placeholder="Contoh: 20 pcs / 1 set dies">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Deskripsi Part & Catatan Toleransi Gambar Kerja</label>
+          <textarea id="rfqNotes" class="form-control" rows="4" placeholder="Tuliskan dimensi part, nomor drawing, toleransi khusus (misal: lubang dowel H7), atau target lead time."></textarea>
+        </div>
+
+        <button type="submit" class="btn-pill btn-pill-primary btn-pill-lg" style="width:100%;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13"></path><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+          <span>Kirim Draf Penawaran Harga Resmi via WhatsApp</span>
+        </button>
+      </form>
+    </div>
+  </main>
+
+  
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div style="display:flex; align-items:center; gap:10px; margin-bottom:1rem;">
+            <img src="assets/images/logo_pti.png" alt="Logo PT NTI" style="width:38px; height:38px;">
+            <div>
+              <div style="font-weight:700; color:var(--blue-deep); font-size:0.95rem;">PT. NURCAHYA TEKNIK INDUSTRY</div>
+              <div style="font-size:0.75rem; color:var(--blue-primary); font-weight:600; text-transform:uppercase;">Cikarang Pusat • Jawa Barat</div>
+            </div>
+          </div>
+          <p style="font-size:0.875rem; color:var(--text-muted); line-height:1.6; margin-bottom:1.25rem;">
+            Mitra industri terpercaya dalam permesinan presisi CNC, perakitan stamping dies, checking fixture jig, serta fabrikasi struktur material handling untuk rantai pasok manufaktur dan otomotif nasional.
+          </p>
+          <a href="assets/docs/CP_PT_NTI.pdf" download class="btn-pill btn-pill-secondary" style="font-size:0.825rem; padding:8px 18px;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+            <span>Unduh Company Profile (PDF)</span>
+          </a>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Layanan & Fasilitas</div>
+          <ul class="footer-links">
+            <li><a href="layanan-cnc-milling-3axis.html" class="footer-link">CNC Milling 3-Axis (1000x500 mm)</a></li>
+            <li><a href="layanan-cnc-bubut.html" class="footer-link">CNC Bubut Turning</a></li>
+            <li><a href="layanan-milling-manual.html" class="footer-link">Milling Manual Konvensional</a></li>
+            <li><a href="produk.html" class="footer-link">Stamping Dies & Mold</a></li>
+            <li><a href="produk.html" class="footer-link">Jig & Checking Fixture</a></li>
+            <li><a href="produk.html" class="footer-link">Fabrikasi Rak & Trolley</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Navigasi Resmi</div>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Beranda Utama</a></li>
+            <li><a href="fasilitas.html" class="footer-link">Daftar Fasilitas Mesin</a></li>
+            <li><a href="produk.html" class="footer-link">Katalog Portofolio Part</a></li>
+            <li><a href="pelanggan.html" class="footer-link">Kemitraan & Rekam Jejak</a></li>
+            <li><a href="rfq.html" class="footer-link">Pengajuan Penawaran (RFQ)</a></li>
+            <li><a href="kontak.html" class="footer-link">Kontak & Workshop Fisik</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Kontak & Workshop</div>
+          <div style="font-size:0.875rem; color:var(--text-body); line-height:1.7;">
+            <div style="font-weight:600; color:var(--blue-deep); margin-bottom:0.25rem;">Workshop PT NTI Cikarang:</div>
+            <div style="color:var(--text-muted); margin-bottom:0.75rem;">Bugel salam poncol RT 02 Rw 06, Desa Hegarmukti, Kec. Cikarang Pusat, Kab. Bekasi</div>
+            
+            <div style="font-weight:600; color:var(--blue-deep);">PIC Operasional & Engineering:</div>
+            <div style="color:var(--text-muted);">Nur Cahyani</div>
+            <div style="margin-top:0.5rem;">
+              <a href="https://wa.me/6281384151264" target="_blank" style="color:var(--blue-primary); font-weight:600; display:inline-flex; align-items:center; gap:6px;">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                <span>+62 813-8415-1264</span>
+              </a>
+            </div>
+            <div style="color:var(--text-muted); font-size:0.8rem; margin-top:0.25rem;">Nur.nurcahyani@outlook.co.id</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 PT. Nurcahya Teknik Industry. Hak Cipta Dilindungi Undang-Undang.</div>
+        <div>Manufaktur Presisi • Cikarang Pusat, Kabupaten Bekasi</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ASISTEN AI TEKNIK PT NTI (POWERED BY GEMINI ENGINE) -->
+  <button type="button" class="ai-chat-fab" id="aiChatFabBtn" aria-label="Konsultasi Teknis AI PT NTI">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+    <span class="ai-chat-badge">AI</span>
+  </button>
+
+  <div class="ai-chat-window" id="aiChatWindow">
+    <div class="ai-chat-header">
+      <div style="display:flex; align-items:center; gap:10px;">
+        <div class="ai-avatar">AI</div>
+        <div>
+          <div class="ai-header-title">Asisten Teknik PT NTI</div>
+          <div class="ai-header-sub">Konsultasi Permesinan & RFQ</div>
+        </div>
+      </div>
+      <button type="button" class="ai-close-btn" id="aiChatCloseBtn" aria-label="Tutup Chat">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+    </div>
+
+    <div class="ai-chat-body" id="aiChatBody">
+      <div class="chat-bubble bubble-ai">
+        Halo! Saya Asisten Teknik AI <strong>PT. Nurcahya Teknik Industry</strong>. Ada yang bisa saya bantu seputar kapasitas mesin CNC, spesifikasi material, atau estimasi pembuatan dies & jig?
+        <div class="ai-quick-topics">
+          <button type="button" class="topic-chip" onclick="askAiQuestion('Berapa kapasitas meja CNC Milling?')">Kapasitas CNC Milling</button>
+          <button type="button" class="topic-chip" onclick="askAiQuestion('Material apa saja yang didukung?')">Material & Baja</button>
+          <button type="button" class="topic-chip" onclick="askAiQuestion('Berapa toleransi presisi?')">Akurasi Toleransi</button>
+          <button type="button" class="topic-chip" onclick="askAiQuestion('Bagaimana cara kirim drawing RFQ?')">Kirim Drawing RFQ</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="ai-chat-footer">
+      <input type="text" class="ai-chat-input" id="aiChatInput" placeholder="Tanyakan spesifikasi part / mesin..." />
+      <button type="button" class="ai-send-btn" id="aiSendBtn" aria-label="Kirim">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+      </button>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

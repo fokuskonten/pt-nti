@@ -3,1236 +3,516 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  
-  <title>PT. Nurcahya Teknik Industry | Mitra Presisi Machining CNC, Dies, Jig & Fabrikasi Cikarang</title>
-  <meta name="description" content="PT. Nurcahya Teknik Industry adalah mitra manufaktur presisi terpercaya di Cikarang Pusat. Spesialisasi CNC Milling 3-Axis (s/d 1000x500 mm), CNC Bubut, Stamping & Mold Dies, Jig Inspection Fixture, dan Fabrikasi Industri.">
-  <meta name="keywords" content="machining cikarang, cnc milling bekasi, cnc bubut cikarang, dies stamping, checking fixture jig, fabrikasi rak mesin, pt nurcahya teknik industry, hegar mukti cikarang pusat">
-  <meta name="author" content="PT. Nurcahya Teknik Industry">
-  
-  <!-- PWA & Mobile Configuration -->
+  <title>PT. Nurcahya Teknik Industry | Mitra Presisi Machining CNC, Dies & Fabrikasi Cikarang</title>
+  <meta name="description" content="PT. Nurcahya Teknik Industry menyediakan layanan permesinan CNC Milling 3-Axis (hingga 1000x500 mm), CNC Bubut, Stamping Dies, Jig Checking Fixture, dan Fabrikasi Material Handling di Cikarang Pusat.">
+  <link rel="icon" type="image/png" href="assets/images/icon-192.png">
   <link rel="manifest" href="manifest.json">
-  <meta name="theme-color" content="#0f172a">
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="apple-mobile-web-app-title" content="PT NTI">
-  
-  <!-- Favicon and App Icons -->
-  <link rel="icon" type="image/png" sizes="192x192" href="assets/images/icon-192.png">
-  <link rel="apple-touch-icon" href="assets/images/icon-192.png">
-  
-  <!-- Stylesheet -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <!-- ==========================================================================
-       SITE HEADER & NAVIGATION
-       ========================================================================== -->
-  <header class="site-header">
-    <div class="container nav-container">
-      <a href="#hero" class="brand-identity" aria-label="Beranda PT Nurcahya Teknik Industry">
-        <img src="assets/images/logo_pti.png" alt="Logo PT Nurcahya Teknik Industry" class="brand-logo-img" width="44" height="44">
-        <div class="brand-text-group">
-          <span class="brand-name">PT. NURCAHYA TEKNIK INDUSTRY</span>
-          <span class="brand-sub">Precision Machining & Tooling</span>
+  
+  <header class="site-nav">
+    <div class="container nav-wrapper">
+      <a href="index.html" class="brand-link" aria-label="Beranda PT Nurcahya Teknik Industry">
+        <img src="assets/images/logo_pti.png" alt="Logo PT Nurcahya Teknik Industry" class="brand-logo-img">
+        <div class="brand-text">
+          <span class="brand-title">PT. NURCAHYA TEKNIK INDUSTRY</span>
+          <span class="brand-subtitle">Precision Machining & Tooling</span>
         </div>
       </a>
 
-      <!-- Desktop Navigation Menu -->
-      <nav class="desktop-nav" aria-label="Navigasi Utama">
-        <a href="#tentang" class="nav-link">Tentang Kami</a>
-        <a href="#fasilitas" class="nav-link">Fasilitas Mesin</a>
-        <a href="#produk" class="nav-link">Produk & Portofolio</a>
-        <a href="#pelanggan" class="nav-link">Pelanggan</a>
-        <a href="#ecard" class="nav-link">E-Card</a>
-        <a href="#kontak" class="nav-link">Kontak</a>
+      <nav class="nav-links">
+        <a href="index.html" class="nav-item active">Beranda</a>
+        <a href="fasilitas.html" class="nav-item ">Fasilitas Mesin</a>
+        <a href="produk.html" class="nav-item ">Produk & Portofolio</a>
+        <a href="pelanggan.html" class="nav-item ">Mitra Pelanggan</a>
+        <a href="kontak.html" class="nav-item ">Kontak & Lokasi</a>
       </nav>
 
-      <!-- Navbar Action Group -->
-      <div class="nav-cta-group">
-        <button type="button" class="btn-nav-rfq" data-action="open-rfq">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-          </svg>
-          <span>Minta RFQ</span>
-        </button>
+      <div>
+        <a href="rfq.html" class="btn-pill btn-pill-primary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+          <span>Minta Penawaran (RFQ)</span>
+        </a>
       </div>
-
-      <!-- Mobile Hamburger Toggle -->
-      <button type="button" class="menu-toggle-btn" id="menuToggleBtn" aria-label="Buka Menu Navigasi" aria-expanded="false">
-        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <line x1="3" y1="12" x2="21" y2="12"></line>
-          <line x1="3" y1="6" x2="21" y2="6"></line>
-          <line x1="3" y1="18" x2="21" y2="18"></line>
-        </svg>
-      </button>
-    </div>
-
-    <!-- Mobile Navigation Drawer -->
-    <div class="mobile-nav-drawer" id="mobileNavDrawer" aria-label="Menu Seluler">
-      <a href="#tentang" class="mobile-nav-link">
-        <span>Tentang Kami</span>
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
-      </a>
-      <a href="#fasilitas" class="mobile-nav-link">
-        <span>Fasilitas & Mesin</span>
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
-      </a>
-      <a href="#produk" class="mobile-nav-link">
-        <span>Produk & Portofolio</span>
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
-      </a>
-      <a href="#pelanggan" class="mobile-nav-link">
-        <span>Klien & Mitra</span>
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
-      </a>
-      <a href="#ecard" class="mobile-nav-link">
-        <span>Kartu Nama Digital (E-Card)</span>
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
-      </a>
-      <a href="#kontak" class="mobile-nav-link">
-        <span>Kontak & Lokasi</span>
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
-      </a>
-      <button type="button" class="btn-primary" style="margin-top: 1rem; width: 100%;" data-action="open-rfq">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
-        <span>Minta Penawaran (RFQ)</span>
-      </button>
     </div>
   </header>
 
   <main>
-    <!-- ==========================================================================
-         HERO SECTION B2B
-         ========================================================================== -->
-    <section class="hero-section" id="hero">
-      <div class="hero-grid-pattern"></div>
+    <!-- HERO SECTION -->
+    <section class="hero-wrapper">
       <div class="container">
-        <div class="hero-content">
-          <div class="hero-status-badge">
-            <span class="badge-pulse-dot"></span>
-            <span>Kapasitas CNC Milling 3-Axis s/d 1000x500 mm • Workshop Cikarang Pusat</span>
+        <div class="hero-badge">
+          <span>Workshop Aktif Cikarang Pusat • Kapasitas CNC s/d 1.000 × 500 mm</span>
+        </div>
+
+        <h1 class="hero-heading">
+          Mitra Rekayasa Presisi <span class="text-blue">Machining CNC, Dies, Jig & Fabrikasi</span> Industri
+        </h1>
+
+        <p class="hero-desc">
+          Solusi terintegrasi pembuatan komponen berakurasi tinggi, rancang bangun stamping dies, alat bantu checking fixture jig, serta fabrikasi struktur rak material handling untuk tier-1 otomotif dan industri manufaktur nasional.
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="rfq.html" class="btn-pill btn-pill-primary btn-pill-lg">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+            <span>Minta Penawaran Harga (RFQ)</span>
+          </a>
+
+          <a href="assets/docs/CP_PT_NTI.pdf" download class="btn-pill btn-pill-secondary btn-pill-lg">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+            <span>Unduh Profil Perusahaan (PDF)</span>
+          </a>
+        </div>
+
+        <!-- Metrics Row -->
+        <div class="metrics-row">
+          <div class="metric-card">
+            <div class="metric-number">1.000 × 500</div>
+            <div class="metric-label">Kapasitas Meja Kerja (mm)</div>
+            <div class="metric-sub">CNC Milling 3-Axis untuk pelat & cetakan besar</div>
           </div>
-
-          <h1 class="hero-title">
-            Mitra Presisi Machining, <span class="text-gradient">Dies, Jig & Fabrikasi</span> Industri Cikarang
-          </h1>
-
-          <p class="hero-lead">
-            Solusi terpadu manufaktur komponen berpresisi tinggi, rancang bangun stamping & mold dies, checking fixture jig, serta fabrikasi kebutuhan industri tier-1 otomotif dan permesinan nasional.
-          </p>
-
-          <div class="hero-actions">
-            <button type="button" class="btn-primary" data-action="open-rfq">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                <polyline points="14 2 14 8 20 8"></polyline>
-                <line x1="16" y1="13" x2="8" y2="13"></line>
-                <line x1="16" y1="17" x2="8" y2="17"></line>
-                <polyline points="10 9 9 9 8 9"></polyline>
-              </svg>
-              <span>Minta Penawaran (RFQ)</span>
-            </button>
-
-            <a href="assets/docs/CP_PT_NTI.pdf" download class="btn-secondary">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                <polyline points="7 10 12 15 17 10"></polyline>
-                <line x1="12" y1="15" x2="12" y2="3"></line>
-              </svg>
-              <span>Unduh Company Profile (PDF)</span>
-            </a>
-
-            <a href="#fasilitas" class="btn-ghost-dark">
-              <span>Eksplorasi Fasilitas</span>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-            </a>
+          <div class="metric-card">
+            <div class="metric-number">±0.008</div>
+            <div class="metric-label">Toleransi Presisi (mm)</div>
+            <div class="metric-sub">Inspeksi ketat sesuai gambar kerja engineering</div>
           </div>
-
-          <div class="hero-trust-bar">
-            <div class="trust-item">
-              <div class="trust-icon">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-              </div>
-              <div>
-                <div class="trust-label">Toleransi Presisi ±0.01 mm</div>
-                <div class="trust-desc">Inspeksi dimensi ketat untuk perakitan presisi</div>
-              </div>
-            </div>
-
-            <div class="trust-item">
-              <div class="trust-icon">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-              </div>
-              <div>
-                <div class="trust-label">Komitmen On-Time Delivery</div>
-                <div class="trust-desc">Jadwal fabrikasi terjadwal & monitoring ketat</div>
-              </div>
-            </div>
-
-            <div class="trust-item">
-              <div class="trust-icon">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
-              </div>
-              <div>
-                <div class="trust-label">Material Sertifikasi Industri</div>
-                <div class="trust-desc">SKD11, S45C, SS400, SUS, Alumunium, Tool Steel</div>
-              </div>
-            </div>
+          <div class="metric-card">
+            <div class="metric-number">8+ Klien</div>
+            <div class="metric-label">Kepercayaan Mitra Tier-1</div>
+            <div class="metric-sub">Termasuk PT Gaya Motor & rekanan perakitan otomotif</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-number">Cikarang</div>
+            <div class="metric-label">Lokasi Workshop Strategis</div>
+            <div class="metric-sub">Kecamatan Cikarang Pusat, Kabupaten Bekasi</div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ==========================================================================
-         B2B STAT COUNTER STRIP
-         ========================================================================== -->
-    <section class="stats-strip" aria-label="Statistik Kapabilitas Manufaktur">
-      <div class="container">
-        <div class="stats-grid">
-          <div class="stat-item">
-            <span class="stat-number">3<span class="highlight">+</span></span>
-            <span class="stat-title">Unit Mesin CNC & Milling</span>
-            <span class="stat-caption">CNC Milling 3-Axis, CNC Bubut, Milling Manual</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-number">8<span class="highlight">+</span></span>
-            <span class="stat-title">Klien Korporat Tier-1</span>
-            <span class="stat-caption">Kepercayaan industri manufaktur & otomotif</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-number">1000<span class="highlight">x</span>500</span>
-            <span class="stat-title">Kapasitas Bed Mesin (mm)</span>
-            <span class="stat-caption">Mampu memproses pelat cetakan & part dimensi besar</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-number">±0.01<span class="highlight">mm</span></span>
-            <span class="stat-title">Akurasi Toleransi Kritis</span>
-            <span class="stat-caption">Standar kontrol mutu konsisten di setiap tahapan</span>
-          </div>
+    <!-- PROMOTIONAL INVITATION BANNER -->
+    <section class="container" style="margin-top:-1.5rem;">
+      <div class="promo-box">
+        <div class="hero-badge" style="margin-bottom:0.75rem;">Jaminan Zero Rework • Komitmen On-Time Delivery</div>
+        <h2 class="promo-title">Kirimkan Gambar Kerja (Drawing) 2D/3D Anda Hari Ini</h2>
+        <p class="promo-text">
+          Hindari kendala stop-line dan part meleset toleransi. Tim rekayasa PT NTI siap memvalidasi kelayakan manufaktur (DFM), mengalkulasi waktu siklus pengerjaan, dan menerbitkan surat penawaran harga resmi B2B dalam waktu 1×24 jam kerja.
+        </p>
+        <div style="display:flex; flex-wrap:wrap; gap:1rem;">
+          <a href="rfq.html" class="btn-pill btn-pill-primary">
+            <span>Unggah Rincian Part ke Form RFQ</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </a>
+          <a href="https://wa.me/6281384151264" target="_blank" class="btn-pill btn-pill-secondary">
+            <span>Konsultasi Cepat via WhatsApp PIC (+62 813-8415-1264)</span>
+          </a>
         </div>
       </div>
     </section>
 
-    <!-- ==========================================================================
-         SECTION: TENTANG KAMI (ABOUT US)
-         ========================================================================== -->
-    <section class="section-padding about-section" id="tentang">
+    <!-- FASILITAS MESIN UTAMA -->
+    <section class="section-py">
       <div class="container">
-        <div class="section-header">
-          <span class="section-tag">Profil Perusahaan</span>
-          <h2 class="section-title">Dedikasi Manufaktur Presisi Tingkat Korporat</h2>
-          <p class="section-description">
-            PT. Nurcahya Teknik Industry hadir sebagai mitra manufaktur andal yang berlokasi strategis di kawasan industri Cikarang Pusat, Kabupaten Bekasi.
-          </p>
+        <div class="section-head">
+          <span class="section-tag">Fasilitas Workshop</span>
+          <h2 class="section-title">Mesin Permesinan Presisi Terkini</h2>
+          <p class="section-intro">Didukung lini mesin CNC berdaya potong tinggi dan mesin konvensional untuk memastikan kecepatan dan akurasi produksi.</p>
         </div>
 
-        <div class="about-grid">
-          <div class="about-narrative">
-            <p class="about-lead-text">
-              Kami berfokus pada penyediaan solusi terintegrasi dalam pemesinan presisi, rekayasa perkakas manufaktur, pembuatan mold & stamping dies, checking fixture jig, serta fabrikasi struktur industri.
-            </p>
-            <p class="about-body-text">
-              Didukung oleh mesin CNC mutakhir, operator berpengalaman, dan kontrol kualitas terstandarisasi, kami melayani berbagai industri strategis mulai dari perakitan otomotif Tier-1, elektronik, cetakan logam, hingga fasilitas logistik dan perakitan industri.
-            </p>
-            
-            <div class="about-features-list">
-              <div class="about-feature-item">
-                <div class="feature-check-icon">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                </div>
-                <span>Lokasi workshop strategis di sentra otomotif & industri Cikarang Pusat</span>
-              </div>
-              <div class="about-feature-item">
-                <div class="feature-check-icon">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                </div>
-                <span>Keahlian dalam machining kontur rumit, cavity mold, dan komponen presisi</span>
-              </div>
-              <div class="about-feature-item">
-                <div class="feature-check-icon">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                </div>
-                <span>Penerimaan file gambar kerja standar industri (AutoCAD DWG/DXF, STEP, IGES, SolidWorks)</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="about-cards-stack">
-            <!-- Visi Card -->
-            <div class="value-card">
-              <div class="value-card-header">
-                <div class="value-icon-box">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
-                </div>
-                <h3 class="value-title">Visi Perusahaan</h3>
-              </div>
-              <p class="value-text">
-                Menjadi mitra manufaktur presisi dan rekayasa teknik terdepan yang andal, berstandar mutu tinggi, serta memberikan efisiensi optimal bagi rantai pasok industri manufaktur nasional.
-              </p>
-            </div>
-
-            <!-- Misi Card -->
-            <div class="value-card">
-              <div class="value-card-header">
-                <div class="value-icon-box">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
-                </div>
-                <h3 class="value-title">Misi Perusahaan</h3>
-              </div>
-              <p class="value-text">
-                Menyediakan layanan CNC machining dan fabrikasi berkualitas prima dengan akurasi dimensi konsisten, menjaga disiplin ketepatan waktu pengiriman, serta membangun kemitraan berkelanjutan.
-              </p>
-            </div>
-
-            <!-- Nilai Inti Card -->
-            <div class="value-card">
-              <div class="value-card-header">
-                <div class="value-icon-box">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                </div>
-                <h3 class="value-title">Nilai Perusahaan (Core Values)</h3>
-              </div>
-              <p class="value-text">
-                <strong>Presisi:</strong> Tanpa kompromi pada ukuran & toleransi. <strong>Disiplin Waktu:</strong> Menghormati target operasional mitra. <strong>Integritas Mutu:</strong> Setiap part melalui verifikasi menyeluruh.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-         SECTION: FASILITAS & SPESIFIKASI MESIN
-         ========================================================================== -->
-    <section class="section-padding facilities-section" id="fasilitas">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tag">Infrastruktur Workshop</span>
-          <h2 class="section-title">Fasilitas Mesin & Spesifikasi Teknis</h2>
-          <p class="section-description">
-            Didukung mesin CNC dan permesinan presisi siap kerja untuk memenuhi kebutuhan part custom, volume batch, hingga tooling berbobot berat.
-          </p>
-        </div>
-
-        <div class="machine-cards-grid">
-          <!-- Mesin 1: CNC Milling Hision 3-Axis -->
-          <article class="machine-card">
-            <div class="machine-image-wrapper">
-              <img src="assets/images/cnc_milling_gut_3axis.jpg" alt="Mesin CNC Milling Hision 3-Axis" class="machine-img" loading="lazy">
-              <div class="machine-badge">CNC 3-Axis Heavy</div>
-            </div>
-            <div class="machine-card-body">
-              <h3 class="machine-name">CNC Milling Hision</h3>
-              <div class="machine-subtitle">Bed Dimensi Besar 1000 x 500 mm</div>
-
-              <table class="machine-specs-table">
-                <tbody>
-                  <tr>
-                    <td class="spec-key">Kapasitas Meja</td>
-                    <td class="spec-val">1000 x 500 mm</td>
-                  </tr>
-                  <tr>
-                    <td class="spec-key">Sumbu Kerja</td>
-                    <td class="spec-val">3-Axis Linear (X/Y/Z)</td>
-                  </tr>
-                  <tr>
-                    <td class="spec-key">Spindle Type</td>
-                    <td class="spec-val">BT40 / BT50 High Torque</td>
-                  </tr>
-                  <tr>
-                    <td class="spec-key">Aplikasi Utama</td>
-                    <td class="spec-val">Plat cetakan besar, dies, casing</td>
-                  </tr>
-                </tbody>
-              </table>
-
-              <div class="machine-card-footer">
-                <button type="button" class="btn-card-rfq" data-action="open-rfq" data-preset-job="Jasa Machining CNC Milling Hision (1000x500mm)">
-                  <span>RFQ Mesin Ini</span>
-                </button>
-                <button type="button" class="btn-card-preview" data-action="preview-image" data-img="assets/images/cnc_milling_gut_3axis.jpg" data-title="Mesin CNC Milling Hision (Table 1000x500 mm)" data-category="Fasilitas CNC Milling" data-desc="Unit CNC Milling 3-Axis Hision dengan area kerja meja 1000x500 mm. Mampu memproses material berbobot berat dengan kestabilan rigiditas tinggi." data-preset-job="Jasa Machining CNC Milling Hision (1000x500mm)" aria-label="Lihat Foto Detail">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
-                </button>
-              </div>
-            </div>
-          </article>
-
-          <!-- Mesin 2: CNC Milling GUT 3-Axis -->
-          <article class="machine-card">
-            <div class="machine-image-wrapper">
-              <img src="assets/images/cnc_milling_gut_3axis.jpg" alt="Mesin CNC Milling GUT 3-Axis" class="machine-img" loading="lazy">
-              <div class="machine-badge">CNC 3-Axis Precision</div>
-            </div>
-            <div class="machine-card-body">
-              <h3 class="machine-name">CNC Milling GUT</h3>
-              <div class="machine-subtitle">Table Ukuran 800 x 350 mm</div>
-
-              <table class="machine-specs-table">
-                <tbody>
-                  <tr>
-                    <td class="spec-key">Kapasitas Meja</td>
-                    <td class="spec-val">800 x 350 mm</td>
-                  </tr>
-                  <tr>
-                    <td class="spec-key">Sumbu Kerja</td>
-                    <td class="spec-val">3-Axis Precision Motion</td>
-                  </tr>
-                  <tr>
-                    <td class="spec-key">Spindle Type</td>
-                    <td class="spec-val">BT40 High Speed</td>
-                  </tr>
-                  <tr>
-                    <td class="spec-key">Aplikasi Utama</td>
-                    <td class="spec-val">Insert dies, jig parts, precision parts</td>
-                  </tr>
-                </tbody>
-              </table>
-
-              <div class="machine-card-footer">
-                <button type="button" class="btn-card-rfq" data-action="open-rfq" data-preset-job="Jasa Machining CNC Milling GUT (800x350mm)">
-                  <span>RFQ Mesin Ini</span>
-                </button>
-                <button type="button" class="btn-card-preview" data-action="preview-image" data-img="assets/images/cnc_milling_gut_3axis.jpg" data-title="Mesin CNC Milling GUT 3-Axis (Table 800x350 mm)" data-category="Fasilitas CNC Milling" data-desc="Unit CNC Milling 3-Axis GUT berkinerja tinggi, dioptimalkan untuk pembuatan insert tooling dan komponen dengan toleransi presisi rapat." data-preset-job="Jasa Machining CNC Milling GUT (800x350mm)" aria-label="Lihat Foto Detail">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
-                </button>
-              </div>
-            </div>
-          </article>
-
-          <!-- Mesin 3: CNC Bubut Hision -->
-          <article class="machine-card">
-            <div class="machine-image-wrapper">
-              <img src="assets/images/cnc_bubut_hision.jpg" alt="Mesin CNC Bubut Hision" class="machine-img" loading="lazy">
-              <div class="machine-badge">CNC Lathe Unit</div>
-            </div>
-            <div class="machine-card-body">
-              <h3 class="machine-name">CNC Bubut Hision</h3>
-              <div class="machine-subtitle">Pemesinan Silindris Presisi Tinggi</div>
-
-              <table class="machine-specs-table">
-                <tbody>
-                  <tr>
-                    <td class="spec-key">Konfigurasi</td>
-                    <td class="spec-val">CNC Turning Lathe 1 Unit</td>
-                  </tr>
-                  <tr>
-                    <td class="spec-key">Spindle Chuck</td>
-                    <td class="spec-val">Hydraulic Precision Chuck</td>
-                  </tr>
-                  <tr>
-                    <td class="spec-key">Turret Tool</td>
-                    <td class="spec-val">Multi-station indexing</td>
-                  </tr>
-                  <tr>
-                    <td class="spec-key">Aplikasi Utama</td>
-                    <td class="spec-val">Shaft, bushing, threading, kontur bulat</td>
-                  </tr>
-                </tbody>
-              </table>
-
-              <div class="machine-card-footer">
-                <button type="button" class="btn-card-rfq" data-action="open-rfq" data-preset-job="Jasa Pemesinan CNC Bubut (Lathe Turning)">
-                  <span>RFQ Mesin Ini</span>
-                </button>
-                <button type="button" class="btn-card-preview" data-action="preview-image" data-img="assets/images/cnc_bubut_hision.jpg" data-title="Mesin CNC Bubut Hision 1 Unit" data-category="Fasilitas CNC Bubut" data-desc="Mesin bubut CNC Hision untuk pemesinan komponen rotari, poros bertingkat, ulir presisi, dan bushing dengan silindrisitas sempurna." data-preset-job="Jasa Pemesinan CNC Bubut (Lathe Turning)" aria-label="Lihat Foto Detail">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
-                </button>
-              </div>
-            </div>
-          </article>
-
-          <!-- Mesin 4: Milling Manual -->
-          <article class="machine-card">
-            <div class="machine-image-wrapper">
-              <img src="assets/images/milling_manual.jpg" alt="Mesin Milling Manual" class="machine-img" loading="lazy">
-              <div class="machine-badge">Conventional Unit</div>
-            </div>
-            <div class="machine-card-body">
-              <h3 class="machine-name">Milling Manual</h3>
-              <div class="machine-subtitle">Pemesinan Konvensional & Persiapan Cepat</div>
-
-              <table class="machine-specs-table">
-                <tbody>
-                  <tr>
-                    <td class="spec-key">Konfigurasi</td>
-                    <td class="spec-val">Universal Milling 1 Unit</td>
-                  </tr>
-                  <tr>
-                    <td class="spec-key">Indikator</td>
-                    <td class="spec-val">Digital Read Out (DRO) 3-Axis</td>
-                  </tr>
-                  <tr>
-                    <td class="spec-key">Keunggulan</td>
-                    <td class="spec-val">Setup cepat, fleksibilitas tinggi</td>
-                  </tr>
-                  <tr>
-                    <td class="spec-key">Aplikasi Utama</td>
-                    <td class="spec-val">Facing raw material, slotting, chamfer</td>
-                  </tr>
-                </tbody>
-              </table>
-
-              <div class="machine-card-footer">
-                <button type="button" class="btn-card-rfq" data-action="open-rfq" data-preset-job="Jasa Milling Konvensional / Pemesinan Cepat">
-                  <span>RFQ Mesin Ini</span>
-                </button>
-                <button type="button" class="btn-card-preview" data-action="preview-image" data-img="assets/images/milling_manual.jpg" data-title="Mesin Milling Manual 1 Unit" data-category="Fasilitas Konvensional" data-desc="Mesin Milling Manual berkecepatan tinggi dengan alat ukur digital DRO untuk pengerjaan perataan permukaan dan persiapan billet material awal." data-preset-job="Jasa Milling Konvensional / Pemesinan Cepat" aria-label="Lihat Foto Detail">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
-                </button>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-         SECTION: PRODUK & PORTOFOLIO INTERAKTIF (CATALOG)
-         ========================================================================== -->
-    <section class="section-padding portfolio-section" id="produk">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tag">Portofolio Kerja</span>
-          <h2 class="section-title">Produk & Portofolio Manufaktur</h2>
-          <p class="section-description">
-            Galeri dokumentasi hasil produksi komponen presisi, dies stamping & mold, checking fixture jig, serta konstruksi fabrikasi industri.
-          </p>
-        </div>
-
-        <!-- Filter Tabs Bar -->
-        <div class="catalog-filter-bar" role="tablist" aria-label="Kategori Produk">
-          <button type="button" class="filter-tab-btn active" data-filter="all" role="tab" aria-selected="true">
-            <span>Semua Produk</span>
-            <span class="tab-count-badge">10</span>
-          </button>
-          <button type="button" class="filter-tab-btn" data-filter="machining" role="tab" aria-selected="false">
-            <span>Jasa Machining</span>
-            <span class="tab-count-badge">3</span>
-          </button>
-          <button type="button" class="filter-tab-btn" data-filter="dies" role="tab" aria-selected="false">
-            <span>Dies & Cetakan</span>
-            <span class="tab-count-badge">2</span>
-          </button>
-          <button type="button" class="filter-tab-btn" data-filter="jig" role="tab" aria-selected="false">
-            <span>Jig Inspection</span>
-            <span class="tab-count-badge">2</span>
-          </button>
-          <button type="button" class="filter-tab-btn" data-filter="fabrication" role="tab" aria-selected="false">
-            <span>Fabrikasi</span>
-            <span class="tab-count-badge">3</span>
-          </button>
-        </div>
-
-        <!-- Portfolio Items Grid -->
-        <div class="portfolio-grid" id="portfolioGrid">
+        <div class="grid-3">
           
-          <!-- Item 1: Machining 1 -->
-          <article class="portfolio-card" data-category="machining" data-action="preview-image" data-img="assets/images/machining_precision_1.jpg" data-title="Jasa Machining Presisi Komponen Spherical" data-category-label="Jasa Machining" data-desc="Pemesinan presisi komponen berbentuk bulat dan kontur radial menggunakan CNC Bubut dan Milling dengan toleransi dimensi hingga ±0.01 mm." data-preset-job="Jasa Machining Presisi Komponen Spherical">
-            <div class="portfolio-card-media">
-              <img src="assets/images/machining_precision_1.jpg" alt="Jasa Machining Presisi Komponen Spherical" class="portfolio-card-img" loading="lazy">
-              <span class="portfolio-category-pill">Machining</span>
-            </div>
-            <div class="portfolio-card-body">
-              <h3 class="portfolio-item-title">Jasa Machining Presisi Komponen Spherical</h3>
-              <p class="portfolio-item-spec">Pemesinan kontur radial dan permukaan silindris presisi tinggi untuk komponen permesinan dinamis.</p>
-              <div class="portfolio-item-footer">
-                <span class="portfolio-btn-view">
-                  <span>Lihat Detail</span>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
-                </span>
+            <div class="corp-card">
+              <div class="card-img-wrapper">
+                <img src="assets/images/cnc_milling_gut_3axis.jpg" alt="Fasilitas & Layanan CNC Milling 3-Axis (Hision & GUT)" class="card-img">
+              </div>
+              <div class="card-body">
+                <span class="card-category">Fasilitas Permesinan CNC</span>
+                <h3 class="card-title">Fasilitas & Layanan CNC Milling 3-Axis (Hision & GUT)</h3>
+                <p class="card-desc">Dua unit mesin CNC Milling 3-Axis berkecepatan tinggi dengan kapasitas meja kerja hingga 1.000 × 500 mm untuk pembuatan cetakan dan part presisi.</p>
+                <a href="layanan-cnc-milling-3axis.html" class="btn-pill btn-pill-primary" style="margin-top:auto;">
+                  <span>Buka Halaman Spesifikasi Mesin</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </a>
               </div>
             </div>
-          </article>
-
-          <!-- Item 2: Machining 2 -->
-          <article class="portfolio-card" data-category="machining" data-action="preview-image" data-img="assets/images/machining_precision_2.jpg" data-title="Jasa Machining Presisi Pelat Cetakan" data-category-label="Jasa Machining" data-desc="Machining pelat cetakan dengan pocketing mendalam, lubang ejector pin, dan jalur baut berakurasi tinggi dari material Tool Steel SKD11." data-preset-job="Jasa Machining Presisi Pelat Cetakan">
-            <div class="portfolio-card-media">
-              <img src="assets/images/machining_precision_2.jpg" alt="Jasa Machining Presisi Pelat Cetakan" class="portfolio-card-img" loading="lazy">
-              <span class="portfolio-category-pill">Machining</span>
-            </div>
-            <div class="portfolio-card-body">
-              <h3 class="portfolio-item-title">Jasa Machining Presisi Pelat Cetakan</h3>
-              <p class="portfolio-item-spec">Pelat dasar cetakan tooling dengan alur baut dan pin posisi berstandar toleransi ketat.</p>
-              <div class="portfolio-item-footer">
-                <span class="portfolio-btn-view">
-                  <span>Lihat Detail</span>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
-                </span>
+          
+            <div class="corp-card">
+              <div class="card-img-wrapper">
+                <img src="assets/images/cnc_bubut_hision.jpg" alt="Fasilitas & Layanan CNC Bubut Turning (Hision)" class="card-img">
+              </div>
+              <div class="card-body">
+                <span class="card-category">Fasilitas Permesinan CNC</span>
+                <h3 class="card-title">Fasilitas & Layanan CNC Bubut Turning (Hision)</h3>
+                <p class="card-desc">Satu unit CNC Bubut Hision presisi tinggi untuk pembentukan komponen silindris, ulir bertingkat, dan kontur radial berkecepatan tinggi.</p>
+                <a href="layanan-cnc-bubut.html" class="btn-pill btn-pill-primary" style="margin-top:auto;">
+                  <span>Buka Halaman Spesifikasi Mesin</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </a>
               </div>
             </div>
-          </article>
-
-          <!-- Item 3: Machining 3 -->
-          <article class="portfolio-card" data-category="machining" data-action="preview-image" data-img="assets/images/machining_precision_3.jpg" data-title="Pemesinan Presisi Billet dan Kontur" data-category-label="Jasa Machining" data-desc="Pengerjaan kontur kompleks 3D surface pada balok billet baja menggunakan endmill khusus dan kecepatan potong terkendali." data-preset-job="Pemesinan Presisi Billet dan Kontur">
-            <div class="portfolio-card-media">
-              <img src="assets/images/machining_precision_3.jpg" alt="Pemesinan Presisi Billet dan Kontur" class="portfolio-card-img" loading="lazy">
-              <span class="portfolio-category-pill">Machining</span>
-            </div>
-            <div class="portfolio-card-body">
-              <h3 class="portfolio-item-title">Pemesinan Presisi Billet dan Kontur</h3>
-              <p class="portfolio-item-spec">Pemesinan balok baja padat dengan kontur bertingkat untuk kebutuhan suku cadang industri mesin.</p>
-              <div class="portfolio-item-footer">
-                <span class="portfolio-btn-view">
-                  <span>Lihat Detail</span>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
-                </span>
+          
+            <div class="corp-card">
+              <div class="card-img-wrapper">
+                <img src="assets/images/milling_manual.jpg" alt="Fasilitas & Layanan Milling Manual Konvensional" class="card-img">
+              </div>
+              <div class="card-body">
+                <span class="card-category">Fasilitas Permesinan Konvensional</span>
+                <h3 class="card-title">Fasilitas & Layanan Milling Manual Konvensional</h3>
+                <p class="card-desc">Mesin milling vertikal konvensional untuk pekerjaan penyiapan material cepat, alur pasak (keyway), lubang tap, dan perbaikan part darurat.</p>
+                <a href="layanan-milling-manual.html" class="btn-pill btn-pill-primary" style="margin-top:auto;">
+                  <span>Buka Halaman Spesifikasi Mesin</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </a>
               </div>
             </div>
-          </article>
-
-          <!-- Item 4: Dies 1 -->
-          <article class="portfolio-card" data-category="dies" data-action="preview-image" data-img="assets/images/produk_dies_stamping_1.jpg" data-title="Produk Stamping Dies Heavy Duty" data-category-label="Dies & Cetakan" data-desc="Konstruksi upper & lower die shoe lengkap dengan guide post dan insert punch hardened untuk proses stamping pelat otomotif." data-preset-job="Pembuatan Stamping Dies Heavy Duty">
-            <div class="portfolio-card-media">
-              <img src="assets/images/produk_dies_stamping_1.jpg" alt="Produk Stamping Dies Heavy Duty" class="portfolio-card-img" loading="lazy">
-              <span class="portfolio-category-pill">Dies</span>
-            </div>
-            <div class="portfolio-card-body">
-              <h3 class="portfolio-item-title">Produk Stamping Dies Heavy Duty</h3>
-              <p class="portfolio-item-spec">Perkakas stamping dies lengkap dengan base shoe tebal untuk stamping part otomotif bertekanan tinggi.</p>
-              <div class="portfolio-item-footer">
-                <span class="portfolio-btn-view">
-                  <span>Lihat Detail</span>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
-                </span>
-              </div>
-            </div>
-          </article>
-
-          <!-- Item 5: Dies 2 -->
-          <article class="portfolio-card" data-category="dies" data-action="preview-image" data-img="assets/images/produk_dies_cavity_2.jpg" data-title="Produk Mold Dies Presisi Cavity" data-category-label="Dies & Cetakan" data-desc="Cetakan rongga cavity presisi tinggi dengan kehalusan permukaan mikro untuk pembentukan komponen industri konsisten." data-preset-job="Pembuatan Mold Dies Presisi Cavity">
-            <div class="portfolio-card-media">
-              <img src="assets/images/produk_dies_cavity_2.jpg" alt="Produk Mold Dies Presisi Cavity" class="portfolio-card-img" loading="lazy">
-              <span class="portfolio-category-pill">Dies</span>
-            </div>
-            <div class="portfolio-card-body">
-              <h3 class="portfolio-item-title">Produk Mold Dies Presisi Cavity</h3>
-              <p class="portfolio-item-spec">Rongga cavity mold presisi dengan toleransi clearance mikro dan ketahanan abrasi maksimal.</p>
-              <div class="portfolio-item-footer">
-                <span class="portfolio-btn-view">
-                  <span>Lihat Detail</span>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
-                </span>
-              </div>
-            </div>
-          </article>
-
-          <!-- Item 6: Jig 1 -->
-          <article class="portfolio-card" data-category="jig" data-action="preview-image" data-img="assets/images/jig_inspection_fixture_1.jpg" data-title="Jig Inspection Fixture Unit A" data-category-label="Jig Inspection" data-desc="Checking fixture dengan pin datum referensi untuk verifikasi kesesuaian part stamping pada jalur QC line pabrik perakitan." data-preset-job="Pembuatan Jig Inspection Fixture Unit A">
-            <div class="portfolio-card-media">
-              <img src="assets/images/jig_inspection_fixture_1.jpg" alt="Jig Inspection Fixture Unit A" class="portfolio-card-img" loading="lazy">
-              <span class="portfolio-category-pill">Jig Inspection</span>
-            </div>
-            <div class="portfolio-card-body">
-              <h3 class="portfolio-item-title">Jig Inspection Fixture Unit A</h3>
-              <p class="portfolio-item-spec">Fixture pemeriksaan dimensi untuk memastikan akurasi geometri part secara cepat di lantai produksi.</p>
-              <div class="portfolio-item-footer">
-                <span class="portfolio-btn-view">
-                  <span>Lihat Detail</span>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
-                </span>
-              </div>
-            </div>
-          </article>
-
-          <!-- Item 7: Jig 2 -->
-          <article class="portfolio-card" data-category="jig" data-action="preview-image" data-img="assets/images/jig_inspection_fixture_2.jpg" data-title="Jig Inspection Fixture Unit B" data-category-label="Jig Inspection" data-desc="Jig fixture multi-point dengan toggle clamp kokoh untuk pengujian go / no-go dan verifikasi koordinat CMM." data-preset-job="Pembuatan Jig Inspection Fixture Unit B">
-            <div class="portfolio-card-media">
-              <img src="assets/images/jig_inspection_fixture_2.jpg" alt="Jig Inspection Fixture Unit B" class="portfolio-card-img" loading="lazy">
-              <span class="portfolio-category-pill">Jig Inspection</span>
-            </div>
-            <div class="portfolio-card-body">
-              <h3 class="portfolio-item-title">Jig Inspection Fixture Unit B</h3>
-              <p class="portfolio-item-spec">Unit inspection fixture dengan clamping presisi untuk validasi part otomotif tier-1.</p>
-              <div class="portfolio-item-footer">
-                <span class="portfolio-btn-view">
-                  <span>Lihat Detail</span>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
-                </span>
-              </div>
-            </div>
-          </article>
-
-          <!-- Item 8: Fabrication 1 -->
-          <article class="portfolio-card" data-category="fabrication" data-action="preview-image" data-img="assets/images/fabrikasi_rak_blue.jpg" data-title="Fabrikasi Rangka Dudukan Mesin & Rak" data-category-label="Fabrikasi Industri" data-desc="Konstruksi hollow steel heavy-duty dengan pengelasan kokoh dan finishing powder coating industrial blue anti-gores." data-preset-job="Fabrikasi Rangka Dudukan Mesin & Rak">
-            <div class="portfolio-card-media">
-              <img src="assets/images/fabrikasi_rak_blue.jpg" alt="Fabrikasi Rangka Dudukan Mesin & Rak" class="portfolio-card-img" loading="lazy">
-              <span class="portfolio-category-pill">Fabrikasi</span>
-            </div>
-            <div class="portfolio-card-body">
-              <h3 class="portfolio-item-title">Fabrikasi Rangka Dudukan Mesin & Rak</h3>
-              <p class="portfolio-item-spec">Rangka struktur baja presisi untuk dudukan permesinan industri dan rak penyimpanan heavy duty.</p>
-              <div class="portfolio-item-footer">
-                <span class="portfolio-btn-view">
-                  <span>Lihat Detail</span>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
-                </span>
-              </div>
-            </div>
-          </article>
-
-          <!-- Item 9: Fabrication 2 -->
-          <article class="portfolio-card" data-category="fabrication" data-action="preview-image" data-img="assets/images/fabrikasi_rak_meja_susun.jpg" data-title="Fabrikasi Rak Kerja & Meja Assembly" data-category-label="Fabrikasi Industri" data-desc="Meja kerja ergonomis untuk jalur perakitan manufaktur dengan rak susun terpadu dan kapasitas beban merata." data-preset-job="Fabrikasi Rak Kerja & Meja Assembly">
-            <div class="portfolio-card-media">
-              <img src="assets/images/fabrikasi_rak_meja_susun.jpg" alt="Fabrikasi Rak Kerja & Meja Assembly" class="portfolio-card-img" loading="lazy">
-              <span class="portfolio-category-pill">Fabrikasi</span>
-            </div>
-            <div class="portfolio-card-body">
-              <h3 class="portfolio-item-title">Fabrikasi Rak Kerja & Meja Assembly</h3>
-              <p class="portfolio-item-spec">Workstation perakitan lini produksi pabrik dengan ketahanan beban tinggi dan kestabilan maksimal.</p>
-              <div class="portfolio-item-footer">
-                <span class="portfolio-btn-view">
-                  <span>Lihat Detail</span>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
-                </span>
-              </div>
-            </div>
-          </article>
-
-          <!-- Item 10: Fabrication 3 -->
-          <article class="portfolio-card" data-category="fabrication" data-action="preview-image" data-img="assets/images/fabrikasi_trolley_material.jpg" data-title="Fabrikasi Trolley Material Handling" data-category-label="Fabrikasi Industri" data-desc="Trolley pengangkut part material di area pabrik dengan roda caster industri berat dan rangka protektif pipa pipa." data-preset-job="Fabrikasi Trolley Material Handling">
-            <div class="portfolio-card-media">
-              <img src="assets/images/fabrikasi_trolley_material.jpg" alt="Fabrikasi Trolley Material Handling" class="portfolio-card-img" loading="lazy">
-              <span class="portfolio-category-pill">Fabrikasi</span>
-            </div>
-            <div class="portfolio-card-body">
-              <h3 class="portfolio-item-title">Fabrikasi Trolley Material Handling</h3>
-              <p class="portfolio-item-spec">Troli logistik internal pabrik untuk mempermudah transfer part aman dan cepat antar lini produksi.</p>
-              <div class="portfolio-item-footer">
-                <span class="portfolio-btn-view">
-                  <span>Lihat Detail</span>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
-                </span>
-              </div>
-            </div>
-          </article>
-
+          
         </div>
       </div>
     </section>
 
-    <!-- ==========================================================================
-         SECTION: KLIEN & MITRA (CLIENTS & PARTNERS)
-         ========================================================================== -->
-    <section class="section-padding clients-section" id="pelanggan">
+    <!-- KATALOG PRODUK HIGHLIGHT (SETIAP CARD MENUJU KE LANDING PAGE MASING-MASING) -->
+    <section class="section-py" style="background-color:var(--white); border-top:1px solid var(--border-card); border-bottom:1px solid var(--border-card);">
       <div class="container">
-        <div class="section-header">
-          <span class="section-tag" style="background: rgba(37,99,235,0.2); color: #93c5fd; border-color: rgba(59,130,246,0.4);">Kepercayaan Industri</span>
-          <h2 class="section-title">Pelanggan & Mitra Korporat</h2>
-          <p class="section-description">
-            Kami bangga dipercaya oleh berbagai perusahaan manufaktur terkemuka, perakitan otomotif, dan engineering partners nasional.
-          </p>
+        <div class="section-head">
+          <span class="section-tag">Portofolio Manufaktur</span>
+          <h2 class="section-title">Produk & Pekerjaan Rekayasa</h2>
+          <p class="section-intro">Setiap item memiliki landing page khusus dengan data teknis, material, dan alur pengerjaan. Klik pada part untuk membuka halaman teknis.</p>
         </div>
 
-        <div class="clients-grid">
-          <!-- Klien 1 -->
-          <div class="client-card">
-            <div class="client-logo-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
-            </div>
-            <div class="client-info-group">
-              <span class="client-company-name">PT. GAYA MOTOR</span>
-              <span class="client-tier-badge">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Automotive Assembly Tier-1
-              </span>
-            </div>
-          </div>
+        <div class="grid-3">
+          
+            <div class="corp-card">
+              <div class="card-img-wrapper">
+                <img src="assets/images/machining_precision_1.jpg" alt="Jasa Machining Presisi Komponen Spherical & Kontur Radial" class="card-img">
+              </div>
+              <div class="card-body">
+                <span class="card-category">Pemesinan Presisi (Machining)</span>
+                <h3 class="card-title">Jasa Machining Presisi Komponen Spherical & Kontur Radial</h3>
+                <p class="card-desc">Rekayasa pemesinan komponen berbentuk bulat, kontur cembung-cekung radial, dan dudukan engsel presisi tinggi dengan toleransi mikron.</p>
+                
+                <div class="card-meta-list">
+                  <div class="card-meta-item">
+                    <span class="card-meta-label">Akurasi GD&T</span>
+                    <span class="card-meta-val">Ovalitas & Sferisitas ±0.008 mm</span>
+                  </div>
+                  <div class="card-meta-item">
+                    <span class="card-meta-label">Material Utama</span>
+                    <span class="card-meta-val">Baja Paduan S45C</span>
+                  </div>
+                </div>
 
-          <!-- Klien 2 -->
-          <div class="client-card">
-            <div class="client-logo-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+                <a href="produk-machining-presisi-spherical.html" class="btn-pill btn-pill-primary" style="margin-top:auto;">
+                  <span>Lihat Landing Page Produk</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </a>
+              </div>
             </div>
-            <div class="client-info-group">
-              <span class="client-company-name">PT. REKADAY MULTI ADIPRIMA</span>
-              <span class="client-tier-badge">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Automotive Component Tier-1
-              </span>
-            </div>
-          </div>
+          
+            <div class="corp-card">
+              <div class="card-img-wrapper">
+                <img src="assets/images/machining_precision_2.jpg" alt="Jasa Machining Presisi Pelat Cetakan, Die Base & Stripper Plate" class="card-img">
+              </div>
+              <div class="card-body">
+                <span class="card-category">Pemesinan Presisi (Machining)</span>
+                <h3 class="card-title">Jasa Machining Presisi Pelat Cetakan, Die Base & Stripper Plate</h3>
+                <p class="card-desc">Pemesinan pelat tebal cetakan baja perkakas dengan kerataan bidang paralel (flatness) superior dan lubang dowel pin berpresisi H7.</p>
+                
+                <div class="card-meta-list">
+                  <div class="card-meta-item">
+                    <span class="card-meta-label">Akurasi GD&T</span>
+                    <span class="card-meta-val">Center-to-center hole pitch ±0.01 mm</span>
+                  </div>
+                  <div class="card-meta-item">
+                    <span class="card-meta-label">Material Utama</span>
+                    <span class="card-meta-val">SKD11</span>
+                  </div>
+                </div>
 
-          <!-- Klien 3 -->
-          <div class="client-card">
-            <div class="client-logo-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+                <a href="produk-machining-pelat-cetakan.html" class="btn-pill btn-pill-primary" style="margin-top:auto;">
+                  <span>Lihat Landing Page Produk</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </a>
+              </div>
             </div>
-            <div class="client-info-group">
-              <span class="client-company-name">PT. HASHIMOTO ENGINEERING</span>
-              <span class="client-tier-badge">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Precision Tooling & Engineering
-              </span>
-            </div>
-          </div>
+          
+            <div class="corp-card">
+              <div class="card-img-wrapper">
+                <img src="assets/images/machining_precision_3.jpg" alt="Pemesinan Presisi Billet Logam Solid & Kontur 3D Kompleks" class="card-img">
+              </div>
+              <div class="card-body">
+                <span class="card-category">Pemesinan Presisi (Machining)</span>
+                <h3 class="card-title">Pemesinan Presisi Billet Logam Solid & Kontur 3D Kompleks</h3>
+                <p class="card-desc">Pemesinan blok logam solid (billet) menjadi part berstruktur tipis dan berkontur 3 dimensi rumit tanpa deformasi tegangan sisa.</p>
+                
+                <div class="card-meta-list">
+                  <div class="card-meta-item">
+                    <span class="card-meta-label">Akurasi GD&T</span>
+                    <span class="card-meta-val">Deviasi permukaan ±0.01 mm terhadap model CAD 3D master</span>
+                  </div>
+                  <div class="card-meta-item">
+                    <span class="card-meta-label">Material Utama</span>
+                    <span class="card-meta-val">Alumunium Dural 6061-T6</span>
+                  </div>
+                </div>
 
-          <!-- Klien 4 -->
-          <div class="client-card">
-            <div class="client-logo-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                <a href="produk-machining-billet-kontur.html" class="btn-pill btn-pill-primary" style="margin-top:auto;">
+                  <span>Lihat Landing Page Produk</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </a>
+              </div>
             </div>
-            <div class="client-info-group">
-              <span class="client-company-name">PT. HANEEDA EKAJAYA</span>
-              <span class="client-tier-badge">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Industrial Tooling & Parts
-              </span>
-            </div>
-          </div>
+          
+            <div class="corp-card">
+              <div class="card-img-wrapper">
+                <img src="assets/images/produk_dies_stamping_1.jpg" alt="Rancang Bangun Stamping Dies Heavy Duty & Sheet Metal Tooling" class="card-img">
+              </div>
+              <div class="card-body">
+                <span class="card-category">Tooling & Cetakan (Dies)</span>
+                <h3 class="card-title">Rancang Bangun Stamping Dies Heavy Duty & Sheet Metal Tooling</h3>
+                <p class="card-desc">Rekayasa pembuatan cetakan press stamping logam untuk proses blanking, piercing, bending, dan deep drawing lembaran pelat otomotif.</p>
+                
+                <div class="card-meta-list">
+                  <div class="card-meta-item">
+                    <span class="card-meta-label">Akurasi GD&T</span>
+                    <span class="card-meta-val">SS400 / S45C Pelat Tebal Presisi dengan Guide Post Ball Bushing</span>
+                  </div>
+                  <div class="card-meta-item">
+                    <span class="card-meta-label">Material Utama</span>
+                    <span class="card-meta-val">SKD11 / D2 Cold Work Tool Steel Vacuum Hardened (HRC 58 - 60)</span>
+                  </div>
+                </div>
 
-          <!-- Klien 5 -->
-          <div class="client-card">
-            <div class="client-logo-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="8.5" cy="7.5" r="4"></circle><line x1="20" y1="8" x2="20" y2="14"></line><line x1="23" y1="11" x2="17" y2="11"></line></svg>
+                <a href="produk-stamping-dies-heavy-duty.html" class="btn-pill btn-pill-primary" style="margin-top:auto;">
+                  <span>Lihat Landing Page Produk</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </a>
+              </div>
             </div>
-            <div class="client-info-group">
-              <span class="client-company-name">PT. SAKURA TECHNICAL ENG.</span>
-              <span class="client-tier-badge">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Partner Indonesia
-              </span>
-            </div>
-          </div>
+          
+            <div class="corp-card">
+              <div class="card-img-wrapper">
+                <img src="assets/images/produk_dies_cavity_2.jpg" alt="Pembuatan Mold Dies Presisi Cavity & Core Cetakan Plastik/Karet" class="card-img">
+              </div>
+              <div class="card-body">
+                <span class="card-category">Tooling & Cetakan (Dies)</span>
+                <h3 class="card-title">Pembuatan Mold Dies Presisi Cavity & Core Cetakan Plastik/Karet</h3>
+                <p class="card-desc">Pemesinan blok cavity dan core cetakan injeksi dengan kehalusan permukaan cermin (mirror finish) dan ketepatan parting line mutlak.</p>
+                
+                <div class="card-meta-list">
+                  <div class="card-meta-item">
+                    <span class="card-meta-label">Akurasi GD&T</span>
+                    <span class="card-meta-val">Toleransi kontak ±0.005 mm (Blue paste matching contact > 90%)</span>
+                  </div>
+                  <div class="card-meta-item">
+                    <span class="card-meta-label">Material Utama</span>
+                    <span class="card-meta-val">SKD61</span>
+                  </div>
+                </div>
 
-          <!-- Klien 6 -->
-          <div class="client-card">
-            <div class="client-logo-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+                <a href="produk-mold-dies-cavity.html" class="btn-pill btn-pill-primary" style="margin-top:auto;">
+                  <span>Lihat Landing Page Produk</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </a>
+              </div>
             </div>
-            <div class="client-info-group">
-              <span class="client-company-name">PT. BERDUA SEJAHTERA TEKNIK</span>
-              <span class="client-tier-badge">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Fabrication & Engineering
-              </span>
-            </div>
-          </div>
+          
+            <div class="corp-card">
+              <div class="card-img-wrapper">
+                <img src="assets/images/jig_inspection_fixture_1.jpg" alt="Jig Inspection & Checking Fixture Unit A (Go/No-Go Gauge)" class="card-img">
+              </div>
+              <div class="card-body">
+                <span class="card-category">Jig & Alat Bantu Inspeksi</span>
+                <h3 class="card-title">Jig Inspection & Checking Fixture Unit A (Go/No-Go Gauge)</h3>
+                <p class="card-desc">Perangkat alat bantu uji dimensi cepat (checking fixture) untuk verifikasi kualitas part manufaktur secara akurat pada lini produksi massal.</p>
+                
+                <div class="card-meta-list">
+                  <div class="card-meta-item">
+                    <span class="card-meta-label">Akurasi GD&T</span>
+                    <span class="card-meta-val">Tool Steel SKD11 Vacuum Hardened HRC 60 - 62</span>
+                  </div>
+                  <div class="card-meta-item">
+                    <span class="card-meta-label">Material Utama</span>
+                    <span class="card-meta-val">Alumunium Dural 6061-T6 Anodized / S45C Plated</span>
+                  </div>
+                </div>
 
-          <!-- Klien 7 -->
-          <div class="client-card">
-            <div class="client-logo-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+                <a href="produk-jig-inspection-fixture-a.html" class="btn-pill btn-pill-primary" style="margin-top:auto;">
+                  <span>Lihat Landing Page Produk</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </a>
+              </div>
             </div>
-            <div class="client-info-group">
-              <span class="client-company-name">PT. NOERHAYAT BERKAH SEJAHTERA</span>
-              <span class="client-tier-badge">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Machining & Supply Partner
-              </span>
-            </div>
-          </div>
+          
+        </div>
 
-          <!-- Klien 8 -->
-          <div class="client-card">
-            <div class="client-logo-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path><path d="M2 12l10 5 10-5"></path></svg>
-            </div>
-            <div class="client-info-group">
-              <span class="client-company-name">PT. GEMA LESTARI SARANA TEKNIK</span>
-              <span class="client-tier-badge">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Industrial Technical Solutions
-              </span>
-            </div>
-          </div>
+        <div style="text-align:center; margin-top:3rem;">
+          <a href="produk.html" class="btn-pill btn-pill-secondary btn-pill-lg">
+            <span>Lihat Seluruh 10 Portofolio Produk & Jasa</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
         </div>
       </div>
     </section>
 
-    <!-- ==========================================================================
-         SECTION: E-CARD DIGITAL / KARTU NAMA VIRTUAL
-         ========================================================================== -->
-    <section class="section-padding ecard-section" id="ecard">
+    <!-- MITRA KORPORAT RESMI (CLEAN CORPORATE TYPOGRAPHY - ZERO DUMMY ICONS) -->
+    <section class="section-py">
       <div class="container">
-        <div class="section-header">
-          <span class="section-tag">Kartu Nama Virtual</span>
-          <h2 class="section-title">E-Card & Kontak Langsung PT NTI</h2>
-          <p class="section-description">
-            Simpan nomor kontak resmi, kirim dokumen RFQ langsung, atau unduh berkas vCard ke buku telepon smartphone Anda dengan satu ketukan.
-          </p>
+        <div class="section-head">
+          <span class="section-tag">Kepercayaan Industri</span>
+          <h2 class="section-title">Mitra & Pelanggan Korporat</h2>
+          <p class="section-intro">Dipercaya oleh industri otomotif perakitan dan rekayasa permesinan terkemuka dalam memenuhi rantai pasok manufaktur.</p>
         </div>
 
-        <div class="ecard-layout-wrapper">
-          <!-- Kolom 1: Visual E-Card Modern -->
-          <div class="ecard-preview-column">
-            <div class="virtual-business-card" id="virtualCardElem">
-              <div class="card-top-row">
-                <img src="assets/images/logo_pti.png" alt="PT NTI Logo" class="card-brand-logo">
-                <div class="card-chip-badge">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
-                  <span>OFFICIAL CARD</span>
-                </div>
-              </div>
-
-              <div class="card-holder-name">Nur Cahyani</div>
-              <div class="card-holder-title">Marketing & Technical Operations</div>
-              <div class="card-company-name">PT. NURCAHYA TEKNIK INDUSTRY</div>
-
-              <div class="card-divider"></div>
-
-              <div class="card-details-list">
-                <div class="card-detail-item">
-                  <svg class="card-detail-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-                  <span>+62 813-8415-1264</span>
-                </div>
-                <div class="card-detail-item">
-                  <svg class="card-detail-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                  <span>Nur.nurcahyani@outlook.co.id</span>
-                </div>
-                <div class="card-detail-item">
-                  <svg class="card-detail-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                  <span>Nur.nurcahya92@outlook.com</span>
-                </div>
-                <div class="card-detail-item">
-                  <svg class="card-detail-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                  <span>Bugel salam poncol, Hegarmukti, Cikarang Pusat</span>
-                </div>
-              </div>
-            </div>
+        <div class="grid-4">
+          <div class="client-corp-card">
+            <div class="client-name">PT. GAYA MOTOR</div>
+            <div class="client-sector">Perakitan Otomotif Nasional (Tier-1)</div>
           </div>
-
-          <!-- Kolom 2: Tombol Aksi Lengkap -->
-          <div class="ecard-actions-column">
-            <h3 style="font-size: 1.35rem; font-weight: 800; color: var(--slate-900);">Tindakan Praktis</h3>
-            <p style="font-size: 0.95rem; color: var(--slate-600); margin-bottom: 0.5rem;">
-              Pilih tindakan yang Anda butuhkan untuk terhubung langsung dengan bagian operasional dan manajemen PT NTI.
-            </p>
-
-            <div class="ecard-action-btn-grid">
-              <!-- Tombol Utama: Simpan Kontak VCF -->
-              <button type="button" class="btn-ecard-action primary-save" id="downloadVCardBtn">
-                <svg class="ecard-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="8.5" cy="7.5" r="4"></circle><line x1="20" y1="8" x2="20" y2="14"></line><line x1="23" y1="11" x2="17" y2="11"></line></svg>
-                <span>Simpan Kontak ke HP (.vcf)</span>
-              </button>
-
-              <!-- Telepon Langsung -->
-              <a href="tel:081384151264" class="btn-ecard-action">
-                <svg class="ecard-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-                <span>Telepon Langsung</span>
-              </a>
-
-              <!-- WhatsApp Langsung -->
-              <a href="https://wa.me/6281384151264?text=Halo%20PT%20Nurcahya%20Teknik%20Industry,%20saya%20ingin%20berkonsultasi%20mengenai%20kebutuhan%20permesinan/tooling." target="_blank" rel="noopener noreferrer" class="btn-ecard-action">
-                <svg class="ecard-btn-icon" style="color: #16a34a;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
-                <span>WhatsApp Langsung</span>
-              </a>
-
-              <!-- Buka Peta Lokasi Google Maps -->
-              <a href="https://maps.google.com/?q=Bugel+salam+poncol+RT+02+Rw+06+desa+hegarmukti+kecamatan+cikarang+pusat" target="_blank" rel="noopener noreferrer" class="btn-ecard-action">
-                <svg class="ecard-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"></polygon><line x1="8" y1="2" x2="8" y2="18"></line><line x1="16" y1="6" x2="16" y2="22"></line></svg>
-                <span>Buka Peta Lokasi</span>
-              </a>
-
-              <!-- Unduh PDF Company Profile Asli -->
-              <a href="assets/docs/CP_PT_NTI.pdf" download class="btn-ecard-action">
-                <svg class="ecard-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="12" y1="18" x2="12" y2="12"></line><line x1="9" y1="15" x2="15" y2="15"></line></svg>
-                <span>Unduh Dokumen PDF</span>
-              </a>
-            </div>
-
-            <!-- Salin Info Kontak Quick Link -->
-            <button type="button" class="btn-ghost-dark" id="copyContactBtn" style="color: var(--slate-600); padding: 0.5rem 0; justify-content: flex-start;">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-              <span>Salin Semua Rincian Kontak ke Clipboard</span>
-            </button>
+          <div class="client-corp-card">
+            <div class="client-name">PT. REKADAY MULTI ADIPRIMA</div>
+            <div class="client-sector">Komponen Otomotif & Manufaktur Presisi</div>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-         SECTION: KONTAK & WORKSHOP LOKASI
-         ========================================================================== -->
-    <section class="section-padding contact-section" id="kontak">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tag">Hubungi Kami</span>
-          <h2 class="section-title">Lokasi Workshop & Alamat Kantor</h2>
-          <p class="section-description">
-            Kunjungi fasilitas produksi kami atau hubungi tim teknis kami untuk pembahasan gambar kerja dan survei kebutuhan tooling pabrik Anda.
-          </p>
-        </div>
-
-        <div class="contact-grid">
-          <div class="contact-info-panel">
-            <div class="contact-card-box">
-              <div class="contact-box-icon">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-              </div>
-              <div>
-                <h3 class="contact-box-title">Alamat Workshop / Kantor</h3>
-                <div class="contact-box-val">
-                  Bugel salam poncol RT 02 Rw 06 desa hegar mukti kecamatan cikarang pusat, Kabupaten Bekasi, Jawa Barat
-                </div>
-              </div>
-            </div>
-
-            <div class="contact-card-box">
-              <div class="contact-box-icon">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-              </div>
-              <div>
-                <h3 class="contact-box-title">Telepon & WhatsApp Resmi</h3>
-                <div class="contact-box-val">
-                  <a href="tel:081384151264">+62 813-8415-1264</a> (Nur Cahyani)
-                </div>
-              </div>
-            </div>
-
-            <div class="contact-card-box">
-              <div class="contact-box-icon">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-              </div>
-              <div>
-                <h3 class="contact-box-title">Alamat Surel (Email) Resmi</h3>
-                <div class="contact-box-val">
-                  <a href="mailto:Nur.nurcahyani@outlook.co.id">Nur.nurcahyani@outlook.co.id</a><br>
-                  <a href="mailto:Nur.nurcahya92@outlook.com">Nur.nurcahya92@outlook.com</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="contact-card-box">
-              <div class="contact-box-icon">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-              </div>
-              <div>
-                <h3 class="contact-box-title">Jam Operasional Workshop</h3>
-                <div class="contact-box-val">
-                  Senin - Sabtu: 08:00 - 17:00 WIB<br>
-                  <em>Layanan RFQ & Konsultasi Online Siaga 24 Jam via WhatsApp</em>
-                </div>
-              </div>
-            </div>
+          <div class="client-corp-card">
+            <div class="client-name">PT. HASHIMOTO ENGINEERING</div>
+            <div class="client-sector">Rekayasa Tooling & Permesinan Presisi</div>
           </div>
-
-          <!-- Peta Lokasi / Map Embed Wrapper -->
-          <div class="map-embed-wrapper">
-            <iframe 
-              class="map-embed-iframe"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15860.97967912384!2d107.1685!3d-6.3621!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e699b828a2a5147%3A0x289ef329fce0bb44!2sHegarmukti%2C%20Cikarang%20Pusat%2C%20Bekasi%20Regency%2C%20West%20Java!5e0!3m2!1sen!2sid!4v1700000000000!5m2!1sen!2sid"
-              title="Peta Lokasi PT Nurcahya Teknik Industry Cikarang Pusat"
-              loading="lazy" 
-              referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
+          <div class="client-corp-card">
+            <div class="client-name">PT. HANEEDA EKAJAYA</div>
+            <div class="client-sector">Pabrikan Tooling & Komponen Industri</div>
+          </div>
+          <div class="client-corp-card">
+            <div class="client-name">PT. SAKURA TECHNICAL ENG.</div>
+            <div class="client-sector">Mitra Rekayasa Teknik & Otomasi</div>
+          </div>
+          <div class="client-corp-card">
+            <div class="client-name">PT. BERDUA SEJAHTERA TEKNIK</div>
+            <div class="client-sector">Fabrikasi Logam & Rekayasa Permesinan</div>
+          </div>
+          <div class="client-corp-card">
+            <div class="client-name">PT. NOERHAYAT BERKAH SEJAHTERA</div>
+            <div class="client-sector">Mitra Pengadaan & Permesinan Presisi</div>
+          </div>
+          <div class="client-corp-card">
+            <div class="client-name">PT. GEMA LESTARI SARANA TEKNIK</div>
+            <div class="client-sector">Solusi Teknis & Fabrikasi Komponen</div>
           </div>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- ==========================================================================
-       SITE FOOTER
-       ========================================================================== -->
+  
   <footer class="site-footer">
     <div class="container">
-      <div class="footer-top-grid">
-        <div class="footer-brand-bio">
-          <div style="display: flex; align-items: center; gap: 0.75rem;">
-            <img src="assets/images/logo_pti.png" alt="Logo PT NTI" width="38" height="38" style="background:#fff; border-radius:4px; padding:2px;">
-            <span class="footer-brand-title">PT. NURCAHYA TEKNIK INDUSTRY</span>
+      <div class="footer-grid">
+        <div>
+          <div style="display:flex; align-items:center; gap:10px; margin-bottom:1rem;">
+            <img src="assets/images/logo_pti.png" alt="Logo PT NTI" style="width:38px; height:38px;">
+            <div>
+              <div style="font-weight:700; color:var(--blue-deep); font-size:0.95rem;">PT. NURCAHYA TEKNIK INDUSTRY</div>
+              <div style="font-size:0.75rem; color:var(--blue-primary); font-weight:600; text-transform:uppercase;">Cikarang Pusat • Jawa Barat</div>
+            </div>
           </div>
-          <p class="footer-bio-text">
-            Perusahaan manufaktur presisi yang mengedepankan kualitas, akurasi dimensi, dan ketepatan waktu pengiriman dalam melayani industri otomotif dan rantai pasok industri nasional.
+          <p style="font-size:0.875rem; color:var(--text-muted); line-height:1.6; margin-bottom:1.25rem;">
+            Mitra industri terpercaya dalam permesinan presisi CNC, perakitan stamping dies, checking fixture jig, serta fabrikasi struktur material handling untuk rantai pasok manufaktur dan otomotif nasional.
           </p>
-          <div class="footer-status-pill">
-            <span class="badge-pulse-dot" style="background:#10b981;"></span>
-            <span>PWA Ready & Offline Supported</span>
+          <a href="assets/docs/CP_PT_NTI.pdf" download class="btn-pill btn-pill-secondary" style="font-size:0.825rem; padding:8px 18px;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+            <span>Unduh Company Profile (PDF)</span>
+          </a>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Layanan & Fasilitas</div>
+          <ul class="footer-links">
+            <li><a href="layanan-cnc-milling-3axis.html" class="footer-link">CNC Milling 3-Axis (1000x500 mm)</a></li>
+            <li><a href="layanan-cnc-bubut.html" class="footer-link">CNC Bubut Turning</a></li>
+            <li><a href="layanan-milling-manual.html" class="footer-link">Milling Manual Konvensional</a></li>
+            <li><a href="produk.html" class="footer-link">Stamping Dies & Mold</a></li>
+            <li><a href="produk.html" class="footer-link">Jig & Checking Fixture</a></li>
+            <li><a href="produk.html" class="footer-link">Fabrikasi Rak & Trolley</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Navigasi Resmi</div>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Beranda Utama</a></li>
+            <li><a href="fasilitas.html" class="footer-link">Daftar Fasilitas Mesin</a></li>
+            <li><a href="produk.html" class="footer-link">Katalog Portofolio Part</a></li>
+            <li><a href="pelanggan.html" class="footer-link">Kemitraan & Rekam Jejak</a></li>
+            <li><a href="rfq.html" class="footer-link">Pengajuan Penawaran (RFQ)</a></li>
+            <li><a href="kontak.html" class="footer-link">Kontak & Workshop Fisik</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Kontak & Workshop</div>
+          <div style="font-size:0.875rem; color:var(--text-body); line-height:1.7;">
+            <div style="font-weight:600; color:var(--blue-deep); margin-bottom:0.25rem;">Workshop PT NTI Cikarang:</div>
+            <div style="color:var(--text-muted); margin-bottom:0.75rem;">Bugel salam poncol RT 02 Rw 06, Desa Hegarmukti, Kec. Cikarang Pusat, Kab. Bekasi</div>
+            
+            <div style="font-weight:600; color:var(--blue-deep);">PIC Operasional & Engineering:</div>
+            <div style="color:var(--text-muted);">Nur Cahyani</div>
+            <div style="margin-top:0.5rem;">
+              <a href="https://wa.me/6281384151264" target="_blank" style="color:var(--blue-primary); font-weight:600; display:inline-flex; align-items:center; gap:6px;">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                <span>+62 813-8415-1264</span>
+              </a>
+            </div>
+            <div style="color:var(--text-muted); font-size:0.8rem; margin-top:0.25rem;">Nur.nurcahyani@outlook.co.id</div>
           </div>
-        </div>
-
-        <div>
-          <h4 class="footer-col-title">Layanan Inti</h4>
-          <ul class="footer-links-list">
-            <li class="footer-link-item"><a href="#produk">Jasa CNC Milling 3-Axis</a></li>
-            <li class="footer-link-item"><a href="#produk">Jasa CNC Bubut (Turning)</a></li>
-            <li class="footer-link-item"><a href="#produk">Stamping & Mold Dies</a></li>
-            <li class="footer-link-item"><a href="#produk">Jig Inspection Fixture</a></li>
-            <li class="footer-link-item"><a href="#produk">Fabrikasi Rak & Meja</a></li>
-            <li class="footer-link-item"><a href="#produk">Trolley Material Handling</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h4 class="footer-col-title">Navigasi Cepat</h4>
-          <ul class="footer-links-list">
-            <li class="footer-link-item"><a href="#tentang">Tentang Kami</a></li>
-            <li class="footer-link-item"><a href="#fasilitas">Spesifikasi Mesin</a></li>
-            <li class="footer-link-item"><a href="#pelanggan">Daftar Klien</a></li>
-            <li class="footer-link-item"><a href="#ecard">E-Card Digital</a></li>
-            <li class="footer-link-item"><a href="assets/docs/CP_PT_NTI.pdf" download>Company Profile PDF</a></li>
-            <li class="footer-link-item"><a href="#kontak">Alamat Workshop</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h4 class="footer-col-title">Kontak B2B</h4>
-          <ul class="footer-links-list">
-            <li class="footer-link-item"><strong>PIC:</strong> Nur Cahyani</li>
-            <li class="footer-link-item"><strong>WA/Telp:</strong> +62 813-8415-1264</li>
-            <li class="footer-link-item"><strong>Email:</strong> Nur.nurcahyani@outlook.co.id</li>
-            <li class="footer-link-item"><strong>Email:</strong> Nur.nurcahya92@outlook.com</li>
-            <li class="footer-link-item"><strong>Lokasi:</strong> Cikarang Pusat, Bekasi</li>
-          </ul>
         </div>
       </div>
 
-      <div class="footer-bottom-bar">
-        <div>
-          &copy; 2026 PT. Nurcahya Teknik Industry. Hak Cipta Dilindungi Undang-Undang.
-        </div>
-        <div>
-          Presisi Machining &bull; Dies &bull; Jig &bull; Fabrikasi Industri Cikarang
-        </div>
+      <div class="footer-bottom">
+        <div>© 2026 PT. Nurcahya Teknik Industry. Hak Cipta Dilindungi Undang-Undang.</div>
+        <div>Manufaktur Presisi • Cikarang Pusat, Kabupaten Bekasi</div>
       </div>
     </div>
   </footer>
 
-  <!-- ==========================================================================
-       MODAL: GENERATOR RFQ WHATSAPP
-       ========================================================================== -->
-  <div class="modal-overlay" id="rfqModal" role="dialog" aria-modal="true" aria-labelledby="rfqModalTitle">
-    <div class="modal-dialog">
-      <div class="modal-header">
-        <div class="modal-title-group">
-          <h3 class="modal-title" id="rfqModalTitle">Minta Penawaran Harga (RFQ)</h3>
-          <span class="modal-subtitle">Isi rincian kebutuhan Anda untuk diteruskan otomatis ke tim sales PT NTI via WhatsApp</span>
+  <!-- ASISTEN AI TEKNIK PT NTI (POWERED BY GEMINI ENGINE) -->
+  <button type="button" class="ai-chat-fab" id="aiChatFabBtn" aria-label="Konsultasi Teknis AI PT NTI">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+    <span class="ai-chat-badge">AI</span>
+  </button>
+
+  <div class="ai-chat-window" id="aiChatWindow">
+    <div class="ai-chat-header">
+      <div style="display:flex; align-items:center; gap:10px;">
+        <div class="ai-avatar">AI</div>
+        <div>
+          <div class="ai-header-title">Asisten Teknik PT NTI</div>
+          <div class="ai-header-sub">Konsultasi Permesinan & RFQ</div>
         </div>
-        <button type="button" class="modal-close-btn" data-action="close-rfq" aria-label="Tutup Formulir">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-        </button>
       </div>
-
-      <form id="rfqForm">
-        <div class="modal-body">
-          <div class="rfq-form-grid">
-            <div>
-              <label for="rfqName" class="form-label">Nama Lengkap & Jabatan *</label>
-              <input type="text" id="rfqName" class="form-input" placeholder="Contoh: Bpk. Bambang (Purchasing)" required>
-            </div>
-
-            <div>
-              <label for="rfqCompany" class="form-label">Nama Perusahaan (PT/CV) *</label>
-              <input type="text" id="rfqCompany" class="form-input" placeholder="Contoh: PT. Manufaktur Sukses" required>
-            </div>
-
-            <div>
-              <label for="rfqContact" class="form-label">Nomor WhatsApp / HP *</label>
-              <input type="tel" id="rfqContact" class="form-input" placeholder="Contoh: 081234567890" required>
-            </div>
-
-            <div>
-              <label for="rfqJobType" class="form-label">Kategori Layanan *</label>
-              <select id="rfqJobType" class="form-select" required>
-                <option value="Jasa Machining CNC (Milling / Lathe)">Jasa Machining CNC (Milling / Lathe)</option>
-                <option value="Pembuatan Stamping & Mold Dies">Pembuatan Stamping & Mold Dies</option>
-                <option value="Jig Inspection & Checking Fixture">Jig Inspection & Checking Fixture</option>
-                <option value="Fabrikasi Struktur & Rak Industri">Fabrikasi Struktur & Rak Industri</option>
-                <option value="Material Handling (Trolley & Meja)">Material Handling (Trolley & Meja)</option>
-                <option value="Lainnya / Engineering Re-work">Lainnya / Engineering Re-work</option>
-              </select>
-            </div>
-
-            <div>
-              <label for="rfqMaterial" class="form-label">Jenis Material Part</label>
-              <input type="text" id="rfqMaterial" class="form-input" placeholder="Contoh: SKD11 / S45C / SS400 / Alumunium 6061">
-            </div>
-
-            <div>
-              <label for="rfqTolerance" class="form-label">Target Toleransi Dimensi</label>
-              <select id="rfqTolerance" class="form-select">
-                <option value="Presisi Kritis (±0.01 mm)">Presisi Kritis (±0.01 mm)</option>
-                <option value="Toleransi Normal (±0.02 s/d ±0.05 mm)">Toleransi Normal (±0.02 s/d ±0.05 mm)</option>
-                <option value="Pemesinan Umum (±0.1 mm)">Pemesinan Umum (±0.1 mm)</option>
-                <option value="Fabrikasi Standar Industri">Fabrikasi Standar Industri</option>
-              </select>
-            </div>
-
-            <div>
-              <label for="rfqQuantity" class="form-label">Estimasi Kuantitas</label>
-              <input type="text" id="rfqQuantity" class="form-input" placeholder="Contoh: 5 Set / 50 Pcs / Prototype">
-            </div>
-
-            <div>
-              <label for="rfqLeadTime" class="form-label">Target Lead Time / Jadwal</label>
-              <input type="text" id="rfqLeadTime" class="form-input" placeholder="Contoh: 1 Minggu / Mendesak">
-            </div>
-
-            <div class="form-group-full">
-              <label for="rfqDetails" class="form-label">Deskripsi Pekerjaan & Catatan Gambar Kerja</label>
-              <textarea id="rfqDetails" class="form-textarea" placeholder="Jelaskan kebutuhan spesifikasi part, ketersediaan file 2D/3D (DWG/STEP), atau permintaan khusus lainnya..."></textarea>
-            </div>
-          </div>
-        </div>
-
-        <div class="modal-footer">
-          <button type="button" class="btn-secondary" style="color: var(--slate-700); border-color: var(--slate-300);" data-action="close-rfq">
-            Batal
-          </button>
-          <button type="submit" class="btn-whatsapp-submit">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
-            <span>Kirim via WhatsApp</span>
-          </button>
-        </div>
-      </form>
+      <button type="button" class="ai-close-btn" id="aiChatCloseBtn" aria-label="Tutup Chat">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
     </div>
-  </div>
 
-  <!-- ==========================================================================
-       MODAL: LIGHTBOX DETAIL PRODUK & MESIN
-       ========================================================================== -->
-  <div class="modal-overlay" id="lightboxModal" role="dialog" aria-modal="true" aria-labelledby="lightboxTitle">
-    <div class="modal-dialog lightbox-dialog">
-      <div class="modal-header">
-        <div class="modal-title-group">
-          <span class="section-tag" id="lightboxCategory" style="margin-bottom: 0.2rem; font-size: 0.68rem; padding: 0.2rem 0.6rem;">Kategori</span>
-          <h3 class="modal-title" id="lightboxTitle">Detail Part / Mesin</h3>
-        </div>
-        <button type="button" class="modal-close-btn" data-action="close-lightbox" aria-label="Tutup Tampilan">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-        </button>
-      </div>
-
-      <div class="lightbox-image-container">
-        <img src="" alt="" class="lightbox-img" id="lightboxImage">
-      </div>
-
-      <div class="lightbox-content-panel">
-        <p id="lightboxDesc" style="font-size: 0.95rem; color: var(--slate-700); line-height: 1.6; margin-bottom: 1.5rem;"></p>
-        
-        <div style="display: flex; justify-content: flex-end; gap: 0.75rem;">
-          <button type="button" class="btn-secondary" style="color: var(--slate-700); border-color: var(--slate-300);" data-action="close-lightbox">
-            Tutup
-          </button>
-          <button type="button" class="btn-primary" id="lightboxRfqBtn">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
-            <span>Minta Penawaran untuk Part Ini</span>
-          </button>
+    <div class="ai-chat-body" id="aiChatBody">
+      <div class="chat-bubble bubble-ai">
+        Halo! Saya Asisten Teknik AI <strong>PT. Nurcahya Teknik Industry</strong>. Ada yang bisa saya bantu seputar kapasitas mesin CNC, spesifikasi material, atau estimasi pembuatan dies & jig?
+        <div class="ai-quick-topics">
+          <button type="button" class="topic-chip" onclick="askAiQuestion('Berapa kapasitas meja CNC Milling?')">Kapasitas CNC Milling</button>
+          <button type="button" class="topic-chip" onclick="askAiQuestion('Material apa saja yang didukung?')">Material & Baja</button>
+          <button type="button" class="topic-chip" onclick="askAiQuestion('Berapa toleransi presisi?')">Akurasi Toleransi</button>
+          <button type="button" class="topic-chip" onclick="askAiQuestion('Bagaimana cara kirim drawing RFQ?')">Kirim Drawing RFQ</button>
         </div>
       </div>
     </div>
+
+    <div class="ai-chat-footer">
+      <input type="text" class="ai-chat-input" id="aiChatInput" placeholder="Tanyakan spesifikasi part / mesin..." />
+      <button type="button" class="ai-send-btn" id="aiSendBtn" aria-label="Kirim">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+      </button>
+    </div>
   </div>
-
-  <!-- ==========================================================================
-       FLOATING ACTION BUTTONS (FAB)
-       ========================================================================== -->
-  <div class="fab-container">
-    <button type="button" class="fab-back-to-top" id="backToTopBtn" aria-label="Kembali ke atas">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"></polyline></svg>
-    </button>
-
-    <button type="button" class="fab-btn-whatsapp" data-action="open-rfq" aria-label="Buka Generator RFQ WhatsApp">
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
-    </button>
-  </div>
-
-  <!-- Toast Notification Container -->
-  <div class="toast-banner" id="toastBanner" role="status" aria-live="polite"></div>
-
-  <!-- Application Script -->
   <script src="app.js"></script>
 </body>
 </html>

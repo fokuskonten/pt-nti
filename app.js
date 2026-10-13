@@ -1,339 +1,8 @@
-/**
- * PT. NURCAHYA TEKNIK INDUSTRY - Enterprise Client Application Logic
- * PWA Offline Handling, Interactive Catalog Filter, vCard Generator & WhatsApp RFQ Engine
- * Pure Vanilla JavaScript | Zero External Dependencies
- */
+/* PT. Nurcahya Teknik Industry - Client App Logic */
 
-document.addEventListener('DOMContentLoaded', () => {
-  initServiceWorker();
-  initNavigation();
-  initCatalogFilter();
-  initRfqModal();
-  initLightboxModal();
-  initVCardGenerator();
-  initScrollEffects();
-  checkUrlParams();
-});
-
-/* ==========================================================================
-   1. PWA Service Worker Registration & Offline Support
-   ========================================================================== */
-function initServiceWorker() {
-  if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-      navigator.serviceWorker.register('./sw.js')
-        .then((registration) => {
-          console.log('[PWA] Service Worker registered successfully:', registration.scope);
-        })
-        .catch((error) => {
-          console.warn('[PWA] Service Worker registration failed:', error);
-        });
-    });
-  }
-
-  // Monitor network status
-  window.addEventListener('online', () => {
-    showToast('Koneksi terhubung kembali (Online)');
-  });
-
-  window.addEventListener('offline', () => {
-    showToast('Mode Offline aktif - Akses katalog tetap tersedia melalui cache PWA');
-  });
-}
-
-/* ==========================================================================
-   2. Sticky Navigation & Mobile Menu Drawer
-   ========================================================================== */
-function initNavigation() {
-  const header = document.querySelector('.site-header');
-  const menuToggle = document.getElementById('menuToggleBtn');
-  const mobileDrawer = document.getElementById('mobileNavDrawer');
-  const mobileLinks = document.querySelectorAll('.mobile-nav-link');
-
-  // Sticky header background transition
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 30) {
-      header.classList.add('scrolled');
-    } else {
-      header.classList.remove('scrolled');
-    }
-  }, { passive: true });
-
-  // Mobile menu toggle
-  if (menuToggle && mobileDrawer) {
-    menuToggle.addEventListener('click', () => {
-      const isOpen = mobileDrawer.classList.contains('open');
-      if (isOpen) {
-        mobileDrawer.classList.remove('open');
-        menuToggle.setAttribute('aria-expanded', 'false');
-      } else {
-        mobileDrawer.classList.add('open');
-        menuToggle.setAttribute('aria-expanded', 'true');
-      }
-    });
-
-    // Close mobile drawer when link clicked
-    mobileLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        mobileDrawer.classList.remove('open');
-        menuToggle.setAttribute('aria-expanded', 'false');
-      });
-    });
-  }
-}
-
-/* ==========================================================================
-   3. Interactive Catalog Filter (No Page Reload)
-   ========================================================================== */
-function initCatalogFilter() {
-  const filterButtons = document.querySelectorAll('.filter-tab-btn');
-  const catalogCards = document.querySelectorAll('.portfolio-card');
-
-  filterButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      const selectedCategory = button.getAttribute('data-filter');
-
-      // Update active tab button style
-      filterButtons.forEach(btn => btn.classList.remove('active'));
-      button.classList.add('active');
-
-      // Filter catalog items with transition
-      catalogCards.forEach(card => {
-        const itemCategory = card.getAttribute('data-category');
-        if (selectedCategory === 'all' || itemCategory === selectedCategory) {
-          card.classList.remove('hidden');
-        } else {
-          card.classList.add('hidden');
-        }
-      });
-    });
-  });
-}
-
-/* ==========================================================================
-   4. RFQ Modal & Form Engine (WhatsApp Message Builder)
-   ========================================================================== */
-const WHATSAPP_TARGET_NUMBER = '6281384151264';
-
-function initRfqModal() {
-  const rfqModal = document.getElementById('rfqModal');
-  const rfqForm = document.getElementById('rfqForm');
-  const openButtons = document.querySelectorAll('[data-action="open-rfq"]');
-  const closeButtons = document.querySelectorAll('[data-action="close-rfq"]');
-
-  // Open modal triggers
-  openButtons.forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      e.preventDefault();
-      const presetJob = btn.getAttribute('data-preset-job');
-      if (presetJob) {
-        const jobSelect = document.getElementById('rfqJobType');
-        if (jobSelect) jobSelect.value = presetJob;
-      }
-      openModal(rfqModal);
-    });
-  });
-
-  // Close modal triggers
-  closeButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      closeModal(rfqModal);
-    });
-  });
-
-  // Backdrop click to close
-  if (rfqModal) {
-    rfqModal.addEventListener('click', (e) => {
-      if (e.target === rfqModal) {
-        closeModal(rfqModal);
-      }
-    });
-  }
-
-  // Handle Form Submission -> WhatsApp
-  if (rfqForm) {
-    rfqForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      submitRfqToWhatsApp();
-    });
-  }
-}
-
-function submitRfqToWhatsApp() {
-  const name = document.getElementById('rfqName').value.trim();
-  const company = document.getElementById('rfqCompany').value.trim();
-  const contact = document.getElementById('rfqContact').value.trim();
-  const jobType = document.getElementById('rfqJobType').value;
-  const material = document.getElementById('rfqMaterial').value.trim() || 'Sesuai Rekomendasi / Gambar';
-  const tolerance = document.getElementById('rfqTolerance').value || 'Standard Presisi';
-  const quantity = document.getElementById('rfqQuantity').value.trim() || '1 Set/Pcs';
-  const leadTime = document.getElementById('rfqLeadTime').value.trim() || 'Standar Normal';
-  const details = document.getElementById('rfqDetails').value.trim();
-
-  if (!name || !company || !contact) {
-    showToast('Mohon lengkapi Nama, Perusahaan, dan Nomor Kontak');
-    return;
-  }
-
-  const message = buildWhatsAppMessage({
-    name,
-    company,
-    contact,
-    jobType,
-    material,
-    tolerance,
-    quantity,
-    leadTime,
-    details
-  });
-
-  const whatsappUrl = `https://wa.me/${WHATSAPP_TARGET_NUMBER}?text=${encodeURIComponent(message)}`;
-
-  // Close modal and open WhatsApp in new tab
-  const rfqModal = document.getElementById('rfqModal');
-  closeModal(rfqModal);
-  showToast('Membuka WhatsApp untuk mengirim RFQ...');
-  window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
-}
-
-function buildWhatsAppMessage(data) {
-  const now = new Date();
-  const dateFormatted = now.toLocaleDateString('id-ID', {
-    day: 'numeric',
-    month: 'long',
-    year: 'numeric'
-  });
-
-  return `*PERMINTAAN PENAWARAN HARGA (RFQ)*\n` +
-         `*PT. NURCAHYA TEKNIK INDUSTRY*\n` +
-         `Tanggal: ${dateFormatted}\n\n` +
-         `*DATA PERUSAHAAN / PEMESAN:*\n` +
-         `• Nama: ${data.name}\n` +
-         `• Perusahaan: ${data.company}\n` +
-         `• No. Kontak / WA: ${data.contact}\n\n` +
-         `*DETAIL PEKERJAAN & SPESIFIKASI:*\n` +
-         `• Kategori Layanan: ${data.jobType}\n` +
-         `• Jenis Material: ${data.material}\n` +
-         `• Toleransi Dimensi: ${data.tolerance}\n` +
-         `• Estimasi Volume: ${data.quantity}\n` +
-         `• Target Lead Time: ${data.leadTime}\n\n` +
-         `*DESKRIPSI / SPESIFIKASI TAMBAHAN:*\n` +
-         `${data.details || '-'}\n\n` +
-         `_Catatan: Gambar kerja teknis (2D PDF / 3D CAD) akan dikirimkan menyusul pada chat ini._\n\n` +
-         `Mohon konfirmasi dan estimasi penawaran harga. Terima kasih.`;
-}
-
-/* ==========================================================================
-   5. Lightbox Modal (High-Res Image Viewer & Technical Specs)
-   ========================================================================== */
-function initLightboxModal() {
-  const lightboxModal = document.getElementById('lightboxModal');
-  const lightboxImg = document.getElementById('lightboxImage');
-  const lightboxTitle = document.getElementById('lightboxTitle');
-  const lightboxCategory = document.getElementById('lightboxCategory');
-  const lightboxDesc = document.getElementById('lightboxDesc');
-  const lightboxRfqBtn = document.getElementById('lightboxRfqBtn');
-  const closeButtons = document.querySelectorAll('[data-action="close-lightbox"]');
-
-  // Open Lightbox from catalog or machine cards
-  const previewButtons = document.querySelectorAll('[data-action="preview-image"]');
-  previewButtons.forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      e.stopPropagation();
-      const imgSrc = btn.getAttribute('data-img');
-      const title = btn.getAttribute('data-title');
-      const category = btn.getAttribute('data-category') || 'Spesifikasi Manufaktur';
-      const desc = btn.getAttribute('data-desc') || 'Komponen presisi industri dengan standar toleransi tinggi.';
-      const jobPreset = btn.getAttribute('data-preset-job') || '';
-
-      if (lightboxImg) lightboxImg.src = imgSrc;
-      if (lightboxImg) lightboxImg.alt = title;
-      if (lightboxTitle) lightboxTitle.textContent = title;
-      if (lightboxCategory) lightboxCategory.textContent = category;
-      if (lightboxDesc) lightboxDesc.textContent = desc;
-
-      if (lightboxRfqBtn) {
-        lightboxRfqBtn.setAttribute('data-preset-job', jobPreset);
-      }
-
-      openModal(lightboxModal);
-    });
-  });
-
-  // Connect Lightbox RFQ button to RFQ Modal
-  if (lightboxRfqBtn) {
-    lightboxRfqBtn.addEventListener('click', () => {
-      const presetJob = lightboxRfqBtn.getAttribute('data-preset-job');
-      closeModal(lightboxModal);
-      const rfqModal = document.getElementById('rfqModal');
-      const jobSelect = document.getElementById('rfqJobType');
-      if (jobSelect && presetJob) {
-        jobSelect.value = presetJob;
-      }
-      setTimeout(() => openModal(rfqModal), 150);
-    });
-  }
-
-  // Close triggers
-  closeButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      closeModal(lightboxModal);
-    });
-  });
-
-  if (lightboxModal) {
-    lightboxModal.addEventListener('click', (e) => {
-      if (e.target === lightboxModal) {
-        closeModal(lightboxModal);
-      }
-    });
-  }
-
-  // Keyboard Escape listener
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') {
-      const openModalElem = document.querySelector('.modal-overlay.active');
-      if (openModalElem) closeModal(openModalElem);
-    }
-  });
-}
-
-function openModal(modal) {
-  if (!modal) return;
-  modal.classList.add('active');
-  document.body.style.overflow = 'hidden';
-}
-
-function closeModal(modal) {
-  if (!modal) return;
-  modal.classList.remove('active');
-  document.body.style.overflow = '';
-}
-
-/* ==========================================================================
-   6. Dynamic vCard Generator & Contact Downloader (.vcf)
-   ========================================================================== */
-function initVCardGenerator() {
-  const downloadVCardBtn = document.getElementById('downloadVCardBtn');
-  const copyContactBtn = document.getElementById('copyContactBtn');
-
-  if (downloadVCardBtn) {
-    downloadVCardBtn.addEventListener('click', (e) => {
-      e.preventDefault();
-      downloadVCard();
-    });
-  }
-
-  if (copyContactBtn) {
-    copyContactBtn.addEventListener('click', (e) => {
-      e.preventDefault();
-      copyContactDetails();
-    });
-  }
-}
-
+// 1. Download vCard .vcf secara dinamis
 function downloadVCard() {
-  const vCardData = [
+  const vcard = [
     'BEGIN:VCARD',
     'VERSION:3.0',
     'N:Cahyani;Nur;;;',
@@ -341,125 +10,173 @@ function downloadVCard() {
     'ORG:PT. Nurcahya Teknik Industry',
     'TITLE:Marketing & Technical Operations',
     'TEL;TYPE=WORK,VOICE:+6281384151264',
-    'TEL;TYPE=CELL:+6281384151264',
-    'EMAIL;TYPE=WORK;TYPE=INTERNET:Nur.nurcahyani@outlook.co.id',
-    'EMAIL;TYPE=HOME;TYPE=INTERNET:Nur.nurcahya92@outlook.com',
-    'ADR;TYPE=WORK:;;Bugel salam poncol RT 02 Rw 06 desa hegarmukti kecamatan cikarang pusat;Bekasi;Jawa Barat;;Indonesia',
-    'LABEL;TYPE=WORK:Bugel salam poncol RT 02 Rw 06 desa hegarmukti kecamatan cikarang pusat, Bekasi, Jawa Barat, Indonesia',
-    'URL:https://pt-nurcahya-teknik-industry.com',
-    'NOTE:PT. Nurcahya Teknik Industry - Mitra Presisi Machining CNC, Dies, Jig & Fabrikasi Industri Cikarang',
-    'REV:2026-10-13T00:00:00Z',
+    'TEL;TYPE=CELL,VOICE:+6281384151264',
+    'EMAIL;TYPE=PREF,INTERNET:Nur.nurcahyani@outlook.co.id',
+    'EMAIL;TYPE=WORK,INTERNET:Nur.nurcahya92@outlook.com',
+    'ADR;TYPE=WORK:;;Bugel salam poncol RT 02 Rw 06 desa hegarmukti;Cikarang Pusat;Bekasi;Jawa Barat;Indonesia',
+    'URL:https://pt-nti.pages.dev/',
+    'NOTE:Precision Machining CNC, Stamping Dies, Jig Inspection & Fabrikasi Industri Cikarang',
     'END:VCARD'
   ].join('\r\n');
 
-  const blob = new Blob([vCardData], { type: 'text/vcard;charset=utf-8;' });
+  const blob = new Blob([vcard], { type: 'text/vcard;charset=utf-8;' });
   const url = URL.createObjectURL(blob);
-  const downloadLink = document.createElement('a');
-
-  downloadLink.href = url;
-  downloadLink.setAttribute('download', 'Nur_Cahyani_PT_NTI.vcf');
-  document.body.appendChild(downloadLink);
-  downloadLink.click();
-  document.body.removeChild(downloadLink);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'Nur_Cahyani_PT_NTI.vcf';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
   URL.revokeObjectURL(url);
-
-  showToast('Kontak vCard berhasil diunduh ke perangkat Anda');
 }
 
-function copyContactDetails() {
-  const textToCopy = `PT. NURCAHYA TEKNIK INDUSTRY\n` +
-                     `Kontak: Nur Cahyani\n` +
-                     `WhatsApp / Telp: +62 813-8415-1264\n` +
-                     `Email 1: Nur.nurcahyani@outlook.co.id\n` +
-                     `Email 2: Nur.nurcahya92@outlook.com\n` +
-                     `Alamat: Bugel salam poncol RT 02 Rw 06 desa hegarmukti kecamatan cikarang pusat, Kab. Bekasi`;
-
-  if (navigator.clipboard && navigator.clipboard.writeText) {
-    navigator.clipboard.writeText(textToCopy).then(() => {
-      showToast('Informasi kontak berhasil disalin ke clipboard');
-    }).catch(() => {
-      fallbackCopy(textToCopy);
-    });
-  } else {
-    fallbackCopy(textToCopy);
+// 2. Event Handler untuk Form RFQ
+document.addEventListener('DOMContentLoaded', () => {
+  const vcardBtn = document.getElementById('btnDownloadVCard');
+  if (vcardBtn) {
+    vcardBtn.addEventListener('click', downloadVCard);
   }
-}
 
-function fallbackCopy(text) {
-  const textarea = document.createElement('textarea');
-  textarea.value = text;
-  textarea.style.position = 'fixed';
-  textarea.style.left = '-9999px';
-  document.body.appendChild(textarea);
-  textarea.select();
-  try {
-    document.execCommand('copy');
-    showToast('Informasi kontak berhasil disalin');
-  } catch (err) {
-    showToast('Gagal menyalin informasi kontak');
-  }
-  document.body.removeChild(textarea);
-}
+  const rfqForm = document.getElementById('rfqFormMain');
+  if (rfqForm) {
+    rfqForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = document.getElementById('rfqName')?.value.trim() || '-';
+      const company = document.getElementById('rfqCompany')?.value.trim() || '-';
+      const phone = document.getElementById('rfqPhone')?.value.trim() || '-';
+      const service = document.getElementById('rfqService')?.value || '-';
+      const material = document.getElementById('rfqMaterial')?.value.trim() || '-';
+      const qty = document.getElementById('rfqQty')?.value.trim() || '-';
+      const notes = document.getElementById('rfqNotes')?.value.trim() || '-';
 
-/* ==========================================================================
-   7. Scroll Effects & FAB Back to Top
-   ========================================================================== */
-function initScrollEffects() {
-  const backToTopBtn = document.getElementById('backToTopBtn');
+      const text = [
+        '*PERMINTAAN PENAWARAN HARGA (RFQ)*',
+        '*PT. NURCAHYA TEKNIK INDUSTRY*',
+        '',
+        '*DATA PERUSAHAAN / PEMESAN:*',
+        '• Nama PIC: ' + name,
+        '• Perusahaan: ' + company,
+        '• Kontak: ' + phone,
+        '',
+        '*SPESIFIKASI PEKERJAAN:*',
+        '• Kategori Layanan: ' + service,
+        '• Jenis Material: ' + material,
+        '• Estimasi Volume: ' + qty,
+        '',
+        '*CATATAN & TOLERANSI GAMBAR KERJA:*',
+        notes,
+        '',
+        '_Gambar kerja teknis 2D/3D akan kami lampirkan pada percakapan ini._',
+        'Mohon konfirmasi dan estimasi penawaran harga. Terima kasih.'
+      ].join('\n');
 
-  window.addEventListener('scroll', () => {
-    if (backToTopBtn) {
-      if (window.scrollY > 400) {
-        backToTopBtn.classList.add('visible');
-      } else {
-        backToTopBtn.classList.remove('visible');
-      }
-    }
-  }, { passive: true });
-
-  if (backToTopBtn) {
-    backToTopBtn.addEventListener('click', () => {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
+      const waUrl = 'https://wa.me/6281384151264?text=' + encodeURIComponent(text);
+      window.open(waUrl, '_blank');
     });
   }
-}
 
-/* ==========================================================================
-   8. URL Parameter Handler (Direct Deep-link e.g. PWA Shortcut)
-   ========================================================================== */
-function checkUrlParams() {
-  const urlParams = new URLSearchParams(window.location.search);
-  const action = urlParams.get('action');
+  // Registrasi Service Worker PWA
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('./sw.js').catch(() => {});
+  }
+});
 
-  if (action === 'rfq') {
-    const rfqModal = document.getElementById('rfqModal');
-    if (rfqModal) {
-      setTimeout(() => openModal(rfqModal), 300);
+// 3. Logika Asisten AI Teknik PT NTI
+const aiKnowledge = [
+  {
+    keywords: ['milling', 'meja', 'kapasitas', 'cnc milling', 'stroke', 'hision', 'gut'],
+    answer: 'Fasilitas CNC Milling 3-Axis PT NTI memiliki 2 unit utama:\n• Brand Hision: Meja kerja 1.000 × 500 mm (kapasitas beban 600 kg).\n• Brand GUT: Meja kerja 800 × 350 mm.\nKeduanya dilengkapi sumbu presisi tinggi untuk cetakan pelat besar dan komponen presisi otomotif.'
+  },
+  {
+    keywords: ['bubut', 'turning', 'lathe', 'diameter'],
+    answer: 'Mesin CNC Bubut Hision kami mampu membubut benda kerja hingga diameter swing 350 mm dan panjang maksimal 500 mm dengan hydraulic tool turret 8/12 station. Sangat presisi untuk shaft, bushing H7, dan komponen silindris.'
+  },
+  {
+    keywords: ['material', 'baja', 'bahan', 'skd11', 's45c', 'sus', 'alumunium'],
+    answer: 'Material yang kami proses secara rutin meliputi:\n• Tool Steel: SKD11 (HRC 58-60), SKD61, NAK80\n• Carbon Steel: S45C, SS400, S50C\n• Stainless Steel: SUS304, SUS316\n• Non-Ferrous: Alumunium Dural (6061/7075), Kuningan, Tembaga\n• Engineering Plastic: Polyacetal (POM/Delrin), MC Nylon.'
+  },
+  {
+    keywords: ['toleransi', 'akurasi', 'mikron', 'presisi', 'qc'],
+    answer: 'Toleransi pengerjaan kami mencapai ±0.005 mm s/d ±0.01 mm sesuai spesifikasi drawing 2D/3D Anda. Setiap part melalui tahapan quality control ketat dengan micrometer, dial gauge, dan laporan inspeksi dimensi sebelum pengiriman.'
+  },
+  {
+    keywords: ['rfq', 'penawaran', 'harga', 'drawing', 'cad', 'pesan', 'order'],
+    answer: 'Untuk pengajuan penawaran harga (RFQ), Anda dapat mengunggah rincian di menu RFQ kami atau langsung kirim file drawing (PDF/DWG/STEP) via WhatsApp PIC Nur Cahyani di +62 813-8415-1264. Penawaran harga resmi akan diterbitkan dalam 1×24 jam.'
+  },
+  {
+    keywords: ['lokasi', 'workshop', 'alamat', 'pabrik', 'cikarang'],
+    answer: 'Workshop kami berlokasi di Kampung Bugel Salam Poncol RT 02 / RW 06, Desa Hegarmukti, Kecamatan Cikarang Pusat, Kabupaten Bekasi (dekat Stadion Wibawa Mukti & Kawasan Industri GIIC/Delta Silicon).'
+  },
+  {
+    keywords: ['klien', 'mitra', 'customer', 'gaya motor'],
+    answer: 'PT NTI dipercaya oleh mitra korporat terkemuka seperti PT Gaya Motor (perakitan otomotif), PT Rekaday Multi Adiprima, PT Hashimoto Engineering, PT Haneeda Ekajaya, dan rekanan tier-1 otomotif nasional.'
+  }
+];
+
+function getAiResponse(userText) {
+  const lower = userText.toLowerCase();
+  for (const item of aiKnowledge) {
+    if (item.keywords.some(k => lower.includes(k))) {
+      return item.answer;
     }
   }
+  return 'Terima kasih atas pertanyaan Anda. Untuk spesifikasi teknis part khusus atau konsultasi gambar kerja (drawing), silakan hubungi langsung PIC Engineering kami Ibu Nur Cahyani via WhatsApp di +62 813-8415-1264 atau ajukan form RFQ.';
 }
 
-/* ==========================================================================
-   9. Global Toast Notification Helper
-   ========================================================================== */
-let toastTimeout;
-function showToast(message) {
-  let toast = document.getElementById('toastBanner');
-  if (!toast) {
-    toast = document.createElement('div');
-    toast.id = 'toastBanner';
-    toast.className = 'toast-banner';
-    document.body.appendChild(toast);
+function askAiQuestion(question) {
+  const input = document.getElementById('aiChatInput');
+  if (input) {
+    input.value = question;
+    sendAiMessage();
   }
-
-  toast.textContent = message;
-  toast.classList.add('show');
-
-  clearTimeout(toastTimeout);
-  toastTimeout = setTimeout(() => {
-    toast.classList.remove('show');
-  }, 3500);
 }
+
+function sendAiMessage() {
+  const input = document.getElementById('aiChatInput');
+  const body = document.getElementById('aiChatBody');
+  if (!input || !body) return;
+  const msg = input.value.trim();
+  if (!msg) return;
+
+  // Append user bubble
+  const userBubble = document.createElement('div');
+  userBubble.className = 'chat-bubble bubble-user';
+  userBubble.textContent = msg;
+  body.appendChild(userBubble);
+  input.value = '';
+  body.scrollTop = body.scrollHeight;
+
+  // Response AI
+  setTimeout(() => {
+    const aiResp = getAiResponse(msg);
+    const aiBubble = document.createElement('div');
+    aiBubble.className = 'chat-bubble bubble-ai';
+    aiBubble.innerHTML = aiResp.replace(/\n/g, '<br>') + 
+      '<div style="margin-top:8px;"><a href="https://wa.me/6281384151264?text=' + encodeURIComponent('Halo PT NTI, saya ingin konsultasi teknis: ' + msg) + '" target="_blank" class="btn-pill btn-pill-primary" style="font-size:0.75rem; padding:6px 14px;">Teruskan ke WhatsApp PIC</a></div>';
+    body.appendChild(aiBubble);
+    body.scrollTop = body.scrollHeight;
+  }, 400);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const fab = document.getElementById('aiChatFabBtn');
+  const win = document.getElementById('aiChatWindow');
+  const close = document.getElementById('aiChatCloseBtn');
+  const send = document.getElementById('aiSendBtn');
+  const input = document.getElementById('aiChatInput');
+
+  if (fab && win) {
+    fab.addEventListener('click', () => win.classList.toggle('active'));
+  }
+  if (close && win) {
+    close.addEventListener('click', () => win.classList.remove('active'));
+  }
+  if (send) {
+    send.addEventListener('click', sendAiMessage);
+  }
+  if (input) {
+    input.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') sendAiMessage();
+    });
+  }
+});
