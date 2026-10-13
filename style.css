@@ -528,7 +528,12 @@ a { color: inherit; text-decoration: none; }
   }
 
   .section-py {
-    padding: 3rem 0;
+    padding: 1.5rem 0 2.5rem;
+  }
+  .breadcrumb-nav {
+    padding: 0.25rem 0 1rem;
+    font-size: 0.825rem;
+    line-height: 1.5;
   }
   .section-title {
     font-size: 1.6rem;
@@ -544,13 +549,13 @@ a { color: inherit; text-decoration: none; }
 
   .detail-layout {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 1.5rem;
   }
   .detail-title {
     font-size: 1.75rem;
   }
   .detail-main-img {
-    height: 280px;
+    height: 260px;
   }
 
   .footer-grid {
@@ -567,6 +572,47 @@ a { color: inherit; text-decoration: none; }
 }
 
 @media (max-width: 520px) {
+  .section-py {
+    padding: 1rem 0 2rem;
+  }
+  .breadcrumb-nav {
+    padding: 0 0 0.75rem;
+    font-size: 0.775rem;
+    line-height: 1.45;
+  }
+  .detail-layout {
+    gap: 1.25rem;
+    margin-bottom: 2rem;
+  }
+  .detail-main-img {
+    height: 230px;
+  }
+  .detail-title {
+    font-size: 1.45rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.25;
+  }
+  .detail-desc {
+    font-size: 0.925rem;
+    margin-bottom: 1.25rem;
+    line-height: 1.6;
+  }
+  .ai-chat-fab {
+    bottom: 18px;
+    right: 18px;
+    width: 48px;
+    height: 48px;
+  }
+  .ai-chat-fab svg {
+    width: 22px;
+    height: 22px;
+  }
+  .ai-chat-badge {
+    font-size: 0.55rem;
+    padding: 1px 4px;
+    top: -2px;
+    right: -2px;
+  }
   .brand-link {
     max-width: calc(100% - 110px);
   }
