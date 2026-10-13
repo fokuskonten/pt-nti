@@ -165,14 +165,16 @@ document.addEventListener('DOMContentLoaded', () => {
   if (navToggle && mobileNavDrawer) {
     navToggle.addEventListener('click', (e) => {
       e.stopPropagation();
-      navToggle.classList.toggle('active');
-      mobileNavDrawer.classList.toggle('active');
+      const isOpen = navToggle.classList.toggle('active');
+      mobileNavDrawer.classList.toggle('active', isOpen);
+      mobileNavDrawer.style.display = isOpen ? 'block' : 'none';
     });
 
     mobileNavDrawer.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
         navToggle.classList.remove('active');
         mobileNavDrawer.classList.remove('active');
+        mobileNavDrawer.style.display = 'none';
       });
     });
 
@@ -180,6 +182,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!navToggle.contains(e.target) && !mobileNavDrawer.contains(e.target)) {
         navToggle.classList.remove('active');
         mobileNavDrawer.classList.remove('active');
+        mobileNavDrawer.style.display = 'none';
       }
     });
   }

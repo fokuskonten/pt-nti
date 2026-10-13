@@ -1,9 +1,9 @@
-const CACHE_NAME = 'pt-nti-pwa-v3.0.0';
+const CACHE_NAME = 'pt-nti-pwa-v4.0.0';
 
 const PRECACHE_ASSETS = [
   './',
-  './style.css',
-  './app.js',
+  './style.css?v=4.0.0',
+  './app.js?v=4.0.0',
   './manifest.json',
   './assets/docs/CP_PT_NTI.pdf',
   './assets/images/logo_pti.png',
@@ -33,24 +33,50 @@ self.addEventListener('install', (event) => {
 
 self.addEventListener('activate', (event) => {
   event.waitUntil(
-    caches.keys().then((keys) => Promise.all(keys.map((k) => k !== CACHE_NAME && caches.delete(k))))
-      .then(() => self.clients.claim())
+    caches.keys().then((keys) => {
+      return Promise.all(
+        keys.map((k) => {
+          if (k !== CACHE_NAME) {
+            console.log('[SW] Purging old cache:', k);
+            return caches.delete(k);
+          }
+        })
+      );
+    }).then(() => self.clients.claim())
   );
 });
 
 self.addEventListener('fetch', (event) => {
   if (event.request.method !== 'GET') return;
 
-  // Let browser natively handle navigation to seamlessly follow Cloudflare 308 redirects
-  if (event.request.mode === 'navigate') {
+  const url = new URL(event.request.url);
+
+  // Network-first for HTML navigation, CSS, and JS to prevent stale cache bugs
+  if (event.request.mode === 'navigate' || url.pathname.endsWith('.css') || url.pathname.endsWith('.js')) {
     event.respondWith(
-      fetch(event.request).catch(() => caches.match('./').then(res => res || caches.match('./index.html')))
+      fetch(event.request)
+        .then((response) => {
+          if (response && response.status === 200) {
+            const copy = response.clone();
+            caches.open(CACHE_NAME).then((cache) => cache.put(event.request, copy));
+          }
+          return response;
+        })
+        .catch(() => caches.match(event.request).then(cached => cached || caches.match('./')))
     );
     return;
   }
 
-  // Cache-first for images & static assets
+  // Cache-first for images and PDFs
   event.respondWith(
-    caches.match(event.request).then((cached) => cached || fetch(event.request))
+    caches.match(event.request).then((cached) => {
+      return cached || fetch(event.request).then((response) => {
+        if (response && response.status === 200) {
+          const copy = response.clone();
+          caches.open(CACHE_NAME).then((cache) => cache.put(event.request, copy));
+        }
+        return response;
+      });
+    })
   );
 });

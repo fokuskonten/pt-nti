@@ -30,9 +30,9 @@ function getNavHtml(filename) {
       </nav>
 
       <div class="nav-actions">
-        <a href="rfq" class="btn-pill btn-pill-primary btn-nav-cta">
+        <a href="rfq" class="btn-pill btn-pill-primary btn-nav-cta" title="Minta Penawaran Harga (RFQ)">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
-          <span>Minta RFQ</span>
+          <span class="nav-cta-text">Minta RFQ</span>
         </a>
         <button type="button" class="nav-toggle" id="navToggle" aria-label="Buka Menu Navigasi">
           <span class="nav-toggle-bar"></span>
@@ -41,7 +41,7 @@ function getNavHtml(filename) {
         </button>
       </div>
     </div>
-    <div class="mobile-nav-drawer" id="mobileNavDrawer">
+    <div class="mobile-nav-drawer" id="mobileNavDrawer" style="display: none;">
       <div class="container mobile-nav-inner">
         <a href="./" class="mobile-nav-item ${activeBeranda}">Beranda</a>
         <a href="fasilitas" class="mobile-nav-item ${activeFasilitas}">Fasilitas Mesin</a>
@@ -59,16 +59,20 @@ for (const file of files) {
   const filePath = path.join(dir, file);
   let content = fs.readFileSync(filePath, 'utf8');
 
+  // Replace existing header
   const navRegex = /<header class=["']site-nav["']>[\s\S]*?<\/header>/;
   if (navRegex.test(content)) {
     const newNav = getNavHtml(file);
     content = content.replace(navRegex, newNav);
-    fs.writeFileSync(filePath, content, 'utf8');
-    count++;
-    console.log('Updated header in:', file);
-  } else {
-    console.log('No header match in:', file);
   }
+
+  // Cache busting query version for CSS & JS
+  content = content.replace(/href=["']style\.css(\?v=[\d\.]+)?["']/g, 'href="style.css?v=4.0.0"');
+  content = content.replace(/src=["']app\.js(\?v=[\d\.]+)?["']/g, 'src="app.js?v=4.0.0"');
+
+  fs.writeFileSync(filePath, content, 'utf8');
+  count++;
+  console.log('Updated:', file);
 }
 
-console.log('Total files updated:', count);
+console.log('Total files updated with v4.0.0 cache bust:', count);

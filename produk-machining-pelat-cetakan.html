@@ -7,14 +7,14 @@
   <meta name="description" content="Pemesinan pelat tebal cetakan baja perkakas dengan kerataan bidang paralel (flatness) superior dan lubang dowel pin berpresisi H7.">
   
   <link rel="manifest" href="manifest.json">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=4.0.0">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="icon" type="image/png" sizes="64x64" href="assets/images/favicon-64.png">
   <link rel="apple-touch-icon" href="assets/images/favicon-64.png">
 </head>
 <body>
   
-      <header class="site-nav">
+        <header class="site-nav">
     <div class="container nav-wrapper">
       <a href="./" class="brand-link" aria-label="PT. Nurcahya Teknik Industry">
         <img src="assets/images/logo_pti.png" alt="Logo PT NTI" class="brand-logo-img">
@@ -33,9 +33,9 @@
       </nav>
 
       <div class="nav-actions">
-        <a href="rfq" class="btn-pill btn-pill-primary btn-nav-cta">
+        <a href="rfq" class="btn-pill btn-pill-primary btn-nav-cta" title="Minta Penawaran Harga (RFQ)">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
-          <span>Minta RFQ</span>
+          <span class="nav-cta-text">Minta RFQ</span>
         </a>
         <button type="button" class="nav-toggle" id="navToggle" aria-label="Buka Menu Navigasi">
           <span class="nav-toggle-bar"></span>
@@ -44,7 +44,7 @@
         </button>
       </div>
     </div>
-    <div class="mobile-nav-drawer" id="mobileNavDrawer">
+    <div class="mobile-nav-drawer" id="mobileNavDrawer" style="display: none;">
       <div class="container mobile-nav-inner">
         <a href="./" class="mobile-nav-item ">Beranda</a>
         <a href="fasilitas" class="mobile-nav-item ">Fasilitas Mesin</a>
@@ -275,6 +275,6 @@
       </button>
     </div>
   </div>
-  <script src="app.js"></script>
+  <script src="app.js?v=4.0.0"></script>
 </body>
 </html>
