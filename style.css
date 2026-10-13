@@ -319,7 +319,7 @@ a { color: inherit; text-decoration: none; }
 /* Corporate Card */
 .corp-card { background-color: var(--white); border: 1px solid var(--border-card); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-card); transition: var(--transition); display: flex; flex-direction: column; }
 .corp-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-hover); border-color: var(--blue-border); }
-.card-img-wrapper { position: relative; width: 100%; aspect-ratio: 1 / 1; background-color: var(--bg-page); overflow: hidden; }
+.card-img-wrapper { position: relative; width: 100%; aspect-ratio: 16 / 10; background-color: var(--bg-page); overflow: hidden; }
 .card-img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; }
 .corp-card:hover .card-img { transform: scale(1.03); }
 .card-body { padding: 1.75rem; display: flex; flex-direction: column; flex-grow: 1; }
@@ -362,7 +362,7 @@ a { color: inherit; text-decoration: none; }
 .breadcrumb-nav span { margin: 0 0.5rem; }
 .detail-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-bottom: 3.5rem; align-items: start; }
 .detail-gallery { background-color: var(--white); border: 1px solid var(--border-card); border-radius: var(--radius-lg); padding: 1rem; box-shadow: var(--shadow-card); }
-.detail-main-img { width: 100%; aspect-ratio: 1 / 1; height: auto; object-fit: cover; border-radius: var(--radius-md); }
+.detail-main-img { width: 100%; aspect-ratio: 4 / 3; height: auto; object-fit: cover; border-radius: var(--radius-md); }
 .detail-info { display: flex; flex-direction: column; }
 
 .detail-title { font-size: 2.25rem; font-weight: 800; color: var(--blue-deep); line-height: 1.25; margin-bottom: 1rem; }
@@ -389,45 +389,7 @@ a { color: inherit; text-decoration: none; }
 .footer-link:hover { color: var(--blue-primary); }
 .footer-bottom { padding-top: 2rem; border-top: 1px solid var(--border-card); display: flex; align-items: center; justify-content: space-between; font-size: 0.825rem; color: var(--text-muted); }
 
-/* AI Assistant Chat (Strict Corporate Blue) */
-.ai-chat-fab { position: fixed; bottom: 28px; right: 28px; z-index: 999; width: 60px; height: 60px; border-radius: var(--radius-full); background-color: var(--blue-primary); color: var(--white); border: none; box-shadow: 0 8px 25px rgba(29, 78, 216, 0.35); cursor: pointer; display: flex; align-items: center; justify-content: center; transition: var(--transition); }
-.ai-chat-fab:hover { background-color: var(--blue-hover); transform: translateY(-3px) scale(1.05); box-shadow: 0 12px 30px rgba(29, 78, 216, 0.45); }
-.ai-chat-badge { position: absolute; top: -4px; right: -4px; background-color: var(--blue-deep); color: var(--white); font-size: 0.65rem; font-weight: 700; padding: 2px 6px; border-radius: var(--radius-full); border: 2px solid var(--white); }
-.ai-chat-window { position: fixed; bottom: 100px; right: 28px; z-index: 1000; width: 380px; max-width: calc(100vw - 40px); height: 540px; max-height: calc(100vh - 120px); background-color: var(--white); border: 1px solid var(--border-card); border-radius: var(--radius-lg); box-shadow: 0 16px 40px -6px rgba(15, 43, 72, 0.2); display: flex; flex-direction: column; overflow: hidden; opacity: 0; pointer-events: none; transform: translateY(20px) scale(0.96); transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1); }
-.ai-chat-window.active { opacity: 1; pointer-events: auto; transform: translateY(0) scale(1); }
-.ai-chat-header { background: linear-gradient(135deg, var(--blue-primary) 0%, var(--blue-deep) 100%); color: var(--white); padding: 1.1rem 1.25rem; display: flex; align-items: center; justify-content: space-between; }
-.ai-avatar { width: 34px; height: 34px; border-radius: var(--radius-full); background-color: var(--white); display: flex; align-items: center; justify-content: center; color: var(--blue-primary); font-weight: 800; font-size: 0.85rem; }
-.ai-header-title { font-size: 0.95rem; font-weight: 700; color: var(--white); }
-.ai-header-sub { font-size: 0.725rem; color: var(--blue-border); }
-.ai-close-btn { background: none; border: none; color: var(--white); cursor: pointer; padding: 4px; display: flex; }
-.ai-chat-body { flex: 1; overflow-y: auto; padding: 1.25rem; background-color: var(--bg-page); display: flex; flex-direction: column; gap: 12px; }
-.chat-bubble { max-width: 85%; padding: 10px 14px; font-size: 0.875rem; line-height: 1.5; border-radius: 14px; }
-.bubble-ai { align-self: flex-start; background-color: var(--white); color: var(--text-body); border: 1px solid var(--border-card); box-shadow: var(--shadow-card); border-bottom-left-radius: 4px; }
-.bubble-user { align-self: flex-end; background-color: var(--blue-primary); color: var(--white); border-bottom-right-radius: 4px; }
-.ai-quick-topics { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
 
-.topic-chip {
-  background-color: var(--white);
-  color: var(--blue-deep);
-  border: 1px solid var(--border-card);
-  padding: 6px 12px;
-  border-radius: var(--radius-md);
-  font-size: 0.775rem;
-  font-weight: 600;
-  cursor: pointer;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
-  transition: var(--transition);
-}
-.topic-chip:hover {
-  border-color: var(--blue-primary);
-  color: var(--blue-primary);
-  background-color: var(--blue-light);
-}
-.ai-chat-footer { padding: 10px 12px; background-color: var(--white); border-top: 1px solid var(--border-card); display: flex; gap: 8px; }
-.ai-chat-input { flex: 1; padding: 10px 14px; border-radius: var(--radius-full); border: 1px solid var(--border-card); font-size: 0.875rem; font-family: inherit; outline: none; background-color: var(--bg-page); }
-.ai-chat-input:focus { border-color: var(--blue-primary); background-color: var(--white); }
-.ai-send-btn { width: 40px; height: 40px; border-radius: var(--radius-full); background-color: var(--blue-primary); color: var(--white); border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: var(--transition); }
-.ai-send-btn:hover { background-color: var(--blue-hover); }
 
 /* Animations */
 @keyframes slideDown {
@@ -611,22 +573,7 @@ a { color: inherit; text-decoration: none; }
     margin-bottom: 1.25rem;
     line-height: 1.6;
   }
-  .ai-chat-fab {
-    bottom: 18px;
-    right: 18px;
-    width: 48px;
-    height: 48px;
-  }
-  .ai-chat-fab svg {
-    width: 22px;
-    height: 22px;
-  }
-  .ai-chat-badge {
-    font-size: 0.55rem;
-    padding: 1px 4px;
-    top: -2px;
-    right: -2px;
-  }
+
   .brand-link {
     max-width: calc(100% - 110px);
   }
@@ -789,3 +736,634 @@ a { color: inherit; text-decoration: none; }
   color: var(--blue-deep);
   line-height: 1.6;
 }
+
+/* ==========================================================================
+   ENGINEERING CASE STUDY & TECHNICAL CATALOG SHOWCASE SYSTEM
+   Eliminates e-commerce look | Densifies whitespace | Technical Docket
+   ========================================================================== */
+
+/* Filter Bar */
+.catalog-filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  justify-content: center;
+  margin-bottom: 2.75rem;
+}
+
+.catalog-filter-btn {
+  padding: 9px 20px;
+  border-radius: var(--radius-full);
+  font-size: 0.85rem;
+  font-weight: 600;
+  border: 1px solid var(--border-card);
+  background: var(--white);
+  color: var(--text-body);
+  cursor: pointer;
+  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 1px 3px rgba(15, 43, 72, 0.04);
+}
+
+.catalog-filter-btn:hover {
+  border-color: var(--blue-primary);
+  color: var(--blue-primary);
+  background-color: var(--blue-light);
+}
+
+.catalog-filter-btn.active {
+  background: var(--blue-primary);
+  color: var(--white);
+  border-color: var(--blue-primary);
+  box-shadow: var(--shadow-btn);
+}
+
+.catalog-filter-count {
+  font-size: 0.75rem;
+  padding: 1px 6px;
+  border-radius: var(--radius-full);
+  background: rgba(0, 0, 0, 0.08);
+  font-weight: 700;
+}
+
+.catalog-filter-btn.active .catalog-filter-count {
+  background: rgba(255, 255, 255, 0.25);
+  color: var(--white);
+}
+
+/* ==========================================================================
+   PRECISION MANUFACTURING PRODUCT CARD (CLEAN FLAT B2B)
+   Tanpa Kapsul Chip Amatir | Tanpa Nested Container | Foto 1:1 Presisi
+   ========================================================================== */
+.tech-card {
+  background-color: #ffffff;
+  border: 1px solid var(--border-card);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px -2px rgba(15, 23, 42, 0.05);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.tech-card:hover {
+  border-color: #93c5fd;
+  box-shadow: 0 12px 28px -4px rgba(29, 78, 216, 0.12);
+  transform: translateY(-3px);
+}
+
+.tech-card-img-box {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background-color: #f8fafc;
+  overflow: hidden;
+}
+
+.tech-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.35s ease;
+}
+
+.tech-card:hover .tech-card-img {
+  transform: scale(1.03);
+}
+
+.tech-card-body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.tech-card-cat {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #2563eb;
+  margin-bottom: 0.4rem;
+}
+
+.tech-card-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #0f2b48;
+  line-height: 1.4;
+  margin-bottom: 0.6rem;
+}
+
+.tech-card-desc {
+  font-size: 0.875rem;
+  color: #475569;
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+  flex-grow: 1;
+}
+
+/* Spesifikasi Flat Bersih Minimalis */
+.clean-spec-list {
+  border-top: 1px solid #f1f5f9;
+  border-bottom: 1px solid #f1f5f9;
+  padding: 0.85rem 0;
+  margin-bottom: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.clean-spec-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 0.825rem;
+  line-height: 1.4;
+}
+
+.clean-spec-lbl {
+  color: #64748b;
+  font-weight: 500;
+  flex-shrink: 0;
+}
+
+.clean-spec-val {
+  color: #0f2b48;
+  font-weight: 700;
+  text-align: right;
+  max-width: 65%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tech-card-actions {
+  margin-top: auto;
+}
+
+/* CTA BIRU RESMI (BUKAN HITAM) */
+.tech-btn-main {
+  width: 100%;
+  background-color: #1d4ed8;
+  color: #ffffff;
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 11px 18px;
+  border-radius: 8px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: var(--transition);
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(29, 78, 216, 0.2);
+}
+
+.tech-btn-main:hover {
+  background-color: #1e40af;
+  color: #ffffff;
+  box-shadow: 0 6px 16px rgba(29, 78, 216, 0.3);
+}
+
+/* ==========================================================================
+   ENGINEERING LANDING PAGE SYSTEM FOR PRODUCT DETAILS
+   Authoritative | Multi-Module | Zero Empty Space | High Conversion
+   ========================================================================== */
+
+/* Top Docket Bar */
+.landing-docket {
+  background: var(--white);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-lg);
+  padding: 2rem 2.25rem;
+  margin-bottom: 2.25rem;
+  box-shadow: var(--shadow-card);
+}
+
+.landing-docket-ribbon {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  border-bottom: 1px solid var(--border-card);
+  padding-bottom: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.landing-tag-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.landing-docket-badge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+  background: #f1f5f9;
+  color: #475569;
+  border: 1px solid #e2e8f0;
+  font-family: inherit;
+}
+
+.landing-hero-title {
+  font-size: 2.15rem;
+  font-weight: 800;
+  color: var(--blue-deep);
+  line-height: 1.25;
+  margin-bottom: 0.85rem;
+  letter-spacing: -0.015em;
+}
+
+.landing-hero-subtitle {
+  font-size: 1.05rem;
+  color: var(--text-body);
+  line-height: 1.65;
+  max-width: 960px;
+  margin-bottom: 1.75rem;
+}
+
+.landing-metrics-strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 1.25rem;
+  background: #f8fafc;
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-md);
+  padding: 1.25rem 1.5rem;
+}
+
+.landing-metric-cell {
+  display: flex;
+  flex-direction: column;
+}
+
+.landing-metric-val {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--blue-primary);
+  line-height: 1.2;
+}
+
+.landing-metric-lbl {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-top: 4px;
+  letter-spacing: 0.03em;
+}
+
+.landing-metric-note {
+  font-size: 0.725rem;
+  color: var(--text-body);
+  margin-top: 2px;
+}
+
+/* Main 2-Column Showcase */
+.landing-main-grid {
+  display: grid;
+  grid-template-columns: 460px 1fr;
+  gap: 2.25rem;
+  margin-bottom: 2.5rem;
+  align-items: start;
+}
+
+/* Left Column Asset Hub (Densified) */
+.landing-asset-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.landing-visual-card {
+  background: var(--white);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-md);
+  padding: 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  position: relative;
+}
+
+.landing-visual-img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  border: 1px solid #e2e8f0;
+  display: block;
+}
+
+.landing-visual-overlay {
+  display: none;
+}
+
+.landing-cad-card {
+  background: var(--white);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  box-shadow: var(--shadow-card);
+  border-left: 4px solid var(--blue-primary);
+}
+
+.landing-cad-title {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--blue-deep);
+  margin-bottom: 0.35rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.landing-cad-text {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-bottom: 0.75rem;
+}
+
+.landing-cad-formats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.landing-cad-pill {
+  font-size: 0.7rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-weight: 700;
+  background: #f1f5f9;
+  color: var(--blue-deep);
+  padding: 3px 7px;
+  border-radius: 4px;
+  border: 1px solid var(--border-card);
+}
+
+.landing-machine-card {
+  background: var(--white);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  box-shadow: var(--shadow-card);
+}
+
+.landing-machine-title {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--blue-deep);
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.landing-machine-item {
+  font-size: 0.825rem;
+  color: var(--text-body);
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.landing-machine-item:last-child {
+  border-bottom: none;
+}
+
+.landing-pic-card {
+  background: linear-gradient(135deg, #f0f7ff 0%, #ffffff 100%);
+  border: 1px solid var(--blue-border);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  box-shadow: var(--shadow-card);
+}
+
+/* Right Column Technical Spec Hub */
+.landing-info-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.landing-overview-box {
+  background: var(--white);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  box-shadow: var(--shadow-card);
+}
+
+.landing-section-heading {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--blue-deep);
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.landing-section-desc {
+  font-size: 0.95rem;
+  color: var(--text-body);
+  line-height: 1.75;
+}
+
+.landing-spec-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--white);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+}
+
+.landing-spec-table td {
+  padding: 13px 18px;
+  font-size: 0.9rem;
+  border-bottom: 1px solid var(--border-card);
+}
+
+.landing-spec-table tr:nth-child(even) {
+  background-color: #f8fafc;
+}
+
+.landing-spec-table tr:last-child td {
+  border-bottom: none;
+}
+
+.landing-spec-table td.col-name {
+  color: var(--text-muted);
+  font-weight: 600;
+  width: 35%;
+}
+
+.landing-spec-table td.col-val {
+  color: var(--blue-deep);
+  font-weight: 700;
+}
+
+.landing-action-banner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  background: #f8fafc;
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+}
+
+/* Landing Page Deep-Dive Modules */
+.landing-module {
+  background: var(--white);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-lg);
+  padding: 2.25rem;
+  box-shadow: var(--shadow-card);
+  margin-bottom: 2rem;
+}
+
+.landing-module-title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--blue-deep);
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.landing-module-sub {
+  font-size: 0.925rem;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.landing-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+}
+
+.landing-feature-card {
+  background: #f8fafc;
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  transition: var(--transition);
+}
+
+.landing-feature-card:hover {
+  border-color: var(--blue-primary);
+  transform: translateY(-2px);
+  background: var(--white);
+  box-shadow: var(--shadow-card);
+}
+
+.landing-feat-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--blue-deep);
+  margin-bottom: 0.4rem;
+}
+
+.landing-feat-text {
+  font-size: 0.85rem;
+  color: var(--text-body);
+  line-height: 1.55;
+}
+
+/* 5-Step Engineering Workflow */
+.landing-step-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.landing-step-card {
+  background: #f8fafc;
+  border-top: 3px solid var(--blue-primary);
+  border-radius: 0 0 var(--radius-md) var(--radius-md);
+  padding: 1.25rem;
+  border-left: 1px solid var(--border-card);
+  border-right: 1px solid var(--border-card);
+  border-bottom: 1px solid var(--border-card);
+}
+
+.landing-step-num {
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: var(--blue-primary);
+  margin-bottom: 0.35rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+.landing-step-title {
+  font-size: 0.925rem;
+  font-weight: 700;
+  color: var(--blue-deep);
+  margin-bottom: 0.4rem;
+}
+
+.landing-step-text {
+  font-size: 0.825rem;
+  color: var(--text-body);
+  line-height: 1.5;
+}
+
+/* Fast-Track RFQ Banner */
+.landing-rfq-box {
+  background: linear-gradient(135deg, #0f2b48 0%, #1d4ed8 100%);
+  color: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  box-shadow: var(--shadow-card);
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.landing-rfq-heading {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--white);
+  margin-bottom: 0.5rem;
+}
+
+.landing-rfq-desc {
+  font-size: 0.95rem;
+  color: #bfdbfe;
+  line-height: 1.6;
+}
+
+.landing-rfq-btn-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+@media (max-width: 992px) {
+  .landing-main-grid {
+    grid-template-columns: 1fr;
+  }
+  .landing-rfq-box {
+    grid-template-columns: 1fr;
+  }
+}
+
