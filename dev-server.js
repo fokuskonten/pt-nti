@@ -21,14 +21,32 @@ const MIME_TYPES = {
 
 // Live reload clients
 const sseClients = new Set();
+let reloadTimeout = null;
 
-// Watch files for live reload
+// Watch files for live reload (filter out internal/scratch folders)
 fs.watch(ROOT_DIR, { recursive: true }, (eventType, filename) => {
-  if (filename && (filename.endsWith('.html') || filename.endsWith('.css') || filename.endsWith('.js') || filename.endsWith('.json'))) {
-    console.log(`[LIVE-RELOAD] File changed: ${filename}. Reloading clients...`);
-    for (const res of sseClients) {
-      res.write('data: reload\n\n');
-    }
+  if (!filename) return;
+  const normalized = filename.replace(/\\/g, '/');
+  if (
+    normalized.startsWith('.git') ||
+    normalized.startsWith('.wrangler') ||
+    normalized.startsWith('scratch') ||
+    normalized.startsWith('node_modules') ||
+    normalized.startsWith('_ARSIP_SEMENTARA')
+  ) {
+    return;
+  }
+
+  if (normalized.endsWith('.html') || normalized.endsWith('.css') || normalized.endsWith('.js') || normalized.endsWith('.json')) {
+    if (reloadTimeout) clearTimeout(reloadTimeout);
+    reloadTimeout = setTimeout(() => {
+      console.log(`[LIVE-RELOAD] File changed: ${normalized}. Triggering reload...`);
+      for (const res of sseClients) {
+        try {
+          res.write('data: reload\n\n');
+        } catch (e) {}
+      }
+    }, 250);
   }
 });
 
@@ -36,16 +54,28 @@ const LIVE_RELOAD_SCRIPT = `
 <!-- DEV LIVE RELOAD SCRIPT -->
 <script>
   (function() {
-    const es = new EventSource('/__livereload');
-    es.onmessage = function(e) {
-      if (e.data === 'reload') {
-        console.log('[DEV] Reloading page...');
-        window.location.reload();
-      }
-    };
-    es.onerror = function() {
-      // Reconnect automatically
-    };
+    // Unregister Service Worker on dev server to prevent caching and stream locking
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.getRegistrations().then(function(regs) {
+        for (var i = 0; i < regs.length; i++) { regs[i].unregister(); }
+      });
+    }
+
+    // Connect SSE ONLY after page load completes to avoid infinite tab spinner
+    window.addEventListener('load', function() {
+      setTimeout(function() {
+        try {
+          var es = new EventSource('/__livereload');
+          es.onmessage = function(e) {
+            if (e.data === 'reload') {
+              console.log('[DEV] File changed. Reloading page...');
+              window.location.reload();
+            }
+          };
+          es.onerror = function() {};
+        } catch (err) {}
+      }, 600);
+    });
   })();
 </script>
 `;
@@ -54,9 +84,11 @@ const server = http.createServer((req, res) => {
   if (req.url === '/__livereload') {
     res.writeHead(200, {
       'Content-Type': 'text/event-stream',
-      'Cache-Control': 'no-cache',
-      'Connection': 'keep-alive'
+      'Cache-Control': 'no-cache, no-transform',
+      'Connection': 'keep-alive',
+      'Access-Control-Allow-Origin': '*'
     });
+    res.write(': connected\n\n');
     sseClients.add(res);
     req.on('close', () => sseClients.delete(res));
     return;

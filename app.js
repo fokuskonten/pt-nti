@@ -75,8 +75,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Registrasi Service Worker PWA
-  if ('serviceWorker' in navigator) {
+  // Registrasi Service Worker PWA hanya pada produksi (bukan localhost) agar tidak mengunci cache saat dev
+  if ('serviceWorker' in navigator && window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1') {
     navigator.serviceWorker.register('./sw.js').catch(() => {});
   }
 });

@@ -51,6 +51,11 @@ self.addEventListener('fetch', (event) => {
 
   const url = new URL(event.request.url);
 
+  // Bypass livereload SSE stream and local dev server immediately
+  if (url.pathname.includes('__livereload') || url.hostname === 'localhost' || url.hostname === '127.0.0.1') {
+    return;
+  }
+
   // Network-first for HTML navigation, CSS, and JS to prevent stale cache bugs
   if (event.request.mode === 'navigate' || url.pathname.endsWith('.css') || url.pathname.endsWith('.js')) {
     event.respondWith(
