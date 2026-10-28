@@ -538,12 +538,7 @@ a { color: inherit; text-decoration: none; }
     gap: 2rem;
   }
 
-  .ai-chat-window {
-    width: calc(100vw - 32px);
-    right: 16px;
-    bottom: 85px;
-    max-height: 75vh;
-  }
+
 }
 
 @media (max-width: 520px) {
